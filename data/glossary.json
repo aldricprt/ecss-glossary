@@ -1,0 +1,2492 @@
+[
+  {
+    "type": "Terme",
+    "id": "2.2.1",
+    "term": "system",
+    "definition": "set of interrelated or interacting functions constituted to achieve a specified objective"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.2",
+    "term": "segment",
+    "definition": "set of elements or combination of systems that fulfils a major"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.3",
+    "term": "element",
+    "definition": "combination of integrated equipment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.4",
+    "term": "subsystem",
+    "definition": "part of a system fulfilling one or more of its functions"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.5",
+    "term": "equipment",
+    "definition": "integrated set of parts and components"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.6",
+    "term": "component",
+    "definition": "set of materials"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.7",
+    "term": "part",
+    "definition": "see \"component\""
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.8",
+    "term": "material",
+    "definition": "raw"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.9",
+    "term": "space system",
+    "definition": "system that contains at least a space"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.10",
+    "term": "space segment",
+    "definition": "part of a space system"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.11",
+    "term": "space segment system",
+    "definition": "system within a space segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.12",
+    "term": "space segment element",
+    "definition": "element within a space segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.13",
+    "term": "stand-alone space segment element",
+    "definition": "space segment element that performs its mission independently of the rest of the space system"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.14",
+    "term": "embedded space segment element",
+    "definition": "space segment element that performs its mission as part of another space segment element"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.15",
+    "term": "space segment subsystem",
+    "definition": "subsystem within a space segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.16",
+    "term": "space segment equipment",
+    "definition": "equipment within a space segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.17",
+    "term": "ground segment",
+    "definition": "part of a space system"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.18",
+    "term": "ground segment system",
+    "definition": "system within a ground segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.19",
+    "term": "ground segment element",
+    "definition": "element within a ground segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.20",
+    "term": "ground segment subsystem",
+    "definition": "subsystem within a ground segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.21",
+    "term": "ground segment equipment",
+    "definition": "equipment within a ground segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.22",
+    "term": "launch segment",
+    "definition": "part of a space system which is used to transport space segment element(s) into space"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.23",
+    "term": "launch segment system",
+    "definition": "system within a launch segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.24",
+    "term": "launch segment element",
+    "definition": "element within a launch segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.25",
+    "term": "launch segment subsystem",
+    "definition": "subsystem within a launch segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.26",
+    "term": "launch segment equipment",
+    "definition": "equipment within a launch segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.2.27",
+    "term": "support segment",
+    "definition": "generic infrastructure and services used to support the development and operation of space system elements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.1",
+    "term": "absorbed dose",
+    "definition": "energy absorbed locally per unit mass as a result of radiation exposure which is transferred through ionisation, displacement damage and excitation"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.2",
+    "term": "acceptance",
+    "definition": "act by which the customer agrees that the product is designed and produced according to its specifications and the agreed deviations and waivers, and it is free of defects when delivered by the supplier"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.3",
+    "term": "acceptance process",
+    "definition": "part of the verification process which demonstrates that the product meets specified acceptance margins"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.4",
+    "term": "acceptance margin",
+    "definition": "increase of the environmental, mechanical, thermal, electrical, EMC, or operational extremes above the worst case levels predicted over the specified product lifetime for the purpose of workmanship verification"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.5",
+    "term": "acceptance test level",
+    "definition": "test level reflecting the maximum level expected to be encountered during the flight product lifetime increased by acceptance margins"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.6",
+    "term": "accident",
+    "definition": "undesired event arising from operation of any project-specific item that results in: a. human death or injury, b. loss of, or damage to, project hardware, software or facilities that can then affect the accomplishment of the mission, c. loss of, or damage to, public or private property, or d. detrimental effects on the environment."
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.7",
+    "term": "active redundancy",
+    "definition": "redundancy where all entities are operating and the system can continue to operate without downtime or defects despite the loss of one or more entities"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.8",
+    "term": "actuator",
+    "definition": "device that transforms an input signal into motion"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.9",
+    "term": "alert",
+    "definition": "formal notification to users, informing them of failures or problems that can affect more than one user, or can recur in other projects or circumstances, if no preventive actions are taken"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.10",
+    "term": "allowable load",
+    "definition": "maximum load that can be accommodated in a structural part for a given operating environment without rupture, collapse, detrimental deformation or unacceptable crack growth"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.11",
+    "term": "analysis",
+    "definition": "verification method utilizing techniques and tools to confirm that verification requirements have been satisfied"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.12",
+    "term": "applicable document",
+    "definition": "document that contains provisions which, through reference in the source document, constitute additional provisions of the source document"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.13",
+    "term": "approval",
+    "definition": "formal agreement by a designated management official to use or apply an item or proceed with a proposed course of action"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.14",
+    "term": "assembly",
+    "definition": "physically combining components"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.15",
+    "term": "assurance",
+    "definition": "planned and systematic activities implemented, and demonstrated as needed, to provide adequate confidence that an entity fulfils its requirements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.16",
+    "term": "audit",
+    "definition": "systematic, independent and documented process for obtaining objective evidence and evaluating it objectively to determine the extent to which audit criteria are fulfilled"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.17",
+    "term": "audit criteria",
+    "definition": "set of policies"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.18",
+    "term": "audit evidence",
+    "definition": "records"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.19",
+    "term": "auditee",
+    "definition": "organization being audited"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.20",
+    "term": "auditor",
+    "definition": "person with the demonstrated personal attributes and competence to conduct an audit"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.21",
+    "term": "availability",
+    "definition": "ability of an item to be in a state to perform a required function under given conditions"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.22",
+    "term": "backward contamination",
+    "definition": "contamination of the terrestrial biosphere by extra-terrestrial life forms in the course of spaceflight missions"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.23",
+    "term": "bakeout",
+    "definition": "activity of increasing the temperature of hardware to accelerate its outgassing rates with the intent of reducing the content of molecular contaminants within the hardware"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.24",
+    "term": "batch",
+    "definition": "quantity produced at one operation"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.25",
+    "term": "biodiversity",
+    "definition": "types of microorganisms"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.26",
+    "term": "blister",
+    "definition": "delamination in the form of a localized swelling and separation between any of the layers of a lamination base material, or between base material and conductive foil or protective coating"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.27",
+    "term": "bremsstrahlung",
+    "definition": "high-energy electromagnetic radiation in the X-y energy range emitted by charged particles slowing down by scattering of atomic nuclei"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.28",
+    "term": "business agreement",
+    "definition": "legally binding agreement, for the supply of goods or services, between two or more actors in the customer-supplier chain"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.29",
+    "term": "calibration",
+    "definition": "determination of the error values of measuring instruments and, if necessary, other metrological properties"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.30",
+    "term": "capability",
+    "definition": "ability of an organization, system or process to realize a product that will fulfil the requirements for that product"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.31",
+    "term": "catastrophic",
+    "definition": "resulting in loss of life, life-threatening, permanently disabling injury or occupational illness, loss of system, loss of an interfacing manned flight system, loss of launch site facilities or severe detrimental environmental effects"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.32",
+    "term": "certification",
+    "definition": "procedure by which a party gives formal assurance that a person or an organization acts, or a product is, in compliance with specified requirements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.33",
+    "term": "clean area",
+    "definition": "area under contamination control"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.34",
+    "term": "cleanliness",
+    "definition": "level of particulate and molecular contamination"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.35",
+    "term": "cleanliness controlled area",
+    "definition": "environmentally controlled area, operated as a cleanroom, with two pre-filter stages but without the final stage of high-efficiency particulate air filters (or better) used in cleanrooms"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.36",
+    "term": "cleanroom",
+    "definition": "clean area controlled according to specified levels"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.37",
+    "term": "cold redundancy",
+    "definition": "redundancy where one entity is operating and the others are powered off"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.38",
+    "term": "collected volatile condensable material",
+    "definition": "mass that outgasses from a material and subsequently condenses on a collector, expressed as a percentage of the initial specimen mass"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.39",
+    "term": "commandability",
+    "definition": "provision of adequate control functions to configure the on-board systems for the execution of nominal mission operations, failure detection, identification, isolation, diagnosis and recovery, and maintenance operations"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.40",
+    "term": "commissioning",
+    "definition": "verification and validation activities conducted after the launch and before the entry into operational service either on the space segment elements only or on the overall system (including the ground segment elements)"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.41",
+    "term": "common cause failure",
+    "definition": "failure of multiple items occurring from a single common cause"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.42",
+    "term": "common mode failure",
+    "definition": "common cause failure of multiple identical items that fail in the same mode"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.43",
+    "term": "component",
+    "definition": "set of materials, assembled according to defined and controlled processes, which cannot be disassembled without destroying its capability and which performs a simple function that can be evaluated against expected performance requirements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.44",
+    "term": "configurable code",
+    "definition": "code (source code or executable code) that can be tailored by setting values of parameters"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.45",
+    "term": "configuration",
+    "definition": "interrelated functional and/or physical characteristics of a product defined in configuration documents subject to configuration management"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.46",
+    "term": "configuration baseline",
+    "definition": "approved product configuration information that establishes the characteristics of a product or service at a point in time that serves as reference for activities throughout the life cycle of the product or service"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.47",
+    "term": "configuration control",
+    "definition": "coordinated activities for controlling modifications to a configuration baseline"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.48",
+    "term": "configuration document",
+    "definition": "document that defines the requirements for function, design, build, production, and verification for a configuration item"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.49",
+    "term": "configuration identification",
+    "definition": "coordinated activities to establish rules for configuration item selection, configuration baseline content definition, and product and document identifiers definition"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.50",
+    "term": "configuration item",
+    "definition": "aggregation of hardware, software, processed materials, services or any of its discrete portions, that is designated for configuration management and treated as a single entity in the configuration management process"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.51",
+    "term": "configuration management",
+    "definition": "activity for establishing and maintaining consistent records of the performance parameters of a product and its functional and physical attributes compared to product design and operational requirements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.52",
+    "term": "configuration status accounting",
+    "definition": "formalized recording and reporting of product characteristics and configuration information, the status of applicable changes and the status of their implementation"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.53",
+    "term": "configuration verification",
+    "definition": "coordinated activities to determine the conformance of the configuration item to its configuration document(s)"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.54",
+    "term": "configured item",
+    "definition": "any level of product whose functional or physical characteristics are recorded in a retrievable"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.55",
+    "term": "conformal coating",
+    "definition": "thin protective coating which conforms to the shape of the assembly to be coated"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.56",
+    "term": "conformance",
+    "definition": "fulfilment of a requirement"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.57",
+    "term": "contaminant",
+    "definition": "undesirable molecular or particulate matter"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.58",
+    "term": "contamination",
+    "definition": "introduction of contaminant to an item or to the environment of interest"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.59",
+    "term": "contract",
+    "definition": "legally enforceable business agreement in which payment is part of the conditions"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.60",
+    "term": "corrective action",
+    "definition": "action to eliminate the cause of a detected nonconformance and to prevent recurrence"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.61",
+    "term": "commercial off-the-shelf",
+    "definition": "equipment, including hardware and associated software or procedures, that is commercially available from current industry inventory"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.62",
+    "term": "critical",
+    "definition": "characteristic of a process, process condition, parameter, requirement or item that deserves control and special attention in order to meet the objectives (e.g. of a mission) within given constraints"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.63",
+    "term": "critical item",
+    "definition": "potential threat to the schedule, cost, performance and quality of a project or programme that is controlled by a specific action plan in order to mitigate emanating risks and to prevent undesirable consequences"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.64",
+    "term": "critical path",
+    "definition": "chain of activities that determines the earliest completion of the project"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.65",
+    "term": "customer",
+    "definition": "organization or person that receives a product as part of a business agreement"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.66",
+    "term": "defect",
+    "definition": "non-fulfilment of a requirement related to an intended or specified use"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.67",
+    "term": "delamination",
+    "definition": "physical separation between two material layers"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.68",
+    "term": "delta qualification",
+    "definition": "qualification performed on a product which has undergone minor design modifications or has been qualified to operate in environments different than those specified"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.69",
+    "term": "dependability",
+    "definition": "the extent to which the fulfilment of a required function can be justifiably trusted"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.70",
+    "term": "derating",
+    "definition": "action when designing a product to limit the component stresses to specified levels that are below their ratings in order to increase its reliability"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.71",
+    "term": "design",
+    "definition": "set of information, or the process used to generate the set of information, that defines the characteristics of a product"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.72",
+    "term": "development",
+    "definition": "complete process of elaborating a product from concept to manufacturing including its qualification and final acceptance"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.73",
+    "term": "deviation",
+    "definition": "departure from the originally specified requirements for a product, prior to production"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.74",
+    "term": "discipline",
+    "definition": "specific area of expertise within a general subject"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.75",
+    "term": "discrepancy",
+    "definition": "departure from expected performance"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.76",
+    "term": "disposal",
+    "definition": "actions performed by a spacecraft or launch vehicle orbital stage to permanently reduce its chance of accidental break-up and to achieve its required long-term clearance of the protected regions"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.77",
+    "term": "effectiveness",
+    "definition": "extent to which planned activities are realized and planned results are achieved"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.78",
+    "term": "efficiency",
+    "definition": "relationship between the result achieved and the resources used"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.79",
+    "term": "element",
+    "definition": "combination of integrated equipment, components and parts"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.80",
+    "term": "emergency",
+    "definition": "situation where hazardous events have occurred with potentially catastrophic or critical consequences requiring an immediate action"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.81",
+    "term": "embedded space segment element",
+    "definition": "space segment element that performs its mission as part of another space segment element"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.82",
+    "term": "end item",
+    "definition": "product that is deliverable under a business agreement"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.83",
+    "term": "engineering model",
+    "definition": "flight representative model in terms of form, fit and function used for functional and failure effect verification"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.84",
+    "term": "engineering qualification model",
+    "definition": "model, which fully reflects the design of the flight model except for the parts standard, used for functional performance and EMC verification and possibly for qualification"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.85",
+    "term": "environment",
+    "definition": "natural conditions and induced conditions that constrain the design definitions or operations of a product"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.86",
+    "term": "equipment",
+    "definition": "integrated set of parts and components"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.87",
+    "term": "fail safe",
+    "definition": "design property of a system, subsystem, or component which prevents its failures from resulting in catastrophic or critical consequences (i.e. remain safe after one failure)"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.88",
+    "term": "failure",
+    "definition": "the event resulting in an item being no longer able to perform its required function"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.89",
+    "term": "failure mode",
+    "definition": "mechanism through which a failure occurs"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.90",
+    "term": "failure tolerance",
+    "definition": "attribute of an item that makes it able to perform a required function in the presence of certain given sub-item failures"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.91",
+    "term": "fastener",
+    "definition": "device used to physically secure hardware components and parts in place"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.92",
+    "term": "fault",
+    "definition": "state of an item characterized by inability to perform as required"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.93",
+    "term": "fault tolerance",
+    "definition": "attribute of an item that makes it able to perform a required function in the presence of certain given sub-item faults"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.94",
+    "term": "firmware",
+    "definition": "hardware that contains a computer program or data that cannot be changed in its user environment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.95",
+    "term": "flight model",
+    "definition": "end product that is intended for flight"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.96",
+    "term": "flight operations",
+    "definition": "all activities related to the planning"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.97",
+    "term": "flight spare",
+    "definition": "spare flight model that could be used in place of the flight model"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.98",
+    "term": "fluence",
+    "definition": "time-integrated flux"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.99",
+    "term": "flux",
+    "definition": "number of particles passing through a given area in a specified time"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.100",
+    "term": "forward contamination",
+    "definition": "contamination of celestial bodies other than the Earth by terrestrial life forms in the course of spaceflight missions"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.101",
+    "term": "function",
+    "definition": "intended effect of a product"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.102",
+    "term": "function tree",
+    "definition": "hierarchical breakdown of a function into successive levels of function"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.103",
+    "term": "functional analysis",
+    "definition": "process that describes completely the functions and their relationships, which are systematically characterised, classified and evaluated"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.104",
+    "term": "ground segment",
+    "definition": "part of a space system, located on ground, which monitors and controls space segment elements)"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.105",
+    "term": "ground segment element",
+    "definition": "element within a ground segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.106",
+    "term": "ground segment equipment",
+    "definition": "equipment within a ground segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.107",
+    "term": "ground segment subsystem",
+    "definition": "subsystem within a ground segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.108",
+    "term": "ground segment system",
+    "definition": "system within a ground segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.109",
+    "term": "ground support equipment",
+    "definition": "non flight product (hardware/software) used on ground to assemble, integrate, test, transport, access, handle, maintain, measure, calibrate, verify, protect or service a flight product (hardware/software)"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.110",
+    "term": "handbook",
+    "definition": "non-normative document providing background information, orientation, advice or recommendations related to one specific discipline or to a specific technique, technology, process or activity"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.111",
+    "term": "hardware-software interaction analysis",
+    "definition": "analysis to verify that the software is specified to react to hardware failures as required"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.112",
+    "term": "hazard",
+    "definition": "existing or potential condition that can result in an accident"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.113",
+    "term": "hazard analysis",
+    "definition": "systematic and iterative process of the identification"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.114",
+    "term": "hazard control",
+    "definition": "preventive or mitigation measure, associated to a hazard scenario, which is introduced into the system design, production and operation to avoid the events or the consequences of the events"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.115",
+    "term": "hazardous event",
+    "definition": "accident resulting from a hazard"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.116",
+    "term": "hot redundancy",
+    "definition": "redundancy where all entities are powered on with only one operating"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.117",
+    "term": "human factors",
+    "definition": "model of observed human physical and psycho-physiological behaviour in relation to environment and product"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.118",
+    "term": "hydrogen embrittlement",
+    "definition": "mechanical and environmental process that results from the initial presence or absorption of excessive amounts of hydrogen in metals"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.119",
+    "term": "implementation document",
+    "definition": "formal response from the supplier to the customer's Project Requirements Document describing how all requirements will be met"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.120",
+    "term": "incident",
+    "definition": "unexpected event that might be, or could lead to, an operational interruption, disruption, loss, emergency, crisis or accident"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.121",
+    "term": "informative",
+    "definition": "providing non-normative information intended to assist the understanding or use of requirements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.122",
+    "term": "inhibit",
+    "definition": "design feature that prevents a function from undesirable execution"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.123",
+    "term": "inspection",
+    "definition": "determination of conformance to specified requirements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.124",
+    "term": "integration",
+    "definition": "functionally combining lower-level functional entities (hardware or software) so they operate together to constitute a higher-level functional entity"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.125",
+    "term": "interchangeability",
+    "definition": "ability of a product to be used in place of another to fulfil the same requirements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.126",
+    "term": "interface control document",
+    "definition": "specification that describes the characteristics that must be controlled at the boundaries between systems, subsystems and other elements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.127",
+    "term": "interface definition document",
+    "definition": "document defining the design of one interface end"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.128",
+    "term": "launch base",
+    "definition": "composed of launch range and launch complexes"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.129",
+    "term": "launch campaign",
+    "definition": "launch activities which include: • Launcher preparation and final integration • Payload processing and integration on the launcher • Launch Operations until lift-off, including Flight Data Gathering"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.130",
+    "term": "launch complex",
+    "definition": "facilities necessary to carry out the final integration of the launcher elements, of the payload into the launcher, as well as the launch operations"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.131",
+    "term": "launch operations",
+    "definition": "all launch related activities taking place after completion of the activities necessary to deliver a fully integrated launcher up to reception of post flight data"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.132",
+    "term": "launch range",
+    "definition": "systems, facilities and means, required to provide the necessary service and support for carrying out a launch campaign, including operations after lift-off and Flight Data Gathering, and to ensure safety and security of persons, assets and protection of the environment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.133",
+    "term": "launch segment",
+    "definition": "part of a space system which is used to transport space segment element(s) into space"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.134",
+    "term": "launch segment element",
+    "definition": "element within a launch segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.135",
+    "term": "launch segment equipment",
+    "definition": "equipment within a launch segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.136",
+    "term": "launch segment subsystem",
+    "definition": "subsystem within a launch segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.137",
+    "term": "launch segment system",
+    "definition": "system within a launch segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.138",
+    "term": "launch service",
+    "definition": "activities required to conclude a launch service contract and to place a payload in the orbit, at the time, and under the payload environment conditions required by the customer"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.139",
+    "term": "launch system",
+    "definition": "system comprising the launcher system and the launch complex"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.140",
+    "term": "launch vehicle",
+    "definition": "vehicle designed to transport payloads to space"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.141",
+    "term": "launcher element",
+    "definition": "building block of a launcher"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.142",
+    "term": "launcher production facilities",
+    "definition": "launcher element manufacturing facilities and testing facilities"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.143",
+    "term": "launcher system",
+    "definition": "fully integrated launcher and the needed facilities for manufacturing, testing and delivering the launcher elements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.144",
+    "term": "life cycle",
+    "definition": "all phases in the life of a product from needs identification through disposal"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.145",
+    "term": "life profile",
+    "definition": "conditions to which a product is chronologically submitted from its manufacturing to its disposal"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.146",
+    "term": "lifetime",
+    "definition": "period, or number of cycles, over which a product is required to perform according to its specification"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.147",
+    "term": "linear energy transfer",
+    "definition": "energy deposited by a charged particle passing through a substance and locally absorbed per unit length of path"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.148",
+    "term": "lot",
+    "definition": "batch or portion of a batch"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.149",
+    "term": "maintainability",
+    "definition": "ease of performing maintenance on a product"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.150",
+    "term": "maintenance",
+    "definition": "actions needed to retain a product in, or restore it to, a state in which it can perform its required function"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.151",
+    "term": "major nonconformance",
+    "definition": "nonconformance which can have an impact on the customer's requirements in the following areas and cases: • safety of people or equipment, • operational, functional or any technical requirements imposed by the business agreement, • reliability, maintainability, availability, • lifetime, • functional or dimensional interchangeability, • interfaces with hardware or software regulated by different business agreements, • changes to or deviations from approved qualification or acceptance test procedures, • project specific items which are proposed to be scrapped"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.152",
+    "term": "material",
+    "definition": "raw, semi-finished or finished substance (gaseous, liquid, solid) of given characteristics from which processing into a component or part is undertaken"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.153",
+    "term": "maximum expected operating pressure",
+    "definition": "highest pressure that a product is expected to experience during its mission life and retain its functionality, in association with its applicable operating environments"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.154",
+    "term": "minor nonconformance",
+    "definition": "nonconformance which by definition cannot be classified as major"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.155",
+    "term": "mission",
+    "definition": "set of tasks"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.156",
+    "term": "mission statement",
+    "definition": "document expressing the set of collected needs"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.157",
+    "term": "model",
+    "definition": "physical or abstract representation used for calculations, predictions or further assessment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.158",
+    "term": "multipaction",
+    "definition": "resonant back and forth flow of secondary electrons in a vacuum between two surfaces separated by a distance such that the electron transit time is an odd integral multiple of one half the period of the alternating voltage impressed on the surface"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.159",
+    "term": "non-volatile residue",
+    "definition": "soluble or suspended material and insoluble particulate matter remaining after temperature-controlled evaporation of a volatile liquid"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.160",
+    "term": "nonconformance",
+    "definition": "non-fulfilment of a requirement"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.161",
+    "term": "normative",
+    "definition": "providing requirements for activities or their results"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.162",
+    "term": "offgassing",
+    "definition": "gaseous release from a material under atmospheric or near-atmospheric pressure"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.163",
+    "term": "off-the-shelf",
+    "definition": "procured from the market"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.164",
+    "term": "outage",
+    "definition": "state of a product being unable to perform its required function"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.165",
+    "term": "outgassing",
+    "definition": "gaseous release from a material in vacuum conditions"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.166",
+    "term": "part",
+    "definition": "see \"component\""
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.167",
+    "term": "particle",
+    "definition": "unit of solid or liquid matter with observable size in a defined range"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.168",
+    "term": "payload",
+    "definition": "set of space segment elements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.169",
+    "term": "performance",
+    "definition": "quantifiable characteristics of a function"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.170",
+    "term": "planetary protection",
+    "definition": "policy and the technical implementations to prevent forward and backward contamination"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.171",
+    "term": "preventive action",
+    "definition": "action to eliminate the cause of a potential nonconformance or other undesirable potential situation"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.172",
+    "term": "procedure",
+    "definition": "specified way to carry out an activity or process"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.173",
+    "term": "process",
+    "definition": "set of interrelated or interacting activities which transform inputs into outputs"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.174",
+    "term": "product",
+    "definition": "result of a process"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.175",
+    "term": "product assurance",
+    "definition": "discipline devoted to the study, planning and implementation of activities intended to assure that the design, controls, methods and techniques in a project result in a satisfactory degree of quality in a product"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.176",
+    "term": "product tree",
+    "definition": "hierarchical representation of the product into successive levels of detail"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.177",
+    "term": "project",
+    "definition": "set of coordinated and controlled activities with start and finish dates, undertaken to achieve an objective conforming to specific requirements, including constraints of time, cost and resources"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.178",
+    "term": "project requirements document",
+    "definition": "documented information including technical and programmatic requirements, as well as political, commercial, and industrial constraints"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.179",
+    "term": "protoflight",
+    "definition": "approach based on a single model to be flown after it has been subjected to a qualification and acceptance test campaign"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.180",
+    "term": "provision",
+    "definition": "expression in the content of a normative document, that takes the form of a statement, an instruction, a recommendation or a requirement"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.181",
+    "term": "qualification",
+    "definition": "that part of verification which demonstrates that the product meets specified qualification margins"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.182",
+    "term": "qualification margin",
+    "definition": "increase in severity of the environmental, mechanical, electrical, EMC, or operational extreme levels expected to be encountered during the specified product lifetime for the purpose of design margin demonstration"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.183",
+    "term": "qualification model",
+    "definition": "model, which fully reflects all aspects of the flight model design, used for complete functional and environmental qualification testing"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.184",
+    "term": "qualification test level",
+    "definition": "test level reflecting the maximum level expected to be encountered during the flight product lifetime increased by qualification margins, or qualification margins on top of acceptance margins for thermal testing"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.185",
+    "term": "quality",
+    "definition": "degree to which a set of characteristics of a product or process fulfils requirements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.186",
+    "term": "quality assurance",
+    "definition": "part of quality management focused on providing confidence that quality requirements will be fulfilled"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.187",
+    "term": "quality control",
+    "definition": "part of quality management focused on fulfilling quality requirements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.188",
+    "term": "redundancy",
+    "definition": "existence of more than one means for performing a given function with the intention of increasing reliability"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.189",
+    "term": "reliability",
+    "definition": "ability of an item to perform a required function under given conditions for a given time interval"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.190",
+    "term": "relifing",
+    "definition": "product assurance activity for the extension of the expiry datecode of a EEE component which is intended to be used for space application"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.191",
+    "term": "repair",
+    "definition": "action on a nonconforming product or service to make it acceptable for the intended use"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.192",
+    "term": "requirement",
+    "definition": "documented demand to be complied with"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.193",
+    "term": "residual risk",
+    "definition": "risk remaining after implementation of risk reduction measures"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.194",
+    "term": "review",
+    "definition": "determination of the suitability"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.195",
+    "term": "rework",
+    "definition": "action on a nonconforming product or service to make it conform to the requirements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.196",
+    "term": "risk",
+    "definition": "undesirable situation or circumstance that has both a likelihood of occurring and a potential negative consequence on a project"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.197",
+    "term": "safe life",
+    "definition": "required period during which a structural item, even containing the largest undetected flaw, is shown by analysis or testing not to fail catastrophically under the expected service load and environment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.198",
+    "term": "safe mode",
+    "definition": "configuration of a spacecraft in which it can remain safely without ground segment intervention for a specified period"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.199",
+    "term": "safety",
+    "definition": "state where an acceptable level of risk is not exceeded"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.200",
+    "term": "safety critical",
+    "definition": "resulting in temporarily disabling but not life threatening injury, temporary occupational illness, major detrimental environmental effects, major damage to public or private properties, major damage to interfacing flight systems or major damage to ground facilities"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.201",
+    "term": "safety critical function",
+    "definition": "function that, if lost or degraded, or as a result of incorrect or inadvertent operation, can result in catastrophic or critical consequences"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.202",
+    "term": "safing",
+    "definition": "action of containment or control of emergency and warning situations, or placing a system (or part thereof), in a predetermined safe condition"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.203",
+    "term": "scrap",
+    "definition": "action on a nonconforming product to preclude its originally intended use"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.204",
+    "term": "security",
+    "definition": "state where an acceptable level of risk arising from malevolent action is not exceeded"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.205",
+    "term": "segment",
+    "definition": "set of elements or combination of systems that fulfils a major, self-contained, subset of the space mission objectives"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.206",
+    "term": "service life",
+    "definition": "interval beginning with the last item inspection or flaw screening proof test after manufacturing"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.207",
+    "term": "severity",
+    "definition": "classification of a failure or undesired event according to the magnitude of its possible consequences"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.208",
+    "term": "shop traveller",
+    "definition": "document recording the complete production process"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.209",
+    "term": "single point failure",
+    "definition": "part of a product that"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.210",
+    "term": "software integration testing",
+    "definition": "testing in which software components"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.211",
+    "term": "solar array",
+    "definition": "assembly of solar panels on a supporting structure with associated hardware"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.212",
+    "term": "solar cell assembly",
+    "definition": "solar cell together with interconnector"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.213",
+    "term": "solar panel",
+    "definition": "interconnected solar cell assemblies mounted on a substrate"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.214",
+    "term": "space debris",
+    "definition": "objects of human origin in Earth orbit or re-entering the Earth's atmosphere"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.215",
+    "term": "space mission",
+    "definition": "user-defined needs to be achieved by a space system"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.216",
+    "term": "space programme",
+    "definition": "set of related space projects managed in a coordinated way to contribute to an overall objective"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.217",
+    "term": "space segment",
+    "definition": "part of a space system"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.218",
+    "term": "space segment element",
+    "definition": "element within a space segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.219",
+    "term": "space segment equipment",
+    "definition": "equipment within a space segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.220",
+    "term": "space segment subsystem",
+    "definition": "subsystem within a space segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.221",
+    "term": "space segment system",
+    "definition": "system within a space segment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.222",
+    "term": "space system",
+    "definition": "system that contains at least a space"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.223",
+    "term": "spacecraft",
+    "definition": "manned or unmanned vehicle designed to orbit or travel in space"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.224",
+    "term": "special process",
+    "definition": "process where the quality cannot be completely ensured by inspection of the resulting product only"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.225",
+    "term": "specification",
+    "definition": "document stating requirements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.226",
+    "term": "stand-alone space segment element",
+    "definition": "space segment element that performs its mission independently of the rest of the space system"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.227",
+    "term": "standard",
+    "definition": "normative document for use in invitations to tender and business agreements for implementing space related activities"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.228",
+    "term": "statement of work",
+    "definition": "contractual document that describes and plans deliverables and activities required to complete a project"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.229",
+    "term": "stress-corrosion",
+    "definition": "combined action of sustained tensile stress and corrosion that can lead to premature failure of materials"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.230",
+    "term": "structural model",
+    "definition": "structurally representative model of the flight model used for qualification of the structural design and for correlation with structural mathematical models"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.231",
+    "term": "subsystem",
+    "definition": "part of a system fulfilling one or more of its functions"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.232",
+    "term": "supplier",
+    "definition": "organization or person that provides a product as part of a business agreement"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.233",
+    "term": "support segment",
+    "definition": "generic infrastructure and services used to support the development and operation of space system elements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.234",
+    "term": "support system",
+    "definition": "see \"support segment\""
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.235",
+    "term": "system",
+    "definition": "set of interrelated or interacting functions constituted to achieve a specified objective"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.236",
+    "term": "tailoring",
+    "definition": "process by which standards are made applicable to a specific project by selection of existing requirements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.237",
+    "term": "technical memorandum",
+    "definition": "non-normative document providing useful information to the space community on a specific subject"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.238",
+    "term": "test",
+    "definition": "measurement of product characteristics"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.239",
+    "term": "thermal balance test",
+    "definition": "test conducted under steady state conditions to correlate and adjust the thermal mathematical model and verify the thermal design"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.240",
+    "term": "thermal model",
+    "definition": "thermally representative model of the flight model used for verification of the thermal design and for correlation with thermal mathematical models"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.241",
+    "term": "thermal vacuum test",
+    "definition": "test conducted in vacuum under predefined temperature conditions to demonstrate the capability of the test item to operate according to requirements"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.242",
+    "term": "third party",
+    "definition": "person or body that is recognized as being independent of the parties involved"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.243",
+    "term": "traceability",
+    "definition": "ability to track the history"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.244",
+    "term": "unit",
+    "definition": "see \"equipment\""
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.245",
+    "term": "validation",
+    "definition": "process which demonstrates that the product is able to accomplish its intended use in the intended operational environment"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.246",
+    "term": "verification",
+    "definition": "process which demonstrates through the provision of objective evidence that the product is designed and produced according to its specifications and the agreed deviations and waivers, and is free of defects"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.247",
+    "term": "visibly clean",
+    "definition": "absence of surface contamination when examined with a specific light source"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.248",
+    "term": "waiver",
+    "definition": "authorised departure from the originally specified requirements for a product"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.249",
+    "term": "work breakdown structure",
+    "definition": "hierarchical representation of the activities necessary to complete a project"
+  },
+  {
+    "type": "Terme",
+    "id": "2.3.250",
+    "term": "work package",
+    "definition": "group of related tasks that are defined down to the lowest level within a work breakdown structure"
+  },
+  {
+    "type": "Abréviation",
+    "id": "1",
+    "term": "A/D",
+    "definition": "analogue-to-digital"
+  },
+  {
+    "type": "Abréviation",
+    "id": "2",
+    "term": "ABM",
+    "definition": "apogee boost motor"
+  },
+  {
+    "type": "Abréviation",
+    "id": "3",
+    "term": "AC",
+    "definition": "alternating current"
+  },
+  {
+    "type": "Abréviation",
+    "id": "4",
+    "term": "ADC",
+    "definition": "analogue-to-digital converter"
+  },
+  {
+    "type": "Abréviation",
+    "id": "5",
+    "term": "AIT",
+    "definition": "assembly"
+  },
+  {
+    "type": "Abréviation",
+    "id": "6",
+    "term": "AIV",
+    "definition": "assembly"
+  },
+  {
+    "type": "Abréviation",
+    "id": "7",
+    "term": "AOCS",
+    "definition": "attitude and orbit control subsystem"
+  },
+  {
+    "type": "Abréviation",
+    "id": "8",
+    "term": "APS",
+    "definition": "active pixel sensor"
+  },
+  {
+    "type": "Abréviation",
+    "id": "9",
+    "term": "AQL",
+    "definition": "acceptance quality level"
+  },
+  {
+    "type": "Abréviation",
+    "id": "10",
+    "term": "AR",
+    "definition": "acceptance review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "11",
+    "term": "ASIC",
+    "definition": "application specific integrated circuit"
+  },
+  {
+    "type": "Abréviation",
+    "id": "12",
+    "term": "ASTM",
+    "definition": "American Society for Testing and Materials"
+  },
+  {
+    "type": "Abréviation",
+    "id": "13",
+    "term": "ATOX",
+    "definition": "atomic oxygen"
+  },
+  {
+    "type": "Abréviation",
+    "id": "14",
+    "term": "AWG",
+    "definition": "American wire gauge"
+  },
+  {
+    "type": "Abréviation",
+    "id": "15",
+    "term": "BOL",
+    "definition": "beginning-of-life"
+  },
+  {
+    "type": "Abréviation",
+    "id": "16",
+    "term": "CAD",
+    "definition": "computer aided design"
+  },
+  {
+    "type": "Abréviation",
+    "id": "17",
+    "term": "CCB",
+    "definition": "configuration control board"
+  },
+  {
+    "type": "Abréviation",
+    "id": "18",
+    "term": "CCD",
+    "definition": "charge coupled device"
+  },
+  {
+    "type": "Abréviation",
+    "id": "19",
+    "term": "CCSDS",
+    "definition": "Consultative Committee for Space Data Systems"
+  },
+  {
+    "type": "Abréviation",
+    "id": "20",
+    "term": "CDR",
+    "definition": "critical design review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "21",
+    "term": "CIDL",
+    "definition": "configuration item data list"
+  },
+  {
+    "type": "Abréviation",
+    "id": "22",
+    "term": "CIL",
+    "definition": "critical items list"
+  },
+  {
+    "type": "Abréviation",
+    "id": "23",
+    "term": "CoG",
+    "definition": "centre of gravity"
+  },
+  {
+    "type": "Abréviation",
+    "id": "24",
+    "term": "CoM",
+    "definition": "centre of mass"
+  },
+  {
+    "type": "Abréviation",
+    "id": "25",
+    "term": "COTS",
+    "definition": "commercial off-the-shelf"
+  },
+  {
+    "type": "Abréviation",
+    "id": "26",
+    "term": "CRR",
+    "definition": "commissioning result review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "27",
+    "term": "CVCM",
+    "definition": "collected volatile condensable material"
+  },
+  {
+    "type": "Abréviation",
+    "id": "28",
+    "term": "DC",
+    "definition": "direct current"
+  },
+  {
+    "type": "Abréviation",
+    "id": "29",
+    "term": "DDF",
+    "definition": "design definition file"
+  },
+  {
+    "type": "Abréviation",
+    "id": "30",
+    "term": "DDR",
+    "definition": "detailed design review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "31",
+    "term": "DJF",
+    "definition": "design justification file"
+  },
+  {
+    "type": "Abréviation",
+    "id": "32",
+    "term": "DML",
+    "definition": "declared materials list"
+  },
+  {
+    "type": "Abréviation",
+    "id": "33",
+    "term": "DMPL",
+    "definition": "declared mechanical parts list"
+  },
+  {
+    "type": "Abréviation",
+    "id": "34",
+    "term": "DPL",
+    "definition": "declared processes list"
+  },
+  {
+    "type": "Abréviation",
+    "id": "35",
+    "term": "DRB",
+    "definition": "delivery review board"
+  },
+  {
+    "type": "Abréviation",
+    "id": "36",
+    "term": "DRD",
+    "definition": "document requirements definition"
+  },
+  {
+    "type": "Abréviation",
+    "id": "37",
+    "term": "DRL",
+    "definition": "document requirements list"
+  },
+  {
+    "type": "Abréviation",
+    "id": "38",
+    "term": "ECLS",
+    "definition": "environmental control and life support"
+  },
+  {
+    "type": "Abréviation",
+    "id": "39",
+    "term": "ECSS",
+    "definition": "European Cooperation for Space Standardization"
+  },
+  {
+    "type": "Abréviation",
+    "id": "40",
+    "term": "EED",
+    "definition": "electro-explosive device"
+  },
+  {
+    "type": "Abréviation",
+    "id": "41",
+    "term": "EEE",
+    "definition": "electrical"
+  },
+  {
+    "type": "Abréviation",
+    "id": "42",
+    "term": "EGSE",
+    "definition": "electrical ground support equipment"
+  },
+  {
+    "type": "Abréviation",
+    "id": "43",
+    "term": "EIDP",
+    "definition": "end item data package"
+  },
+  {
+    "type": "Abréviation",
+    "id": "44",
+    "term": "ELR",
+    "definition": "end-of-life review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "45",
+    "term": "EM",
+    "definition": "engineering model"
+  },
+  {
+    "type": "Abréviation",
+    "id": "46",
+    "term": "EMC",
+    "definition": "electromagnetic compatibility"
+  },
+  {
+    "type": "Abréviation",
+    "id": "47",
+    "term": "EMI",
+    "definition": "electromagnetic interference"
+  },
+  {
+    "type": "Abréviation",
+    "id": "48",
+    "term": "EN",
+    "definition": "European Standard"
+  },
+  {
+    "type": "Abréviation",
+    "id": "49",
+    "term": "EOL",
+    "definition": "end-of-life"
+  },
+  {
+    "type": "Abréviation",
+    "id": "50",
+    "term": "ESA",
+    "definition": "European Space Agency"
+  },
+  {
+    "type": "Abréviation",
+    "id": "51",
+    "term": "ESCC",
+    "definition": "European Space Components Coordination"
+  },
+  {
+    "type": "Abréviation",
+    "id": "52",
+    "term": "ESD",
+    "definition": "electrostatic discharge"
+  },
+  {
+    "type": "Abréviation",
+    "id": "53",
+    "term": "FDIR",
+    "definition": "failure detection isolation and recovery"
+  },
+  {
+    "type": "Abréviation",
+    "id": "54",
+    "term": "FM",
+    "definition": "flight model"
+  },
+  {
+    "type": "Abréviation",
+    "id": "55",
+    "term": "FMEA",
+    "definition": "failure modes and effects analysis"
+  },
+  {
+    "type": "Abréviation",
+    "id": "56",
+    "term": "FMECA",
+    "definition": "failure modes"
+  },
+  {
+    "type": "Abréviation",
+    "id": "57",
+    "term": "FOS",
+    "definition": "factor of safety"
+  },
+  {
+    "type": "Abréviation",
+    "id": "58",
+    "term": "FRR",
+    "definition": "flight readiness review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "59",
+    "term": "FTA",
+    "definition": "fault tree analysis"
+  },
+  {
+    "type": "Abréviation",
+    "id": "60",
+    "term": "GEO",
+    "definition": "geostationary orbit"
+  },
+  {
+    "type": "Abréviation",
+    "id": "61",
+    "term": "GS",
+    "definition": "ground segment"
+  },
+  {
+    "type": "Abréviation",
+    "id": "62",
+    "term": "GSE",
+    "definition": "ground support equipment"
+  },
+  {
+    "type": "Abréviation",
+    "id": "63",
+    "term": "HMI",
+    "definition": "human-machine interface"
+  },
+  {
+    "type": "Abréviation",
+    "id": "64",
+    "term": "HSIA",
+    "definition": "hardware-software interaction analysis"
+  },
+  {
+    "type": "Abréviation",
+    "id": "65",
+    "term": "HW",
+    "definition": "hardware"
+  },
+  {
+    "type": "Abréviation",
+    "id": "66",
+    "term": "ICD",
+    "definition": "interface control document"
+  },
+  {
+    "type": "Abréviation",
+    "id": "67",
+    "term": "ILS",
+    "definition": "integrated logistic support"
+  },
+  {
+    "type": "Abréviation",
+    "id": "68",
+    "term": "IRD",
+    "definition": "interface requirements document"
+  },
+  {
+    "type": "Abréviation",
+    "id": "69",
+    "term": "ISO",
+    "definition": "International Organization for Standardization"
+  },
+  {
+    "type": "Abréviation",
+    "id": "70",
+    "term": "ISS",
+    "definition": "International Space Station"
+  },
+  {
+    "type": "Abréviation",
+    "id": "71",
+    "term": "I/F",
+    "definition": "interface"
+  },
+  {
+    "type": "Abréviation",
+    "id": "72",
+    "term": "I/O",
+    "definition": "input/output"
+  },
+  {
+    "type": "Abréviation",
+    "id": "73",
+    "term": "LEO",
+    "definition": "low Earth orbit"
+  },
+  {
+    "type": "Abréviation",
+    "id": "74",
+    "term": "LEOP",
+    "definition": "launch and early orbit phase"
+  },
+  {
+    "type": "Abréviation",
+    "id": "75",
+    "term": "LRR",
+    "definition": "launch readiness review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "76",
+    "term": "MCR",
+    "definition": "mission close-out review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "77",
+    "term": "MDD",
+    "definition": "mission description document"
+  },
+  {
+    "type": "Abréviation",
+    "id": "78",
+    "term": "MDP",
+    "definition": "maximum design pressure"
+  },
+  {
+    "type": "Abréviation",
+    "id": "79",
+    "term": "MDR",
+    "definition": "mission definition review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "80",
+    "term": "MEOP",
+    "definition": "maximum expected operating pressure"
+  },
+  {
+    "type": "Abréviation",
+    "id": "81",
+    "term": "MGSE",
+    "definition": "mechanical ground support equipment"
+  },
+  {
+    "type": "Abréviation",
+    "id": "82",
+    "term": "MIP",
+    "definition": "mandatory inspection point"
+  },
+  {
+    "type": "Abréviation",
+    "id": "83",
+    "term": "MLI",
+    "definition": "multi-layer insulation"
+  },
+  {
+    "type": "Abréviation",
+    "id": "84",
+    "term": "MMIC",
+    "definition": "monolithic microwave integrated circuit"
+  },
+  {
+    "type": "Abréviation",
+    "id": "85",
+    "term": "MOI",
+    "definition": "moment of inertia"
+  },
+  {
+    "type": "Abréviation",
+    "id": "86",
+    "term": "NASA",
+    "definition": "National Aeronautics and Space Administration"
+  },
+  {
+    "type": "Abréviation",
+    "id": "87",
+    "term": "NCR",
+    "definition": "nonconformance report"
+  },
+  {
+    "type": "Abréviation",
+    "id": "88",
+    "term": "NDI",
+    "definition": "non-destructive inspection"
+  },
+  {
+    "type": "Abréviation",
+    "id": "89",
+    "term": "NDT",
+    "definition": "non-destructive test"
+  },
+  {
+    "type": "Abréviation",
+    "id": "90",
+    "term": "NRB",
+    "definition": "nonconformance review board"
+  },
+  {
+    "type": "Abréviation",
+    "id": "91",
+    "term": "N/A",
+    "definition": "not applicable"
+  },
+  {
+    "type": "Abréviation",
+    "id": "92",
+    "term": "OBDH",
+    "definition": "on-board data handling"
+  },
+  {
+    "type": "Abréviation",
+    "id": "93",
+    "term": "ORR",
+    "definition": "operational readiness review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "94",
+    "term": "OTS",
+    "definition": "off-the-shelf"
+  },
+  {
+    "type": "Abréviation",
+    "id": "95",
+    "term": "PA",
+    "definition": "product assurance"
+  },
+  {
+    "type": "Abréviation",
+    "id": "96",
+    "term": "PCB",
+    "definition": "printed circuit board"
+  },
+  {
+    "type": "Abréviation",
+    "id": "97",
+    "term": "PDR",
+    "definition": "preliminary design review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "98",
+    "term": "PFM",
+    "definition": "protoflight model"
+  },
+  {
+    "type": "Abréviation",
+    "id": "99",
+    "term": "PID",
+    "definition": "process identification document"
+  },
+  {
+    "type": "Abréviation",
+    "id": "100",
+    "term": "PMP",
+    "definition": "parts"
+  },
+  {
+    "type": "Abréviation",
+    "id": "101",
+    "term": "PRR",
+    "definition": "preliminary requirements review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "102",
+    "term": "PTR",
+    "definition": "post test review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "103",
+    "term": "QA",
+    "definition": "quality assurance"
+  },
+  {
+    "type": "Abréviation",
+    "id": "104",
+    "term": "QM",
+    "definition": "qualification model"
+  },
+  {
+    "type": "Abréviation",
+    "id": "105",
+    "term": "QR",
+    "definition": "qualification review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "106",
+    "term": "RAMS",
+    "definition": "reliability"
+  },
+  {
+    "type": "Abréviation",
+    "id": "107",
+    "term": "RB",
+    "definition": "requirements baseline"
+  },
+  {
+    "type": "Abréviation",
+    "id": "108",
+    "term": "RF",
+    "definition": "radio frequency"
+  },
+  {
+    "type": "Abréviation",
+    "id": "109",
+    "term": "RFA",
+    "definition": "request for approval"
+  },
+  {
+    "type": "Abréviation",
+    "id": "110",
+    "term": "RFD",
+    "definition": "request for deviation"
+  },
+  {
+    "type": "Abréviation",
+    "id": "111",
+    "term": "RFW",
+    "definition": "request for waiver"
+  },
+  {
+    "type": "Abréviation",
+    "id": "112",
+    "term": "RH",
+    "definition": "relative humidity"
+  },
+  {
+    "type": "Abréviation",
+    "id": "113",
+    "term": "RID",
+    "definition": "review item discrepancy"
+  },
+  {
+    "type": "Abréviation",
+    "id": "114",
+    "term": "ROD",
+    "definition": "review of design"
+  },
+  {
+    "type": "Abréviation",
+    "id": "115",
+    "term": "r.m.s.",
+    "definition": "root-mean-square"
+  },
+  {
+    "type": "Abréviation",
+    "id": "116",
+    "term": "SCC",
+    "definition": "stress-corrosion cracking"
+  },
+  {
+    "type": "Abréviation",
+    "id": "117",
+    "term": "SEE",
+    "definition": "single event effect"
+  },
+  {
+    "type": "Abréviation",
+    "id": "118",
+    "term": "SEP",
+    "definition": "system engineering plan"
+  },
+  {
+    "type": "Abréviation",
+    "id": "119",
+    "term": "SRR",
+    "definition": "system requirements review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "120",
+    "term": "STM",
+    "definition": "structural-thermal model"
+  },
+  {
+    "type": "Abréviation",
+    "id": "121",
+    "term": "SVT",
+    "definition": "system validation test"
+  },
+  {
+    "type": "Abréviation",
+    "id": "122",
+    "term": "S/C",
+    "definition": "spacecraft"
+  },
+  {
+    "type": "Abréviation",
+    "id": "123",
+    "term": "SW",
+    "definition": "software"
+  },
+  {
+    "type": "Abréviation",
+    "id": "124",
+    "term": "TC",
+    "definition": "telecommand"
+  },
+  {
+    "type": "Abréviation",
+    "id": "125",
+    "term": "TCS",
+    "definition": "thermal control subsystem"
+  },
+  {
+    "type": "Abréviation",
+    "id": "126",
+    "term": "TM",
+    "definition": "telemetry"
+  },
+  {
+    "type": "Abréviation",
+    "id": "127",
+    "term": "TM/TC",
+    "definition": "telemetry/telecommand"
+  },
+  {
+    "type": "Abréviation",
+    "id": "128",
+    "term": "TML",
+    "definition": "total mass loss"
+  },
+  {
+    "type": "Abréviation",
+    "id": "129",
+    "term": "TRB",
+    "definition": "test review board"
+  },
+  {
+    "type": "Abréviation",
+    "id": "130",
+    "term": "TRL",
+    "definition": "technology readiness level"
+  },
+  {
+    "type": "Abréviation",
+    "id": "131",
+    "term": "TRR",
+    "definition": "test readiness review"
+  },
+  {
+    "type": "Abréviation",
+    "id": "132",
+    "term": "TS",
+    "definition": "technical specification"
+  },
+  {
+    "type": "Abréviation",
+    "id": "133",
+    "term": "TT&C",
+    "definition": "telemetry"
+  },
+  {
+    "type": "Abréviation",
+    "id": "134",
+    "term": "UTC",
+    "definition": "coordinated universal time"
+  },
+  {
+    "type": "Abréviation",
+    "id": "135",
+    "term": "UV",
+    "definition": "ultraviolet"
+  },
+  {
+    "type": "Abréviation",
+    "id": "136",
+    "term": "VCD",
+    "definition": "verification control document"
+  },
+  {
+    "type": "Abréviation",
+    "id": "137",
+    "term": "VP",
+    "definition": "verification plan"
+  },
+  {
+    "type": "Abréviation",
+    "id": "138",
+    "term": "WBS",
+    "definition": "work breakdown structure"
+  }
+]

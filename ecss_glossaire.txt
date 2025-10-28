@@ -1,0 +1,416 @@
+Type,Identifiant,Terme/Abréviation,Définition/Signification
+Terme,2.2.1,system,set of interrelated or interacting functions constituted to achieve a specified objective
+Terme,2.2.2,segment,set of elements or combination of systems that fulfils a major, self-contained, subset of the space mission objectives
+Terme,2.2.3,element,combination of integrated equipment, components and parts
+Terme,2.2.4,subsystem,part of a system fulfilling one or more of its functions
+Terme,2.2.5,equipment,integrated set of parts and components
+Terme,2.2.6,component,set of materials, assembled according to defined and controlled processes, which cannot be disassembled without destroying its capability and which performs a simple function that can be evaluated against expected performance requirements
+Terme,2.2.7,part,see "component"
+Terme,2.2.8,material,raw, semi-finished or finished substance (gaseous, liquid, solid) of given characteristics from which processing into a component or part is undertaken
+Terme,2.2.9,space system,system that contains at least a space, a ground or a launch segment
+Terme,2.2.10,space segment,part of a space system, placed in space, to fulfil the space mission objectives
+Terme,2.2.11,space segment system,system within a space segment
+Terme,2.2.12,space segment element,element within a space segment
+Terme,2.2.13,stand-alone space segment element,space segment element that performs its mission independently of the rest of the space system
+Terme,2.2.14,embedded space segment element,space segment element that performs its mission as part of another space segment element
+Terme,2.2.15,space segment subsystem,subsystem within a space segment
+Terme,2.2.16,space segment equipment,equipment within a space segment
+Terme,2.2.17,ground segment,part of a space system, located on ground, which monitors and controls space segment element(s)
+Terme,2.2.18,ground segment system,system within a ground segment
+Terme,2.2.19,ground segment element,element within a ground segment
+Terme,2.2.20,ground segment subsystem,subsystem within a ground segment
+Terme,2.2.21,ground segment equipment,equipment within a ground segment
+Terme,2.2.22,launch segment,part of a space system which is used to transport space segment element(s) into space
+Terme,2.2.23,launch segment system,system within a launch segment
+Terme,2.2.24,launch segment element,element within a launch segment
+Terme,2.2.25,launch segment subsystem,subsystem within a launch segment
+Terme,2.2.26,launch segment equipment,equipment within a launch segment
+Terme,2.2.27,support segment,generic infrastructure and services used to support the development and operation of space system elements
+Terme,2.3.1,absorbed dose,"energy absorbed locally per unit mass as a result of radiation exposure which is transferred through ionisation, displacement damage and excitation"
+Terme,2.3.2,acceptance,"act by which the customer agrees that the product is designed and produced according to its specifications and the agreed deviations and waivers, and it is free of defects when delivered by the supplier"
+Terme,2.3.3,acceptance process,"part of the verification process which demonstrates that the product meets specified acceptance margins"
+Terme,2.3.4,acceptance margin,"increase of the environmental, mechanical, thermal, electrical, EMC, or operational extremes above the worst case levels predicted over the specified product lifetime for the purpose of workmanship verification"
+Terme,2.3.5,acceptance test level,"test level reflecting the maximum level expected to be encountered during the flight product lifetime increased by acceptance margins"
+Terme,2.3.6,accident,"undesired event arising from operation of any project-specific item that results in: a. human death or injury, b. loss of, or damage to, project hardware, software or facilities that can then affect the accomplishment of the mission, c. loss of, or damage to, public or private property, or d. detrimental effects on the environment."
+Terme,2.3.7,active redundancy,"redundancy where all entities are operating and the system can continue to operate without downtime or defects despite the loss of one or more entities"
+Terme,2.3.8,actuator,device that transforms an input signal into motion
+Terme,2.3.9,alert,"formal notification to users, informing them of failures or problems that can affect more than one user, or can recur in other projects or circumstances, if no preventive actions are taken"
+Terme,2.3.10,allowable load,"maximum load that can be accommodated in a structural part for a given operating environment without rupture, collapse, detrimental deformation or unacceptable crack growth"
+Terme,2.3.11,analysis,"verification method utilizing techniques and tools to confirm that verification requirements have been satisfied"
+Terme,2.3.12,applicable document,"document that contains provisions which, through reference in the source document, constitute additional provisions of the source document"
+Terme,2.3.13,approval,"formal agreement by a designated management official to use or apply an item or proceed with a proposed course of action"
+Terme,2.3.14,assembly,physically combining components, equipment or elements to form a larger entity
+Terme,2.3.15,assurance,"planned and systematic activities implemented, and demonstrated as needed, to provide adequate confidence that an entity fulfils its requirements"
+Terme,2.3.16,audit,"systematic, independent and documented process for obtaining objective evidence and evaluating it objectively to determine the extent to which audit criteria are fulfilled"
+Terme,2.3.17,audit criteria,set of policies, procedures or requirements used as a reference against which objective evidence is compared
+Terme,2.3.18,audit evidence,records, statements of fact or other information which are relevant to the audit criteria and verifiable
+Terme,2.3.19,auditee,organization being audited
+Terme,2.3.20,auditor,person with the demonstrated personal attributes and competence to conduct an audit
+Terme,2.3.21,availability,"ability of an item to be in a state to perform a required function under given conditions"
+Terme,2.3.22,backward contamination,contamination of the terrestrial biosphere by extra-terrestrial life forms in the course of spaceflight missions
+Terme,2.3.23,bakeout,"activity of increasing the temperature of hardware to accelerate its outgassing rates with the intent of reducing the content of molecular contaminants within the hardware"
+Terme,2.3.24,batch,quantity produced at one operation
+Terme,2.3.25,biodiversity,types of microorganisms, identified with specified assays
+Terme,2.3.26,blister,"delamination in the form of a localized swelling and separation between any of the layers of a lamination base material, or between base material and conductive foil or protective coating"
+Terme,2.3.27,bremsstrahlung,"high-energy electromagnetic radiation in the X-y energy range emitted by charged particles slowing down by scattering of atomic nuclei"
+Terme,2.3.28,business agreement,"legally binding agreement, for the supply of goods or services, between two or more actors in the customer-supplier chain"
+Terme,2.3.29,calibration,"determination of the error values of measuring instruments and, if necessary, other metrological properties"
+Terme,2.3.30,capability,"ability of an organization, system or process to realize a product that will fulfil the requirements for that product"
+Terme,2.3.31,catastrophic,"resulting in loss of life, life-threatening, permanently disabling injury or occupational illness, loss of system, loss of an interfacing manned flight system, loss of launch site facilities or severe detrimental environmental effects"
+Terme,2.3.32,certification,"procedure by which a party gives formal assurance that a person or an organization acts, or a product is, in compliance with specified requirements"
+Terme,2.3.33,clean area,area under contamination control
+Terme,2.3.34,cleanliness,level of particulate and molecular contamination
+Terme,2.3.35,cleanliness controlled area,"environmentally controlled area, operated as a cleanroom, with two pre-filter stages but without the final stage of high-efficiency particulate air filters (or better) used in cleanrooms"
+Terme,2.3.36,cleanroom,clean area controlled according to specified levels
+Terme,2.3.37,cold redundancy,redundancy where one entity is operating and the others are powered off
+Terme,2.3.38,collected volatile condensable material,"mass that outgasses from a material and subsequently condenses on a collector, expressed as a percentage of the initial specimen mass"
+Terme,2.3.39,commandability,"provision of adequate control functions to configure the on-board systems for the execution of nominal mission operations, failure detection, identification, isolation, diagnosis and recovery, and maintenance operations"
+Terme,2.3.40,commissioning,"verification and validation activities conducted after the launch and before the entry into operational service either on the space segment elements only or on the overall system (including the ground segment elements)"
+Terme,2.3.41,common cause failure,failure of multiple items occurring from a single common cause
+Terme,2.3.42,common mode failure,common cause failure of multiple identical items that fail in the same mode
+Terme,2.3.43,component,"set of materials, assembled according to defined and controlled processes, which cannot be disassembled without destroying its capability and which performs a simple function that can be evaluated against expected performance requirements"
+Terme,2.3.44,configurable code,"code (source code or executable code) that can be tailored by setting values of parameters"
+Terme,2.3.45,configuration,"interrelated functional and/or physical characteristics of a product defined in configuration documents subject to configuration management"
+Terme,2.3.46,configuration baseline,"approved product configuration information that establishes the characteristics of a product or service at a point in time that serves as reference for activities throughout the life cycle of the product or service"
+Terme,2.3.47,configuration control,coordinated activities for controlling modifications to a configuration baseline
+Terme,2.3.48,configuration document,"document that defines the requirements for function, design, build, production, and verification for a configuration item"
+Terme,2.3.49,configuration identification,"coordinated activities to establish rules for configuration item selection, configuration baseline content definition, and product and document identifiers definition"
+Terme,2.3.50,configuration item,"aggregation of hardware, software, processed materials, services or any of its discrete portions, that is designated for configuration management and treated as a single entity in the configuration management process"
+Terme,2.3.51,configuration management,"activity for establishing and maintaining consistent records of the performance parameters of a product and its functional and physical attributes compared to product design and operational requirements"
+Terme,2.3.52,configuration status accounting,"formalized recording and reporting of product characteristics and configuration information, the status of applicable changes and the status of their implementation"
+Terme,2.3.53,configuration verification,"coordinated activities to determine the conformance of the configuration item to its configuration document(s)"
+Terme,2.3.54,configured item,any level of product whose functional or physical characteristics are recorded in a retrievable, consistent manner
+Terme,2.3.55,conformal coating,thin protective coating which conforms to the shape of the assembly to be coated
+Terme,2.3.56,conformance,fulfilment of a requirement
+Terme,2.3.57,contaminant,undesirable molecular or particulate matter
+Terme,2.3.58,contamination,introduction of contaminant to an item or to the environment of interest
+Terme,2.3.59,contract,"legally enforceable business agreement in which payment is part of the conditions"
+Terme,2.3.60,corrective action,"action to eliminate the cause of a detected nonconformance and to prevent recurrence"
+Terme,2.3.61,commercial off-the-shelf,"equipment, including hardware and associated software or procedures, that is commercially available from current industry inventory"
+Terme,2.3.62,critical,"characteristic of a process, process condition, parameter, requirement or item that deserves control and special attention in order to meet the objectives (e.g. of a mission) within given constraints"
+Terme,2.3.63,critical item,"potential threat to the schedule, cost, performance and quality of a project or programme that is controlled by a specific action plan in order to mitigate emanating risks and to prevent undesirable consequences"
+Terme,2.3.64,critical path,chain of activities that determines the earliest completion of the project
+Terme,2.3.65,customer,organization or person that receives a product as part of a business agreement
+Terme,2.3.66,defect,non-fulfilment of a requirement related to an intended or specified use
+Terme,2.3.67,delamination,physical separation between two material layers, which are joined in design
+Terme,2.3.68,delta qualification,"qualification performed on a product which has undergone minor design modifications or has been qualified to operate in environments different than those specified"
+Terme,2.3.69,dependability,the extent to which the fulfilment of a required function can be justifiably trusted
+Terme,2.3.70,derating,"action when designing a product to limit the component stresses to specified levels that are below their ratings in order to increase its reliability"
+Terme,2.3.71,design,"set of information, or the process used to generate the set of information, that defines the characteristics of a product"
+Terme,2.3.72,development,"complete process of elaborating a product from concept to manufacturing including its qualification and final acceptance"
+Terme,2.3.73,deviation,"departure from the originally specified requirements for a product, prior to production"
+Terme,2.3.74,discipline,specific area of expertise within a general subject
+Terme,2.3.75,discrepancy,departure from expected performance
+Terme,2.3.76,disposal,"actions performed by a spacecraft or launch vehicle orbital stage to permanently reduce its chance of accidental break-up and to achieve its required long-term clearance of the protected regions"
+Terme,2.3.77,effectiveness,extent to which planned activities are realized and planned results are achieved
+Terme,2.3.78,efficiency,relationship between the result achieved and the resources used
+Terme,2.3.79,element,"combination of integrated equipment, components and parts"
+Terme,2.3.80,emergency,"situation where hazardous events have occurred with potentially catastrophic or critical consequences requiring an immediate action"
+Terme,2.3.81,embedded space segment element,space segment element that performs its mission as part of another space segment element
+Terme,2.3.82,end item,product that is deliverable under a business agreement
+Terme,2.3.83,engineering model,"flight representative model in terms of form, fit and function used for functional and failure effect verification"
+Terme,2.3.84,engineering qualification model,"model, which fully reflects the design of the flight model except for the parts standard, used for functional performance and EMC verification and possibly for qualification"
+Terme,2.3.85,environment,"natural conditions and induced conditions that constrain the design definitions or operations of a product"
+Terme,2.3.86,equipment,integrated set of parts and components
+Terme,2.3.87,fail safe,"design property of a system, subsystem, or component which prevents its failures from resulting in catastrophic or critical consequences (i.e. remain safe after one failure)"
+Terme,2.3.88,failure,the event resulting in an item being no longer able to perform its required function
+Terme,2.3.89,failure mode,mechanism through which a failure occurs
+Terme,2.3.90,failure tolerance,attribute of an item that makes it able to perform a required function in the presence of certain given sub-item failures
+Terme,2.3.91,fastener,device used to physically secure hardware components and parts in place
+Terme,2.3.92,fault,state of an item characterized by inability to perform as required
+Terme,2.3.93,fault tolerance,attribute of an item that makes it able to perform a required function in the presence of certain given sub-item faults
+Terme,2.3.94,firmware,"hardware that contains a computer program or data that cannot be changed in its user environment"
+Terme,2.3.95,flight model,end product that is intended for flight
+Terme,2.3.96,flight operations,all activities related to the planning, execution and evaluation of the control of the space segment when in orbit
+Terme,2.3.97,flight spare,spare flight model that could be used in place of the flight model
+Terme,2.3.98,fluence,time-integrated flux
+Terme,2.3.99,flux,number of particles passing through a given area in a specified time
+Terme,2.3.100,forward contamination,contamination of celestial bodies other than the Earth by terrestrial life forms in the course of spaceflight missions
+Terme,2.3.101,function,intended effect of a product
+Terme,2.3.102,function tree,hierarchical breakdown of a function into successive levels of function
+Terme,2.3.103,functional analysis,"process that describes completely the functions and their relationships, which are systematically characterised, classified and evaluated"
+Terme,2.3.104,ground segment,"part of a space system, located on ground, which monitors and controls space segment elements)"
+Terme,2.3.105,ground segment element,element within a ground segment
+Terme,2.3.106,ground segment equipment,equipment within a ground segment
+Terme,2.3.107,ground segment subsystem,subsystem within a ground segment
+Terme,2.3.108,ground segment system,system within a ground segment
+Terme,2.3.109,ground support equipment,"non flight product (hardware/software) used on ground to assemble, integrate, test, transport, access, handle, maintain, measure, calibrate, verify, protect or service a flight product (hardware/software)"
+Terme,2.3.110,handbook,"non-normative document providing background information, orientation, advice or recommendations related to one specific discipline or to a specific technique, technology, process or activity"
+Terme,2.3.111,hardware-software interaction analysis,analysis to verify that the software is specified to react to hardware failures as required
+Terme,2.3.112,hazard,existing or potential condition that can result in an accident
+Terme,2.3.113,hazard analysis,systematic and iterative process of the identification, classification and reduction of hazards
+Terme,2.3.114,hazard control,"preventive or mitigation measure, associated to a hazard scenario, which is introduced into the system design, production and operation to avoid the events or the consequences of the events"
+Terme,2.3.115,hazardous event,accident resulting from a hazard
+Terme,2.3.116,hot redundancy,redundancy where all entities are powered on with only one operating
+Terme,2.3.117,human factors,model of observed human physical and psycho-physiological behaviour in relation to environment and product
+Terme,2.3.118,hydrogen embrittlement,"mechanical and environmental process that results from the initial presence or absorption of excessive amounts of hydrogen in metals"
+Terme,2.3.119,implementation document,"formal response from the supplier to the customer's Project Requirements Document describing how all requirements will be met"
+Terme,2.3.120,incident,"unexpected event that might be, or could lead to, an operational interruption, disruption, loss, emergency, crisis or accident"
+Terme,2.3.121,informative,providing non-normative information intended to assist the understanding or use of requirements
+Terme,2.3.122,inhibit,design feature that prevents a function from undesirable execution
+Terme,2.3.123,inspection,determination of conformance to specified requirements
+Terme,2.3.124,integration,"functionally combining lower-level functional entities (hardware or software) so they operate together to constitute a higher-level functional entity"
+Terme,2.3.125,interchangeability,ability of a product to be used in place of another to fulfil the same requirements
+Terme,2.3.126,interface control document,"specification that describes the characteristics that must be controlled at the boundaries between systems, subsystems and other elements"
+Terme,2.3.127,interface definition document,document defining the design of one interface end
+Terme,2.3.128,launch base,composed of launch range and launch complexes
+Terme,2.3.129,launch campaign,"launch activities which include: • Launcher preparation and final integration • Payload processing and integration on the launcher • Launch Operations until lift-off, including Flight Data Gathering"
+Terme,2.3.130,launch complex,"facilities necessary to carry out the final integration of the launcher elements, of the payload into the launcher, as well as the launch operations"
+Terme,2.3.131,launch operations,all launch related activities taking place after completion of the activities necessary to deliver a fully integrated launcher up to reception of post flight data
+Terme,2.3.132,launch range,"systems, facilities and means, required to provide the necessary service and support for carrying out a launch campaign, including operations after lift-off and Flight Data Gathering, and to ensure safety and security of persons, assets and protection of the environment"
+Terme,2.3.133,launch segment,part of a space system which is used to transport space segment element(s) into space
+Terme,2.3.134,launch segment element,element within a launch segment
+Terme,2.3.135,launch segment equipment,equipment within a launch segment
+Terme,2.3.136,launch segment subsystem,subsystem within a launch segment
+Terme,2.3.137,launch segment system,system within a launch segment
+Terme,2.3.138,launch service,"activities required to conclude a launch service contract and to place a payload in the orbit, at the time, and under the payload environment conditions required by the customer"
+Terme,2.3.139,launch system,system comprising the launcher system and the launch complex
+Terme,2.3.140,launch vehicle,vehicle designed to transport payloads to space
+Terme,2.3.141,launcher element,building block of a launcher
+Terme,2.3.142,launcher production facilities,launcher element manufacturing facilities and testing facilities
+Terme,2.3.143,launcher system,"fully integrated launcher and the needed facilities for manufacturing, testing and delivering the launcher elements"
+Terme,2.3.144,life cycle,all phases in the life of a product from needs identification through disposal
+Terme,2.3.145,life profile,conditions to which a product is chronologically submitted from its manufacturing to its disposal
+Terme,2.3.146,lifetime,"period, or number of cycles, over which a product is required to perform according to its specification"
+Terme,2.3.147,linear energy transfer,energy deposited by a charged particle passing through a substance and locally absorbed per unit length of path
+Terme,2.3.148,lot,batch or portion of a batch
+Terme,2.3.149,maintainability,ease of performing maintenance on a product
+Terme,2.3.150,maintenance,"actions needed to retain a product in, or restore it to, a state in which it can perform its required function"
+Terme,2.3.151,major nonconformance,"nonconformance which can have an impact on the customer's requirements in the following areas and cases: • safety of people or equipment, • operational, functional or any technical requirements imposed by the business agreement, • reliability, maintainability, availability, • lifetime, • functional or dimensional interchangeability, • interfaces with hardware or software regulated by different business agreements, • changes to or deviations from approved qualification or acceptance test procedures, • project specific items which are proposed to be scrapped"
+Terme,2.3.152,material,"raw, semi-finished or finished substance (gaseous, liquid, solid) of given characteristics from which processing into a component or part is undertaken"
+Terme,2.3.153,maximum expected operating pressure,"highest pressure that a product is expected to experience during its mission life and retain its functionality, in association with its applicable operating environments"
+Terme,2.3.154,minor nonconformance,nonconformance which by definition cannot be classified as major
+Terme,2.3.155,mission,set of tasks, duties or functions to be accomplished by an element
+Terme,2.3.156,mission statement,document expressing the set of collected needs
+Terme,2.3.157,model,"physical or abstract representation used for calculations, predictions or further assessment"
+Terme,2.3.158,multipaction,"resonant back and forth flow of secondary electrons in a vacuum between two surfaces separated by a distance such that the electron transit time is an odd integral multiple of one half the period of the alternating voltage impressed on the surface"
+Terme,2.3.159,non-volatile residue,soluble or suspended material and insoluble particulate matter remaining after temperature-controlled evaporation of a volatile liquid
+Terme,2.3.160,nonconformance,non-fulfilment of a requirement
+Terme,2.3.161,normative,providing requirements for activities or their results
+Terme,2.3.162,offgassing,gaseous release from a material under atmospheric or near-atmospheric pressure
+Terme,2.3.163,off-the-shelf,procured from the market, even if not developed for space application
+Terme,2.3.164,outage,state of a product being unable to perform its required function
+Terme,2.3.165,outgassing,gaseous release from a material in vacuum conditions
+Terme,2.3.166,part,see "component"
+Terme,2.3.167,particle,unit of solid or liquid matter with observable size in a defined range
+Terme,2.3.168,payload,set of space segment elements
+Terme,2.3.169,performance,quantifiable characteristics of a function
+Terme,2.3.170,planetary protection,policy and the technical implementations to prevent forward and backward contamination
+Terme,2.3.171,preventive action,action to eliminate the cause of a potential nonconformance or other undesirable potential situation
+Terme,2.3.172,procedure,specified way to carry out an activity or process
+Terme,2.3.173,process,set of interrelated or interacting activities which transform inputs into outputs
+Terme,2.3.174,product,result of a process
+Terme,2.3.175,product assurance,"discipline devoted to the study, planning and implementation of activities intended to assure that the design, controls, methods and techniques in a project result in a satisfactory degree of quality in a product"
+Terme,2.3.176,product tree,hierarchical representation of the product into successive levels of detail
+Terme,2.3.177,project,"set of coordinated and controlled activities with start and finish dates, undertaken to achieve an objective conforming to specific requirements, including constraints of time, cost and resources"
+Terme,2.3.178,project requirements document,"documented information including technical and programmatic requirements, as well as political, commercial, and industrial constraints"
+Terme,2.3.179,protoflight,"approach based on a single model to be flown after it has been subjected to a qualification and acceptance test campaign"
+Terme,2.3.180,provision,"expression in the content of a normative document, that takes the form of a statement, an instruction, a recommendation or a requirement"
+Terme,2.3.181,qualification,that part of verification which demonstrates that the product meets specified qualification margins
+Terme,2.3.182,qualification margin,"increase in severity of the environmental, mechanical, electrical, EMC, or operational extreme levels expected to be encountered during the specified product lifetime for the purpose of design margin demonstration"
+Terme,2.3.183,qualification model,"model, which fully reflects all aspects of the flight model design, used for complete functional and environmental qualification testing"
+Terme,2.3.184,qualification test level,"test level reflecting the maximum level expected to be encountered during the flight product lifetime increased by qualification margins, or qualification margins on top of acceptance margins for thermal testing"
+Terme,2.3.185,quality,degree to which a set of characteristics of a product or process fulfils requirements
+Terme,2.3.186,quality assurance,part of quality management focused on providing confidence that quality requirements will be fulfilled
+Terme,2.3.187,quality control,part of quality management focused on fulfilling quality requirements
+Terme,2.3.188,redundancy,existence of more than one means for performing a given function with the intention of increasing reliability
+Terme,2.3.189,reliability,ability of an item to perform a required function under given conditions for a given time interval
+Terme,2.3.190,relifing,product assurance activity for the extension of the expiry datecode of a EEE component which is intended to be used for space application
+Terme,2.3.191,repair,"action on a nonconforming product or service to make it acceptable for the intended use"
+Terme,2.3.192,requirement,documented demand to be complied with
+Terme,2.3.193,residual risk,risk remaining after implementation of risk reduction measures
+Terme,2.3.194,review,determination of the suitability, adequacy or effectiveness of a product or process to achieve established objectives
+Terme,2.3.195,rework,action on a nonconforming product or service to make it conform to the requirements
+Terme,2.3.196,risk,"undesirable situation or circumstance that has both a likelihood of occurring and a potential negative consequence on a project"
+Terme,2.3.197,safe life,"required period during which a structural item, even containing the largest undetected flaw, is shown by analysis or testing not to fail catastrophically under the expected service load and environment"
+Terme,2.3.198,safe mode,"configuration of a spacecraft in which it can remain safely without ground segment intervention for a specified period"
+Terme,2.3.199,safety,state where an acceptable level of risk is not exceeded
+Terme,2.3.200,safety critical,"resulting in temporarily disabling but not life threatening injury, temporary occupational illness, major detrimental environmental effects, major damage to public or private properties, major damage to interfacing flight systems or major damage to ground facilities"
+Terme,2.3.201,safety critical function,"function that, if lost or degraded, or as a result of incorrect or inadvertent operation, can result in catastrophic or critical consequences"
+Terme,2.3.202,safing,"action of containment or control of emergency and warning situations, or placing a system (or part thereof), in a predetermined safe condition"
+Terme,2.3.203,scrap,action on a nonconforming product to preclude its originally intended use
+Terme,2.3.204,security,state where an acceptable level of risk arising from malevolent action is not exceeded
+Terme,2.3.205,segment,"set of elements or combination of systems that fulfils a major, self-contained, subset of the space mission objectives"
+Terme,2.3.206,service life,interval beginning with the last item inspection or flaw screening proof test after manufacturing, and ending with completion of its specified life
+Terme,2.3.207,severity,classification of a failure or undesired event according to the magnitude of its possible consequences
+Terme,2.3.208,shop traveller,document recording the complete production process, including repairs, malfunction of equipment, inspections, and reference to produced samples
+Terme,2.3.209,single point failure,part of a product that, if it fails, will result in the unrecoverable failure of that product
+Terme,2.3.210,software integration testing,testing in which software components, hardware components, or both are combined and tested to evaluate the interaction between them
+Terme,2.3.211,solar array,assembly of solar panels on a supporting structure with associated hardware
+Terme,2.3.212,solar cell assembly,solar cell together with interconnector, coverglass and, if used, by-pass diode
+Terme,2.3.213,solar panel,interconnected solar cell assemblies mounted on a substrate
+Terme,2.3.214,space debris,objects of human origin in Earth orbit or re-entering the Earth's atmosphere, including fragments and elements thereof, that no longer serve a useful purpose
+Terme,2.3.215,space mission,user-defined needs to be achieved by a space system
+Terme,2.3.216,space programme,set of related space projects managed in a coordinated way to contribute to an overall objective
+Terme,2.3.217,space segment,part of a space system, placed in space, to fulfil the space mission objectives
+Terme,2.3.218,space segment element,element within a space segment
+Terme,2.3.219,space segment equipment,equipment within a space segment
+Terme,2.3.220,space segment subsystem,subsystem within a space segment
+Terme,2.3.221,space segment system,system within a space segment
+Terme,2.3.222,space system,system that contains at least a space, a ground or a launch segment
+Terme,2.3.223,spacecraft,manned or unmanned vehicle designed to orbit or travel in space
+Terme,2.3.224,special process,process where the quality cannot be completely ensured by inspection of the resulting product only
+Terme,2.3.225,specification,document stating requirements
+Terme,2.3.226,stand-alone space segment element,space segment element that performs its mission independently of the rest of the space system
+Terme,2.3.227,standard,"normative document for use in invitations to tender and business agreements for implementing space related activities"
+Terme,2.3.228,statement of work,contractual document that describes and plans deliverables and activities required to complete a project
+Terme,2.3.229,stress-corrosion,combined action of sustained tensile stress and corrosion that can lead to premature failure of materials
+Terme,2.3.230,structural model,"structurally representative model of the flight model used for qualification of the structural design and for correlation with structural mathematical models"
+Terme,2.3.231,subsystem,part of a system fulfilling one or more of its functions
+Terme,2.3.232,supplier,organization or person that provides a product as part of a business agreement
+Terme,2.3.233,support segment,generic infrastructure and services used to support the development and operation of space system elements
+Terme,2.3.234,support system,see "support segment"
+Terme,2.3.235,system,set of interrelated or interacting functions constituted to achieve a specified objective
+Terme,2.3.236,tailoring,process by which standards are made applicable to a specific project by selection of existing requirements, with or without modification, or addition of new ones
+Terme,2.3.237,technical memorandum,"non-normative document providing useful information to the space community on a specific subject"
+Terme,2.3.238,test,measurement of product characteristics, performance or functions under representative environments
+Terme,2.3.239,thermal balance test,test conducted under steady state conditions to correlate and adjust the thermal mathematical model and verify the thermal design
+Terme,2.3.240,thermal model,"thermally representative model of the flight model used for verification of the thermal design and for correlation with thermal mathematical models"
+Terme,2.3.241,thermal vacuum test,test conducted in vacuum under predefined temperature conditions to demonstrate the capability of the test item to operate according to requirements
+Terme,2.3.242,third party,person or body that is recognized as being independent of the parties involved, as concerns the issue in question
+Terme,2.3.243,traceability,ability to track the history, location or application by means of documented records
+Terme,2.3.244,unit,see "equipment"
+Terme,2.3.245,validation,"process which demonstrates that the product is able to accomplish its intended use in the intended operational environment"
+Terme,2.3.246,verification,"process which demonstrates through the provision of objective evidence that the product is designed and produced according to its specifications and the agreed deviations and waivers, and is free of defects"
+Terme,2.3.247,visibly clean,absence of surface contamination when examined with a specific light source, angle of incidence and viewing distance using normal or magnified vision
+Terme,2.3.248,waiver,authorised departure from the originally specified requirements for a product, during or after production
+Terme,2.3.249,work breakdown structure,hierarchical representation of the activities necessary to complete a project
+Terme,2.3.250,work package,group of related tasks that are defined down to the lowest level within a work breakdown structure
+Abréviation,1,A/D,analogue-to-digital
+Abréviation,2,ABM,apogee boost motor
+Abréviation,3,AC,alternating current
+Abréviation,4,ADC,analogue-to-digital converter
+Abréviation,5,AIT,assembly, integration and test
+Abréviation,6,AIV,assembly, integration and verification
+Abréviation,7,AOCS,attitude and orbit control subsystem
+Abréviation,8,APS,active pixel sensor
+Abréviation,9,AQL,acceptance quality level
+Abréviation,10,AR,acceptance review
+Abréviation,11,ASIC,application specific integrated circuit
+Abréviation,12,ASTM,American Society for Testing and Materials
+Abréviation,13,ATOX,atomic oxygen
+Abréviation,14,AWG,American wire gauge
+Abréviation,15,BOL,beginning-of-life
+Abréviation,16,CAD,computer aided design
+Abréviation,17,CCB,configuration control board
+Abréviation,18,CCD,charge coupled device
+Abréviation,19,CCSDS,Consultative Committee for Space Data Systems
+Abréviation,20,CDR,critical design review
+Abréviation,21,CIDL,configuration item data list
+Abréviation,22,CIL,critical items list
+Abréviation,23,CoG,centre of gravity
+Abréviation,24,CoM,centre of mass
+Abréviation,25,COTS,commercial off-the-shelf
+Abréviation,26,CRR,commissioning result review
+Abréviation,27,CVCM,collected volatile condensable material
+Abréviation,28,DC,direct current
+Abréviation,29,DDF,design definition file
+Abréviation,30,DDR,detailed design review
+Abréviation,31,DJF,design justification file
+Abréviation,32,DML,declared materials list
+Abréviation,33,DMPL,declared mechanical parts list
+Abréviation,34,DPL,declared processes list
+Abréviation,35,DRB,delivery review board
+Abréviation,36,DRD,document requirements definition
+Abréviation,37,DRL,document requirements list
+Abréviation,38,ECLS,environmental control and life support
+Abréviation,39,ECSS,European Cooperation for Space Standardization
+Abréviation,40,EED,electro-explosive device
+Abréviation,41,EEE,electrical, electronic and electromechanical
+Abréviation,42,EGSE,electrical ground support equipment
+Abréviation,43,EIDP,end item data package
+Abréviation,44,ELR,end-of-life review
+Abréviation,45,EM,engineering model
+Abréviation,46,EMC,electromagnetic compatibility
+Abréviation,47,EMI,electromagnetic interference
+Abréviation,48,EN,European Standard
+Abréviation,49,EOL,end-of-life
+Abréviation,50,ESA,European Space Agency
+Abréviation,51,ESCC,European Space Components Coordination
+Abréviation,52,ESD,electrostatic discharge
+Abréviation,53,FDIR,failure detection isolation and recovery
+Abréviation,54,FM,flight model
+Abréviation,55,FMEA,failure modes and effects analysis
+Abréviation,56,FMECA,failure modes, effects and criticality analysis
+Abréviation,57,FOS,factor of safety
+Abréviation,58,FRR,flight readiness review
+Abréviation,59,FTA,fault tree analysis
+Abréviation,60,GEO,geostationary orbit
+Abréviation,61,GS,ground segment
+Abréviation,62,GSE,ground support equipment
+Abréviation,63,HMI,human-machine interface
+Abréviation,64,HSIA,hardware-software interaction analysis
+Abréviation,65,HW,hardware
+Abréviation,66,ICD,interface control document
+Abréviation,67,ILS,integrated logistic support
+Abréviation,68,IRD,interface requirements document
+Abréviation,69,ISO,International Organization for Standardization
+Abréviation,70,ISS,International Space Station
+Abréviation,71,I/F,interface
+Abréviation,72,I/O,input/output
+Abréviation,73,LEO,low Earth orbit
+Abréviation,74,LEOP,launch and early orbit phase
+Abréviation,75,LRR,launch readiness review
+Abréviation,76,MCR,mission close-out review
+Abréviation,77,MDD,mission description document
+Abréviation,78,MDP,maximum design pressure
+Abréviation,79,MDR,mission definition review
+Abréviation,80,MEOP,maximum expected operating pressure
+Abréviation,81,MGSE,mechanical ground support equipment
+Abréviation,82,MIP,mandatory inspection point
+Abréviation,83,MLI,multi-layer insulation
+Abréviation,84,MMIC,monolithic microwave integrated circuit
+Abréviation,85,MOI,moment of inertia
+Abréviation,86,NASA,National Aeronautics and Space Administration
+Abréviation,87,NCR,nonconformance report
+Abréviation,88,NDI,non-destructive inspection
+Abréviation,89,NDT,non-destructive test
+Abréviation,90,NRB,nonconformance review board
+Abréviation,91,N/A,not applicable
+Abréviation,92,OBDH,on-board data handling
+Abréviation,93,ORR,operational readiness review
+Abréviation,94,OTS,off-the-shelf
+Abréviation,95,PA,product assurance
+Abréviation,96,PCB,printed circuit board
+Abréviation,97,PDR,preliminary design review
+Abréviation,98,PFM,protoflight model
+Abréviation,99,PID,process identification document
+Abréviation,100,PMP,parts, materials and processes
+Abréviation,101,PRR,preliminary requirements review
+Abréviation,102,PTR,post test review
+Abréviation,103,QA,quality assurance
+Abréviation,104,QM,qualification model
+Abréviation,105,QR,qualification review
+Abréviation,106,RAMS,reliability, availability, maintainability and safety
+Abréviation,107,RB,requirements baseline
+Abréviation,108,RF,radio frequency
+Abréviation,109,RFA,request for approval
+Abréviation,110,RFD,request for deviation
+Abréviation,111,RFW,request for waiver
+Abréviation,112,RH,relative humidity
+Abréviation,113,RID,review item discrepancy
+Abréviation,114,ROD,review of design
+Abréviation,115,r.m.s.,root-mean-square
+Abréviation,116,SCC,stress-corrosion cracking
+Abréviation,117,SEE,single event effect
+Abréviation,118,SEP,system engineering plan
+Abréviation,119,SRR,system requirements review
+Abréviation,120,STM,structural-thermal model
+Abréviation,121,SVT,system validation test
+Abréviation,122,S/C,spacecraft
+Abréviation,123,SW,software
+Abréviation,124,TC,telecommand
+Abréviation,125,TCS,thermal control subsystem
+Abréviation,126,TM,telemetry
+Abréviation,127,TM/TC,telemetry/telecommand
+Abréviation,128,TML,total mass loss
+Abréviation,129,TRB,test review board
+Abréviation,130,TRL,technology readiness level
+Abréviation,131,TRR,test readiness review
+Abréviation,132,TS,technical specification
+Abréviation,133,TT&C,telemetry, tracking and command
+Abréviation,134,UTC,coordinated universal time
+Abréviation,135,UV,ultraviolet
+Abréviation,136,VCD,verification control document
+Abréviation,137,VP,verification plan
+Abréviation,138,WBS,work breakdown structure
