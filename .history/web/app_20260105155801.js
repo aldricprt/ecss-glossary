@@ -522,44 +522,12 @@ function showDbModal(db){
   const container = document.getElementById('dbTableContainer');
   const searchInput = document.getElementById('dbSearch');
   const rowsSelect = document.getElementById('dbRows');
-  const sortSelect = document.getElementById('dbSort');
   container.innerHTML = '';
 
   // keep a working copy
   let items = Array.isArray(db) ? db.slice() : [];
   let filtered = items;
   let page = 1;
-
-  function sortItems(arr, sortType){
-    const sorted = arr.slice();
-    switch(sortType){
-      case 'recent':
-        // Sort by updated_at or created_at descending (most recent first)
-        sorted.sort((a,b)=>{
-          const aTime = a.updated_at || a.created_at || '';
-          const bTime = b.updated_at || b.created_at || '';
-          return bTime.localeCompare(aTime);
-        });
-        break;
-      case 'oldest':
-        // Sort by created_at ascending (oldest first)
-        sorted.sort((a,b)=>{
-          const aTime = a.created_at || a.updated_at || '';
-          const bTime = b.created_at || b.updated_at || '';
-          return aTime.localeCompare(bTime);
-        });
-        break;
-      case 'alpha-asc':
-        // Sort A-Z by term
-        sorted.sort((a,b)=>(a.term||'').localeCompare(b.term||''));
-        break;
-      case 'alpha-desc':
-        // Sort Z-A by term
-        sorted.sort((a,b)=>(b.term||'').localeCompare(a.term||''));
-        break;
-    }
-    return sorted;
-  }
 
   function renderTable(){
     const rowsPerPage = parseInt(rowsSelect.value, 10) || 10;
@@ -609,7 +577,7 @@ function showDbModal(db){
       eBtn.addEventListener('click',(ev)=>{ ev.stopPropagation(); openEditor(it); });
       const dBtn = document.createElement('button'); dBtn.textContent='Delete'; dBtn.addEventListener('click',(ev)=>{ ev.stopPropagation(); if(confirm(`Delete "${it.term}"?`)){ deleteTerm(it.id); // reload
         // update local items then rerender after slight delay to let API complete
-        setTimeout(async ()=>{ items = await (tryFetch('/api/terms') || []); applyFiltersAndSort(); }, 250);
+        setTimeout(async ()=>{ items = await (tryFetch('/api/terms') || []); filtered = filterItems(searchInput.value); renderTable(); }, 250);
       }});
       tdAct.appendChild(eBtn); tdAct.appendChild(dBtn);
       tr.appendChild(tdAct);
@@ -638,28 +606,15 @@ function showDbModal(db){
     return items.filter(it => (it.term || '').toLowerCase().includes(s) || (it.definition || '').toLowerCase().includes(s));
   }
 
-  function applyFiltersAndSort(){
-    const searchQuery = searchInput.value;
-    const sortType = sortSelect.value;
-    // First filter
-    let result = filterItems(searchQuery);
-    // Then sort
-    result = sortItems(result, sortType);
-    filtered = result;
-    page = 1;
-    renderTable();
-  }
-
   // wire inputs
   searchInput.value = '';
   rowsSelect.value = '10';
-  sortSelect.value = 'recent';
-  searchInput.oninput = applyFiltersAndSort;
+  searchInput.oninput = ()=>{ filtered = filterItems(searchInput.value); page=1; renderTable(); };
   rowsSelect.onchange = ()=>{ page=1; renderTable(); };
-  sortSelect.onchange = applyFiltersAndSort;
 
   // initial render
-  applyFiltersAndSort();
+  filtered = items.slice();
+  renderTable();
 
   modal.classList.remove('hidden');
   modal.setAttribute('aria-hidden','false');
