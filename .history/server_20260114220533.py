@@ -101,7 +101,7 @@ def load_items():
                         changed = True
                     migrated.append(new)
                     continue
-                # migrate (handle old schema with 'type' field)
+                # migrate
                 new = dict(it)
                 t = it.get('type')
                 if t == 'Abréviation':
@@ -263,20 +263,11 @@ def create_term():
         return jsonify({'error': 'missing or invalid fields, required: term, definition'}), 400
     items = load_items()
     now = datetime.utcnow().isoformat() + 'Z'
-    # Parse tags: if it's a string (comma-separated), split and trim; if already list, use as-is
-    tags_input = data.get('tags', [])
-    if isinstance(tags_input, str):
-        tags = [t.strip() for t in tags_input.split(',') if t.strip()]
-    elif isinstance(tags_input, list):
-        tags = [t.strip() for t in tags_input if isinstance(t, str) and t.strip()]
-    else:
-        tags = []
     item = {
         'id': str(uuid.uuid4()),
         'term': data['term'].strip(),
         'definition': data['definition'].strip(),
         'abbreviation': data.get('abbreviation','').strip(),
-        'tags': tags,
         'created_at': now,
         'updated_at': now
     }
@@ -294,18 +285,6 @@ def update_term(term_id):
             it['term'] = data.get('term', it.get('term'))
             it['definition'] = data.get('definition', it.get('definition'))
             it['abbreviation'] = data.get('abbreviation', it.get('abbreviation', ''))
-            # Parse tags: if it's a string (comma-separated), split and trim; if already list, use as-is
-            if 'tags' in data:
-                tags_input = data['tags']
-                if isinstance(tags_input, str):
-                    tags = [t.strip() for t in tags_input.split(',') if t.strip()]
-                elif isinstance(tags_input, list):
-                    tags = [t.strip() for t in tags_input if isinstance(t, str) and t.strip()]
-                else:
-                    tags = it.get('tags', [])
-                it['tags'] = tags
-            elif 'tags' not in it:
-                it['tags'] = []
             it['updated_at'] = datetime.utcnow().isoformat() + 'Z'
             if 'created_at' not in it:
                 it['created_at'] = it['updated_at']

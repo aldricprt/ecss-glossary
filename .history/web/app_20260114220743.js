@@ -363,6 +363,8 @@ function debounce(fn, wait=200){
 }
 
 // Tag filtering
+let selectedTags = new Set();
+
 function getAllUniqueTags(){
   const tags = new Set();
   for(const item of glossary){

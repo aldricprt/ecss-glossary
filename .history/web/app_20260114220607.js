@@ -2,8 +2,6 @@ let glossary = [];
 let fuse = null;
 let usingApi = false;
 let currentView = 'glossary'; // 'glossary' or 'diagrams'
-let doSearch = null; // Will be defined in DOMContentLoaded
-let selectedTags = new Set();
 
 async function tryFetch(path){
   try{
@@ -362,93 +360,14 @@ function debounce(fn, wait=200){
   }
 }
 
-// Tag filtering
-function getAllUniqueTags(){
-  const tags = new Set();
-  for(const item of glossary){
-    if(item.tags && Array.isArray(item.tags)){
-      for(const tag of item.tags){
-        tags.add(tag);
-      }
-    }
-  }
-  return Array.from(tags).sort();
-}
-
-function filterByTags(results){
-  if(selectedTags.size === 0) return results;
-  // Return only results that have ALL selected tags
-  return results.filter(r=>{
-    const itemTags = new Set(r.item?.tags || r.tags || []);
-    for(const tag of selectedTags){
-      if(!itemTags.has(tag)) return false;
-    }
-    return true;
-  });
-}
-
-function renderTagFilters(){
-  const container = document.getElementById('tagFilterContainer');
-  if(!container) return;
-  
-  const tags = getAllUniqueTags();
-  container.innerHTML = '';
-  
-  for(const tag of tags){
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.textContent = tag;
-    btn.className = selectedTags.has(tag) ? 'tagFilterBtn active' : 'tagFilterBtn';
-    btn.addEventListener('click', ()=>{
-      if(selectedTags.has(tag)){
-        selectedTags.delete(tag);
-        btn.classList.remove('active');
-      }else{
-        selectedTags.add(tag);
-        btn.classList.add('active');
-      }
-      if(doSearch) doSearch();
-      updateClearTagsButton();
-    });
-    container.appendChild(btn);
-  }
-  
-  updateClearTagsButton();
-}
-
-function updateClearTagsButton(){
-  const btn = document.getElementById('clearTagFilters');
-  if(!btn) return;
-  if(selectedTags.size > 0){
-    btn.style.display = 'inline-block';
-  }else{
-    btn.style.display = 'none';
-  }
-}
-
 document.addEventListener('DOMContentLoaded', async ()=>{
   await loadGlossary();
   const q = document.getElementById('q');
-  doSearch = debounce(()=>{
+  const doSearch = debounce(()=>{
     const results = search(q.value);
-    const filtered = filterByTags(results);
-    render(filtered);
+    render(results);
   }, 150);
   q.addEventListener('input', doSearch);
-  
-  // Clear tag filters button
-  const clearTagFiltersBtn = document.getElementById('clearTagFilters');
-  if(clearTagFiltersBtn){
-    clearTagFiltersBtn.addEventListener('click', ()=>{
-      selectedTags.clear();
-      renderTagFilters();
-      doSearch();
-    });
-  }
-  
-  // Initial render of tag filters
-  renderTagFilters();
-  
   // Menu switching
   const menuGloss = document.getElementById('menuGlossary');
   const menuDiag = document.getElementById('menuDiagrams');

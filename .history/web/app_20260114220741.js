@@ -363,6 +363,8 @@ function debounce(fn, wait=200){
 }
 
 // Tag filtering
+let selectedTags = new Set();
+
 function getAllUniqueTags(){
   const tags = new Set();
   for(const item of glossary){
@@ -429,7 +431,7 @@ function updateClearTagsButton(){
 document.addEventListener('DOMContentLoaded', async ()=>{
   await loadGlossary();
   const q = document.getElementById('q');
-  doSearch = debounce(()=>{
+  const doSearch = debounce(()=>{
     const results = search(q.value);
     const filtered = filterByTags(results);
     render(filtered);

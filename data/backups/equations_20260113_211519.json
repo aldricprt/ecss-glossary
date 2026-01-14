@@ -1,0 +1,18 @@
+[
+  {
+    "id": "7952c89c-6912-4a1f-8017-b08245b4ac26",
+    "name": "Learning process general equation",
+    "content": "y = a x^{b}",
+    "description": "In one theory :\ny : cost\nx : unit number we want to calculate the cost\na : cost associated with the first unit produced\nb : negative value --> reflect that unit costs decrease as production quantity increases",
+    "created_at": "2026-01-13T20:57:59.917421Z",
+    "updated_at": "2026-01-13T21:12:45.013506Z"
+  },
+  {
+    "id": "bf0b5db8-7589-477e-8f71-901dd91ac360",
+    "name": "Elementary CER of order 1",
+    "content": "y = a /product x + b",
+    "description": "",
+    "created_at": "2026-01-13T21:13:32.402920Z",
+    "updated_at": "2026-01-13T21:14:06.396412Z"
+  }
+]

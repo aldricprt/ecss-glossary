@@ -2,8 +2,6 @@ let glossary = [];
 let fuse = null;
 let usingApi = false;
 let currentView = 'glossary'; // 'glossary' or 'diagrams'
-let doSearch = null; // Will be defined in DOMContentLoaded
-let selectedTags = new Set();
 
 async function tryFetch(path){
   try{
@@ -132,26 +130,6 @@ function mkResult(item, matches){
   p.innerHTML = defHtml;
   div.appendChild(h);
   div.appendChild(p);
-  // Display tags if present
-  if(item.tags && item.tags.length > 0){
-    const tagsDiv = document.createElement('div');
-    tagsDiv.style.marginBottom = '8px';
-    tagsDiv.style.display = 'flex';
-    tagsDiv.style.gap = '6px';
-    tagsDiv.style.flexWrap = 'wrap';
-    for(const tag of item.tags){
-      const tagEl = document.createElement('span');
-      tagEl.style.backgroundColor = 'rgba(77,161,255,0.15)';
-      tagEl.style.color = 'var(--accent)';
-      tagEl.style.padding = '2px 8px';
-      tagEl.style.borderRadius = '4px';
-      tagEl.style.fontSize = '12px';
-      tagEl.style.fontWeight = '500';
-      tagEl.textContent = tag;
-      tagsDiv.appendChild(tagEl);
-    }
-    div.appendChild(tagsDiv);
-  }
   // action buttons (edit / delete)
   const actions = document.createElement('div');
   actions.className = 'itemActions';
@@ -185,7 +163,6 @@ function openEditor(item){
   const term = document.getElementById('fieldTerm');
   const abbr = document.getElementById('fieldAbbreviation');
   const def = document.getElementById('fieldDefinition');
-  const tags = document.getElementById('fieldTags');
   const idf = document.getElementById('fieldId');
   editor.classList.remove('hidden');
   editor.setAttribute('aria-hidden','false');
@@ -194,14 +171,12 @@ function openEditor(item){
     term.value = item.term || '';
     abbr.value = item.abbreviation || '';
     def.value = item.definition || '';
-    tags.value = item.tags && item.tags.length > 0 ? item.tags.join(', ') : '';
     idf.value = item.id || '';
   }else{
     title.textContent = 'Add a new entry';
     term.value = '';
     abbr.value = '';
     def.value = '';
-    tags.value = '';
     idf.value = '';
   }
   document.getElementById('fieldTerm').focus();
@@ -362,93 +337,14 @@ function debounce(fn, wait=200){
   }
 }
 
-// Tag filtering
-function getAllUniqueTags(){
-  const tags = new Set();
-  for(const item of glossary){
-    if(item.tags && Array.isArray(item.tags)){
-      for(const tag of item.tags){
-        tags.add(tag);
-      }
-    }
-  }
-  return Array.from(tags).sort();
-}
-
-function filterByTags(results){
-  if(selectedTags.size === 0) return results;
-  // Return only results that have ALL selected tags
-  return results.filter(r=>{
-    const itemTags = new Set(r.item?.tags || r.tags || []);
-    for(const tag of selectedTags){
-      if(!itemTags.has(tag)) return false;
-    }
-    return true;
-  });
-}
-
-function renderTagFilters(){
-  const container = document.getElementById('tagFilterContainer');
-  if(!container) return;
-  
-  const tags = getAllUniqueTags();
-  container.innerHTML = '';
-  
-  for(const tag of tags){
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.textContent = tag;
-    btn.className = selectedTags.has(tag) ? 'tagFilterBtn active' : 'tagFilterBtn';
-    btn.addEventListener('click', ()=>{
-      if(selectedTags.has(tag)){
-        selectedTags.delete(tag);
-        btn.classList.remove('active');
-      }else{
-        selectedTags.add(tag);
-        btn.classList.add('active');
-      }
-      if(doSearch) doSearch();
-      updateClearTagsButton();
-    });
-    container.appendChild(btn);
-  }
-  
-  updateClearTagsButton();
-}
-
-function updateClearTagsButton(){
-  const btn = document.getElementById('clearTagFilters');
-  if(!btn) return;
-  if(selectedTags.size > 0){
-    btn.style.display = 'inline-block';
-  }else{
-    btn.style.display = 'none';
-  }
-}
-
 document.addEventListener('DOMContentLoaded', async ()=>{
   await loadGlossary();
   const q = document.getElementById('q');
-  doSearch = debounce(()=>{
+  const doSearch = debounce(()=>{
     const results = search(q.value);
-    const filtered = filterByTags(results);
-    render(filtered);
+    render(results);
   }, 150);
   q.addEventListener('input', doSearch);
-  
-  // Clear tag filters button
-  const clearTagFiltersBtn = document.getElementById('clearTagFilters');
-  if(clearTagFiltersBtn){
-    clearTagFiltersBtn.addEventListener('click', ()=>{
-      selectedTags.clear();
-      renderTagFilters();
-      doSearch();
-    });
-  }
-  
-  // Initial render of tag filters
-  renderTagFilters();
-  
   // Menu switching
   const menuGloss = document.getElementById('menuGlossary');
   const menuDiag = document.getElementById('menuDiagrams');
@@ -502,14 +398,13 @@ document.addEventListener('DOMContentLoaded', async ()=>{
     const abbrv = document.getElementById('fieldAbbreviation').value.trim();
     const termv = document.getElementById('fieldTerm').value.trim();
     const defv = document.getElementById('fieldDefinition').value.trim();
-    const tagsv = document.getElementById('fieldTags').value.trim();
     const idv = document.getElementById('fieldId').value;
     if(!termv || !defv){ alert('Term and definition are required'); return; }
     if(idv){
-      const updated = await updateTermAPI(idv, {term:termv, definition:defv, abbreviation: abbrv, tags: tagsv});
+      const updated = await updateTermAPI(idv, {term:termv, definition:defv, abbreviation: abbrv});
       if(updated){ await loadGlossary(); closeEditor(); doSearch(); }
     }else{
-      const added = await saveTerm({term:termv, definition:defv, abbreviation: abbrv, tags: tagsv});
+      const added = await saveTerm({term:termv, definition:defv, abbreviation: abbrv});
       if(added){ await loadGlossary(); closeEditor(); doSearch(); }
     }
   });

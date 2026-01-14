@@ -95,13 +95,9 @@ def load_items():
                     elif 'updated_at' not in new:
                         new['updated_at'] = new.get('created_at')
                         changed = True
-                    # Add tags field if missing
-                    if 'tags' not in new:
-                        new['tags'] = []
-                        changed = True
                     migrated.append(new)
                     continue
-                # migrate (handle old schema with 'type' field)
+                # migrate
                 new = dict(it)
                 t = it.get('type')
                 if t == 'Abréviation':
@@ -121,8 +117,6 @@ def load_items():
                 artificial_time = base_time + timedelta(hours=idx)
                 new['created_at'] = artificial_time.isoformat() + 'Z'
                 new['updated_at'] = new['created_at']
-                # Add tags field if missing
-                new['tags'] = new.get('tags', [])
                 migrated.append(new)
                 changed = True
             # If migration changed data, persist back
@@ -155,21 +149,6 @@ def save_images(images):
     backup_file(IMAGES_FILE)  # Backup before writing
     content = json.dumps(images, ensure_ascii=False, indent=2)
     atomic_write(IMAGES_FILE, content)
-
-
-def load_equations():
-    if EQUATIONS_FILE.exists():
-        try:
-            return json.loads(EQUATIONS_FILE.read_text(encoding='utf-8') or '[]')
-        except Exception:
-            return []
-    return []
-
-
-def save_equations(equations):
-    backup_file(EQUATIONS_FILE)  # Backup before writing
-    content = json.dumps(equations, ensure_ascii=False, indent=2)
-    atomic_write(EQUATIONS_FILE, content)
 
 
 @app.route('/')
@@ -263,20 +242,11 @@ def create_term():
         return jsonify({'error': 'missing or invalid fields, required: term, definition'}), 400
     items = load_items()
     now = datetime.utcnow().isoformat() + 'Z'
-    # Parse tags: if it's a string (comma-separated), split and trim; if already list, use as-is
-    tags_input = data.get('tags', [])
-    if isinstance(tags_input, str):
-        tags = [t.strip() for t in tags_input.split(',') if t.strip()]
-    elif isinstance(tags_input, list):
-        tags = [t.strip() for t in tags_input if isinstance(t, str) and t.strip()]
-    else:
-        tags = []
     item = {
         'id': str(uuid.uuid4()),
         'term': data['term'].strip(),
         'definition': data['definition'].strip(),
         'abbreviation': data.get('abbreviation','').strip(),
-        'tags': tags,
         'created_at': now,
         'updated_at': now
     }
@@ -294,18 +264,6 @@ def update_term(term_id):
             it['term'] = data.get('term', it.get('term'))
             it['definition'] = data.get('definition', it.get('definition'))
             it['abbreviation'] = data.get('abbreviation', it.get('abbreviation', ''))
-            # Parse tags: if it's a string (comma-separated), split and trim; if already list, use as-is
-            if 'tags' in data:
-                tags_input = data['tags']
-                if isinstance(tags_input, str):
-                    tags = [t.strip() for t in tags_input.split(',') if t.strip()]
-                elif isinstance(tags_input, list):
-                    tags = [t.strip() for t in tags_input if isinstance(t, str) and t.strip()]
-                else:
-                    tags = it.get('tags', [])
-                it['tags'] = tags
-            elif 'tags' not in it:
-                it['tags'] = []
             it['updated_at'] = datetime.utcnow().isoformat() + 'Z'
             if 'created_at' not in it:
                 it['created_at'] = it['updated_at']
@@ -322,60 +280,6 @@ def delete_term(term_id):
     if len(new) == len(items):
         return jsonify({'error': 'not found'}), 404
     save_items(new)
-    return jsonify({'deleted': True})
-
-
-# Equations endpoints
-@app.route('/api/equations', methods=['GET'])
-def list_equations():
-    equations = load_equations()
-    return jsonify(equations)
-
-
-@app.route('/api/equations', methods=['POST'])
-def create_equation():
-    data = request.get_json(silent=True) or {}
-    required = ['name', 'content']
-    if not all(k in data and isinstance(data[k], str) and data[k].strip() for k in required):
-        return jsonify({'error': 'missing or invalid fields, required: name, content'}), 400
-    equations = load_equations()
-    now = datetime.utcnow().isoformat() + 'Z'
-    equation = {
-        'id': str(uuid.uuid4()),
-        'name': data['name'].strip(),
-        'content': data['content'].strip(),
-        'description': data.get('description', '').strip(),
-        'created_at': now,
-        'updated_at': now
-    }
-    equations.append(equation)
-    save_equations(equations)
-    return jsonify(equation), 201
-
-
-@app.route('/api/equations/<eq_id>', methods=['PUT'])
-def update_equation(eq_id):
-    data = request.get_json(silent=True) or {}
-    equations = load_equations()
-    for i, eq in enumerate(equations):
-        if eq.get('id') == eq_id:
-            eq['name'] = data.get('name', eq.get('name'))
-            eq['content'] = data.get('content', eq.get('content'))
-            eq['description'] = data.get('description', eq.get('description', ''))
-            eq['updated_at'] = datetime.utcnow().isoformat() + 'Z'
-            equations[i] = eq
-            save_equations(equations)
-            return jsonify(eq)
-    return jsonify({'error': 'not found'}), 404
-
-
-@app.route('/api/equations/<eq_id>', methods=['DELETE'])
-def delete_equation(eq_id):
-    equations = load_equations()
-    new = [eq for eq in equations if eq.get('id') != eq_id]
-    if len(new) == len(equations):
-        return jsonify({'error': 'not found'}), 404
-    save_equations(new)
     return jsonify({'deleted': True})
 
 

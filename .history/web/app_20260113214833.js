@@ -2,8 +2,6 @@ let glossary = [];
 let fuse = null;
 let usingApi = false;
 let currentView = 'glossary'; // 'glossary' or 'diagrams'
-let doSearch = null; // Will be defined in DOMContentLoaded
-let selectedTags = new Set();
 
 async function tryFetch(path){
   try{
@@ -132,26 +130,6 @@ function mkResult(item, matches){
   p.innerHTML = defHtml;
   div.appendChild(h);
   div.appendChild(p);
-  // Display tags if present
-  if(item.tags && item.tags.length > 0){
-    const tagsDiv = document.createElement('div');
-    tagsDiv.style.marginBottom = '8px';
-    tagsDiv.style.display = 'flex';
-    tagsDiv.style.gap = '6px';
-    tagsDiv.style.flexWrap = 'wrap';
-    for(const tag of item.tags){
-      const tagEl = document.createElement('span');
-      tagEl.style.backgroundColor = 'rgba(77,161,255,0.15)';
-      tagEl.style.color = 'var(--accent)';
-      tagEl.style.padding = '2px 8px';
-      tagEl.style.borderRadius = '4px';
-      tagEl.style.fontSize = '12px';
-      tagEl.style.fontWeight = '500';
-      tagEl.textContent = tag;
-      tagsDiv.appendChild(tagEl);
-    }
-    div.appendChild(tagsDiv);
-  }
   // action buttons (edit / delete)
   const actions = document.createElement('div');
   actions.className = 'itemActions';
@@ -185,7 +163,6 @@ function openEditor(item){
   const term = document.getElementById('fieldTerm');
   const abbr = document.getElementById('fieldAbbreviation');
   const def = document.getElementById('fieldDefinition');
-  const tags = document.getElementById('fieldTags');
   const idf = document.getElementById('fieldId');
   editor.classList.remove('hidden');
   editor.setAttribute('aria-hidden','false');
@@ -194,14 +171,12 @@ function openEditor(item){
     term.value = item.term || '';
     abbr.value = item.abbreviation || '';
     def.value = item.definition || '';
-    tags.value = item.tags && item.tags.length > 0 ? item.tags.join(', ') : '';
     idf.value = item.id || '';
   }else{
     title.textContent = 'Add a new entry';
     term.value = '';
     abbr.value = '';
     def.value = '';
-    tags.value = '';
     idf.value = '';
   }
   document.getElementById('fieldTerm').focus();
@@ -362,93 +337,14 @@ function debounce(fn, wait=200){
   }
 }
 
-// Tag filtering
-function getAllUniqueTags(){
-  const tags = new Set();
-  for(const item of glossary){
-    if(item.tags && Array.isArray(item.tags)){
-      for(const tag of item.tags){
-        tags.add(tag);
-      }
-    }
-  }
-  return Array.from(tags).sort();
-}
-
-function filterByTags(results){
-  if(selectedTags.size === 0) return results;
-  // Return only results that have ALL selected tags
-  return results.filter(r=>{
-    const itemTags = new Set(r.item?.tags || r.tags || []);
-    for(const tag of selectedTags){
-      if(!itemTags.has(tag)) return false;
-    }
-    return true;
-  });
-}
-
-function renderTagFilters(){
-  const container = document.getElementById('tagFilterContainer');
-  if(!container) return;
-  
-  const tags = getAllUniqueTags();
-  container.innerHTML = '';
-  
-  for(const tag of tags){
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.textContent = tag;
-    btn.className = selectedTags.has(tag) ? 'tagFilterBtn active' : 'tagFilterBtn';
-    btn.addEventListener('click', ()=>{
-      if(selectedTags.has(tag)){
-        selectedTags.delete(tag);
-        btn.classList.remove('active');
-      }else{
-        selectedTags.add(tag);
-        btn.classList.add('active');
-      }
-      if(doSearch) doSearch();
-      updateClearTagsButton();
-    });
-    container.appendChild(btn);
-  }
-  
-  updateClearTagsButton();
-}
-
-function updateClearTagsButton(){
-  const btn = document.getElementById('clearTagFilters');
-  if(!btn) return;
-  if(selectedTags.size > 0){
-    btn.style.display = 'inline-block';
-  }else{
-    btn.style.display = 'none';
-  }
-}
-
 document.addEventListener('DOMContentLoaded', async ()=>{
   await loadGlossary();
   const q = document.getElementById('q');
-  doSearch = debounce(()=>{
+  const doSearch = debounce(()=>{
     const results = search(q.value);
-    const filtered = filterByTags(results);
-    render(filtered);
+    render(results);
   }, 150);
   q.addEventListener('input', doSearch);
-  
-  // Clear tag filters button
-  const clearTagFiltersBtn = document.getElementById('clearTagFilters');
-  if(clearTagFiltersBtn){
-    clearTagFiltersBtn.addEventListener('click', ()=>{
-      selectedTags.clear();
-      renderTagFilters();
-      doSearch();
-    });
-  }
-  
-  // Initial render of tag filters
-  renderTagFilters();
-  
   // Menu switching
   const menuGloss = document.getElementById('menuGlossary');
   const menuDiag = document.getElementById('menuDiagrams');
@@ -502,14 +398,13 @@ document.addEventListener('DOMContentLoaded', async ()=>{
     const abbrv = document.getElementById('fieldAbbreviation').value.trim();
     const termv = document.getElementById('fieldTerm').value.trim();
     const defv = document.getElementById('fieldDefinition').value.trim();
-    const tagsv = document.getElementById('fieldTags').value.trim();
     const idv = document.getElementById('fieldId').value;
     if(!termv || !defv){ alert('Term and definition are required'); return; }
     if(idv){
-      const updated = await updateTermAPI(idv, {term:termv, definition:defv, abbreviation: abbrv, tags: tagsv});
+      const updated = await updateTermAPI(idv, {term:termv, definition:defv, abbreviation: abbrv});
       if(updated){ await loadGlossary(); closeEditor(); doSearch(); }
     }else{
-      const added = await saveTerm({term:termv, definition:defv, abbreviation: abbrv, tags: tagsv});
+      const added = await saveTerm({term:termv, definition:defv, abbreviation: abbrv});
       if(added){ await loadGlossary(); closeEditor(); doSearch(); }
     }
   });
@@ -839,193 +734,3 @@ function showDiagModal(imgs){
 function renderGallery(imgs){
   showDiagModal(imgs);
 }
-// Equations management
-function openEquationEditor(equation){
-  const editor = document.getElementById('equationEditor');
-  const title = document.getElementById('eqEditorTitle');
-  const nameField = document.getElementById('eqName');
-  const contentField = document.getElementById('eqContent');
-  const descField = document.getElementById('eqDescription');
-  const idField = document.getElementById('eqId');
-  
-  editor.classList.remove('hidden');
-  editor.setAttribute('aria-hidden','false');
-  
-  if(equation){
-    title.textContent = 'Edit equation';
-    nameField.value = equation.name || '';
-    contentField.value = equation.content || '';
-    descField.value = equation.description || '';
-    idField.value = equation.id || '';
-  }else{
-    title.textContent = 'Add a new equation';
-    nameField.value = '';
-    contentField.value = '';
-    descField.value = '';
-    idField.value = '';
-  }
-  nameField.focus();
-}
-
-function closeEquationEditor(){
-  const editor = document.getElementById('equationEditor');
-  editor.classList.add('hidden');
-  editor.setAttribute('aria-hidden','true');
-}
-
-async function saveEquation(name, content, description, id){
-  try{
-    if(id){
-      const resp = await fetch(`/api/equations/${id}`, {
-        method: 'PUT',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({name, content, description})
-      });
-      if(!resp.ok) throw new Error('Failed to update');
-      return await resp.json();
-    }else{
-      const resp = await fetch('/api/equations', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({name, content, description})
-      });
-      if(!resp.ok) throw new Error('Failed to create');
-      return await resp.json();
-    }
-  }catch(e){
-    alert('Could not save equation. Is the server running?');
-    return null;
-  }
-}
-
-async function deleteEquation(id){
-  try{
-    const resp = await fetch(`/api/equations/${id}`, {method:'DELETE'});
-    if(!resp.ok) throw new Error('Delete failed');
-    // Reload equations
-    const eqs = await tryFetch('/api/equations') || [];
-    renderEquationsList(eqs);
-  }catch(e){
-    alert('Could not delete equation. Is the server running?');
-  }
-}
-
-function renderEquationsList(equations){
-  const container = document.getElementById('equationsList');
-  const searchField = document.getElementById('eqSearch');
-  container.innerHTML = '';
-  
-  let filtered = equations;
-  
-  function filterEquations(q){
-    const s = (q||'').trim().toLowerCase();
-    if(!s) return equations.slice();
-    return equations.filter(eq => 
-      (eq.name || '').toLowerCase().includes(s) || 
-      (eq.content || '').toLowerCase().includes(s) || 
-      (eq.description || '').toLowerCase().includes(s)
-    );
-  }
-  
-  function renderList(){
-    container.innerHTML = '';
-    if(filtered.length === 0){
-      container.textContent = 'No equations found.';
-      return;
-    }
-    for(const eq of filtered){
-      const card = document.createElement('div');
-      card.className = 'item';
-      const h = document.createElement('h3');
-      h.textContent = eq.name || '';
-      const p = document.createElement('p');
-      p.style.fontSize = '15px';
-      p.style.padding = '8px 0';
-      // Render LaTeX with KaTeX if available
-      if(window.katex){
-        try{
-          katex.render(eq.content || '', p, {
-            throwOnError: false,
-            displayMode: true
-          });
-        }catch(e){
-          // Fallback to plain text if LaTeX rendering fails
-          p.style.fontFamily = 'monospace';
-          p.style.whiteSpace = 'pre-wrap';
-          p.textContent = eq.content || '';
-        }
-      }else{
-        p.style.fontFamily = 'monospace';
-        p.style.whiteSpace = 'pre-wrap';
-        p.textContent = eq.content || '';
-      }
-      if(eq.description){
-        const desc = document.createElement('p');
-        desc.style.color = 'var(--muted)';
-        desc.style.fontSize = '14px';
-        desc.style.whiteSpace = 'pre-wrap';
-        desc.textContent = eq.description;
-        card.appendChild(h);
-        card.appendChild(p);
-        card.appendChild(desc);
-      }else{
-        card.appendChild(h);
-        card.appendChild(p);
-      }
-      const actions = document.createElement('div');
-      actions.className = 'itemActions';
-      const editBtn = document.createElement('button');
-      editBtn.textContent = 'Edit';
-      editBtn.addEventListener('click', (ev)=>{
-        ev.stopPropagation();
-        openEquationEditor(eq);
-      });
-      const delBtn = document.createElement('button');
-      delBtn.textContent = 'Delete';
-      delBtn.addEventListener('click', (ev)=>{
-        ev.stopPropagation();
-        if(confirm(`Delete equation "${eq.name}"?`)) deleteEquation(eq.id);
-      });
-      actions.appendChild(editBtn);
-      actions.appendChild(delBtn);
-      card.appendChild(actions);
-      container.appendChild(card);
-    }
-  }
-  
-  // Wire search
-  searchField.value = '';
-  searchField.oninput = ()=>{
-    filtered = filterEquations(searchField.value);
-    renderList();
-  };
-  
-  renderList();
-}
-
-// Wire equation editor buttons
-document.addEventListener('DOMContentLoaded', ()=>{
-  const eqShowAdd = document.getElementById('eqShowAdd');
-  eqShowAdd && eqShowAdd.addEventListener('click', ()=>openEquationEditor());
-  
-  const eqCancelBtn = document.getElementById('eqCancelBtn');
-  eqCancelBtn && eqCancelBtn.addEventListener('click', ()=>closeEquationEditor());
-  
-  const eqForm = document.getElementById('eqForm');
-  eqForm && eqForm.addEventListener('submit', async (ev)=>{
-    ev.preventDefault();
-    const name = document.getElementById('eqName').value.trim();
-    const content = document.getElementById('eqContent').value.trim();
-    const description = document.getElementById('eqDescription').value.trim();
-    const id = document.getElementById('eqId').value;
-    
-    if(!name || !content){ alert('Name and equation/formula are required'); return; }
-    
-    const result = await saveEquation(name, content, description, id);
-    if(result){
-      closeEquationEditor();
-      const eqs = await tryFetch('/api/equations') || [];
-      renderEquationsList(eqs);
-    }
-  });
-}, {once: true});

@@ -3,174 +3,264 @@
     "id": "8193e291-21b5-41b7-bedb-5acafb1a9428",
     "term": "Basis Of Estimates",
     "definition": "Basis Of Estimates",
-    "abbreviation": "BOE"
+    "abbreviation": "BOE",
+    "created_at": "2025-12-13T21:27:55.000117Z",
+    "updated_at": "2025-12-13T21:27:55.000117Z"
   },
   {
     "id": "cef31e63-71d5-46cf-b34e-62ef7c15082f",
     "term": "Federal Acquisition Regulation",
     "definition": "Federal Acquisition Regulation",
-    "abbreviation": "FAR"
+    "abbreviation": "FAR",
+    "created_at": "2025-12-13T22:27:55.000117Z",
+    "updated_at": "2025-12-13T22:27:55.000117Z"
   },
   {
     "id": "ed854d84-89a9-409f-89af-2ab9eca05a6f",
     "term": "Integrated product teams",
     "definition": "Integrated product teams",
-    "abbreviation": "IPTs"
+    "abbreviation": "IPTs",
+    "created_at": "2025-12-13T23:27:55.000117Z",
+    "updated_at": "2025-12-13T23:27:55.000117Z"
   },
   {
     "id": "cc357b05-5bf1-4009-8fab-989dae11f092",
     "term": "Parametric estimating",
     "definition": "technique that develops cost estimates based upon the examination and validation of the relationship which exists between projet characteristics (technical, programmatic, cost) and project resources consumed (during development, manufacture, maintenance and modification).\n\nTwo types :\n-simple : CERs = 1 cost driver\n-complex : multiple CERs",
-    "abbreviation": ""
+    "abbreviation": "",
+    "created_at": "2025-12-14T00:27:55.000117Z",
+    "updated_at": "2025-12-14T00:27:55.000117Z"
   },
   {
     "id": "14623a32-d419-49a1-a205-e95e7a021884",
     "term": "Cost estimating relationships",
     "definition": "Cost estimating relationships. A CER is always a mathematical relationship and always involves numbers. Most common forms : algebraic equations and lookup tables",
-    "abbreviation": "CERs"
+    "abbreviation": "CERs",
+    "created_at": "2025-12-14T01:27:55.000117Z",
+    "updated_at": "2025-12-14T01:27:55.000117Z"
   },
   {
     "id": "8d95940e-584f-4732-8c96-e5319e4bd590",
     "term": "Parametric Cost Estimating Initiative",
     "definition": "Parametric Cost Estimating Initiative",
-    "abbreviation": "PCEI"
+    "abbreviation": "PCEI",
+    "created_at": "2025-12-14T02:27:55.000117Z",
+    "updated_at": "2025-12-14T02:27:55.000117Z"
   },
   {
     "id": "03274ff8-5139-4b50-a48e-50f7c1e8d95e",
     "term": "Truth in Negotiations Act",
     "definition": "Truth in Negotiations Act : U.S. federal law that requires contractors to provide the government with complete, accurate, and current cost or pricing data when negotiating certain types of contracts.\nIts purpose is to ensure fair and transparent pricing, preventing contractors from overcharging the government during negotiations.",
-    "abbreviation": "TINA"
+    "abbreviation": "TINA",
+    "created_at": "2025-12-14T03:27:55.000117Z",
+    "updated_at": "2025-12-14T03:27:55.000117Z"
   },
   {
     "id": "ce5482b1-f6c7-4056-bc76-b0a2e3988f46",
     "term": "Bill of Material",
     "definition": "Bill of Material :  detailed list of all the parts, components, raw materials, and assemblies needed to manufacture a product, along with their quantities and specifications.",
-    "abbreviation": "BOM"
+    "abbreviation": "BOM",
+    "created_at": "2025-12-14T04:27:55.000117Z",
+    "updated_at": "2025-12-14T04:27:55.000117Z"
   },
   {
     "id": "8014133f-751f-47c9-99c8-7fe8dc55ab31",
     "term": "Point estimate",
     "definition": "A single number from an estimating model at a specific moment",
-    "abbreviation": ""
+    "abbreviation": "",
+    "created_at": "2025-12-14T05:27:55.000117Z",
+    "updated_at": "2025-12-14T05:27:55.000117Z"
   },
   {
     "id": "b33d0c06-e824-49a2-bd0a-d820ec4ff565",
     "term": "Range estimates",
     "definition": "Possible range and likelihood of cost outcomes",
-    "abbreviation": ""
+    "abbreviation": "",
+    "created_at": "2025-12-14T06:27:55.000117Z",
+    "updated_at": "2025-12-14T06:27:55.000117Z"
   },
   {
     "id": "b44882b8-eb9e-40c4-85f7-4c7ccf363a54",
     "term": "Work Breakdown Structure",
     "definition": "Work Breakdown Structure : hierarchical decomposition of a project into smaller, manageable tasks or deliverables.",
-    "abbreviation": "WBS"
+    "abbreviation": "WBS",
+    "created_at": "2025-12-14T07:27:55.000117Z",
+    "updated_at": "2025-12-14T07:27:55.000117Z"
   },
   {
     "id": "e21590b3-6264-41ee-8acd-560f8c1db077",
     "term": "Cost model",
     "definition": "Forecast of future costs based on historical data",
-    "abbreviation": ""
+    "abbreviation": "",
+    "created_at": "2025-12-14T08:27:55.000117Z",
+    "updated_at": "2025-12-14T08:27:55.000117Z"
   },
   {
     "id": "1e35719f-8939-4884-bb59-dd802365437f",
     "term": "Management Information System",
     "definition": "Management Information System : system that collects, processes, and organizes data to provide managers with the information they need to make effective decisions.",
-    "abbreviation": "MIS"
+    "abbreviation": "MIS",
+    "created_at": "2025-12-14T09:27:55.000117Z",
+    "updated_at": "2025-12-14T09:27:55.000117Z"
   },
   {
     "id": "802805af-6b27-4928-98c3-edb35a0b6d76",
     "term": "Material Requirements Planning",
     "definition": "Material Requirements Planning : system used to ensure that the right materials are available for production at the right time.",
-    "abbreviation": "MRP"
+    "abbreviation": "MRP",
+    "created_at": "2025-12-14T10:27:55.000117Z",
+    "updated_at": "2025-12-14T10:27:55.000117Z"
   },
   {
     "id": "83bbe910-38b1-4bd7-9e26-80ea082e2215",
     "term": "ERP",
     "definition": "Enterprise Resource Planning : integrated software system that centralizes and manages all core business processes—such as finance, supply chain, production, HR, and sales—within a single platform.",
-    "abbreviation": ""
+    "abbreviation": "",
+    "created_at": "2025-12-14T11:27:55.000117Z",
+    "updated_at": "2025-12-14T11:27:55.000117Z"
   },
   {
     "id": "273cd3c3-fb8b-47c4-9a11-942c7ce416de",
     "term": "Request For Information",
     "definition": "A Request for Information (RFI) is a formal document issued by an organization to gather general information from industry or potential suppliers about available solutions, technologies, capabilities, and indicative costs. It is used primarily for market research and acquisition planning and does not constitute a solicitation or a commitment to procure goods or services.",
-    "abbreviation": "RFI"
+    "abbreviation": "RFI",
+    "created_at": "2025-12-14T12:27:55.000117Z",
+    "updated_at": "2025-12-14T12:27:55.000117Z"
   },
   {
     "id": "253373f6-0197-4f03-8c74-7736deafd104",
     "term": "Request For Proposal",
     "definition": "A Request for Proposal (RFP) is a formal solicitation issued by an organization inviting qualified vendors to submit detailed proposals describing how they would meet defined technical, cost, and schedule requirements. The RFP is used as part of a competitive procurement process and serves as the basis for evaluating offers and awarding a contract.",
-    "abbreviation": "RFP"
+    "abbreviation": "RFP",
+    "created_at": "2025-12-14T13:27:55.000117Z",
+    "updated_at": "2025-12-14T13:27:55.000117Z"
   },
   {
     "id": "bdcf4464-403a-4580-9616-165ce0565020",
     "term": "Fundamental Assumption of Parametric Estimating",
     "definition": "If carefully selected and adjusted historical project outcomes are fitted with sufficient accuracy with a set of mathematical relationships, then that same set of mathematical relationships will estimate with similar accuracy the outcomes of sufficiently similar future projects.",
-    "abbreviation": ""
+    "abbreviation": "",
+    "created_at": "2025-12-14T14:27:55.000117Z",
+    "updated_at": "2025-12-14T14:27:55.000117Z"
   },
   {
     "id": "2ce78afb-b0d7-4e84-a7bb-146489421b22",
     "term": "Lookup Tables",
     "definition": "Lookup tables are structured reference tables that provide predefined values or parameters corresponding to specific input variables. In parametric estimating, lookup tables are used to quickly retrieve cost factors, adjustment coefficients, or performance values based on historical data, empirical models, or standardized assumptions, thereby reducing computation effort and ensuring consistency in estimates.",
-    "abbreviation": ""
+    "abbreviation": "",
+    "created_at": "2025-12-14T15:27:55.000117Z",
+    "updated_at": "2025-12-14T15:27:55.000117Z"
   },
   {
     "id": "a63e22ae-bc9a-4906-bd1b-2d9ab0e8404c",
     "term": "Correlation",
     "definition": "Correlation is a statistical measure that describes the strength and direction of the relationship between two variables. In parametric estimating, correlation is used to assess how well a cost driver (such as weight, size, complexity, or performance) is related to cost, and to evaluate the suitability of variables for inclusion in cost estimating relationships (CERs). A higher correlation indicates a stronger association, but does not necessarily imply causation.",
-    "abbreviation": ""
+    "abbreviation": "",
+    "created_at": "2025-12-14T16:27:55.000117Z",
+    "updated_at": "2025-12-14T16:27:55.000117Z"
   },
   {
     "id": "1467f9d3-9cbc-478e-a029-8773ca80f6e7",
     "term": "Ordinary Least Squares",
     "definition": "Ordinary Least Squares (OLS) is a statistical regression method used to estimate the parameters of a linear model by minimizing the sum of the squared differences between observed values and model-predicted values. In parametric estimating, OLS is commonly used to derive cost estimating relationships (CERs) from historical data, providing coefficient estimates that best fit the data under the assumption of linearity, independent errors, constant variance, and normally distributed residuals.",
-    "abbreviation": "OLS"
+    "abbreviation": "OLS",
+    "created_at": "2025-12-14T17:27:55.000117Z",
+    "updated_at": "2025-12-14T17:27:55.000117Z"
   },
   {
     "id": "fbb3b500-8ce9-4a4f-9636-822a6120dfc5",
     "term": "Validation",
     "definition": "Validation is the process, or act, of demonstrating the complex model’s ability to\nfunction as a credible estimating tool. Validation ensures:\n• The model is a good predictor of costs;\n• Estimating system policies and procedures are established and enforced;\n• Key personnel have proper experience and are adequately trained.",
-    "abbreviation": ""
+    "abbreviation": "",
+    "created_at": "2025-12-14T18:27:55.000117Z",
+    "updated_at": "2025-12-14T18:27:55.000117Z"
   },
   {
     "id": "73a61afb-936b-40b8-af21-92aed8b50c6d",
     "term": "Earned Value Management",
     "definition": "Earned Value Management (EVM) is a structured project management methodology that integrates scope, schedule, and cost to assess project performance and progress. EVM uses objective measures of work performed to compare planned work, completed work, and actual costs, enabling early identification of cost and schedule variances and supporting informed management decisions.",
-    "abbreviation": "EVM"
+    "abbreviation": "EVM",
+    "created_at": "2025-12-14T19:27:55.000117Z",
+    "updated_at": "2025-12-14T19:27:55.000117Z"
   },
   {
     "id": "5a6f0b35-f579-4787-92ec-036bc436bdd2",
     "term": "Inflation",
     "definition": "Inflation is the sustained increase in the general price level of goods and services over time, resulting in a reduction in the purchasing power of money. In cost estimating and acquisition, inflation is accounted for by adjusting costs across time to reflect expected changes in prices, ensuring that estimates expressed in future or then-year dollars accurately represent anticipated economic conditions.",
-    "abbreviation": ""
+    "abbreviation": "",
+    "created_at": "2025-12-14T20:27:55.000117Z",
+    "updated_at": "2025-12-14T20:27:55.000117Z"
   },
   {
     "id": "96e5ca26-0fc0-43fe-9b07-e1cbf0928b1d",
     "term": "Recurring Cost",
     "definition": "Recurring cost refers to the portion of total cost that is incurred repeatedly for each additional unit produced or service delivered. In acquisition and cost estimating, recurring costs typically include direct labor, direct materials, and other unit-level production or operating expenses, and they scale with the quantity of units. Recurring costs are often distinguished from non-recurring costs, which are incurred only once or infrequently.",
-    "abbreviation": ""
+    "abbreviation": "",
+    "created_at": "2025-12-14T21:27:55.000117Z",
+    "updated_at": "2025-12-14T21:27:55.000117Z"
   },
   {
     "id": "1b649220-f674-4ab6-ac12-6ebda75c4cc8",
     "term": "Non-Recurring Costs",
     "definition": "Non-recurring costs (NRC) are costs that are incurred only once or a limited number of times during a program and do not vary with the number of units produced. In acquisition and cost estimating, non-recurring costs typically include research and development, design, tooling, test and evaluation, qualification, and program start-up activities. These costs are generally associated with enabling production rather than with unit-level production itself.",
-    "abbreviation": "NRC"
+    "abbreviation": "NRC",
+    "created_at": "2025-12-14T22:27:55.000117Z",
+    "updated_at": "2025-12-14T22:27:55.000117Z"
   },
   {
     "id": "bb0c7f71-db64-4730-9630-91b1ad8f1c98",
     "term": "Overhead Cost",
     "definition": "Overhead cost refers to indirect costs that cannot be directly traced to a specific product, unit, or service but are necessary to support overall operations. In acquisition and cost estimating, overhead typically includes administrative expenses, facility costs, utilities, management, and other support functions. Overhead costs are allocated to programs or units using appropriate bases, such as labor hours or material costs, to ensure accurate total cost estimation.",
-    "abbreviation": ""
+    "abbreviation": "",
+    "created_at": "2025-12-14T23:27:55.000117Z",
+    "updated_at": "2025-12-14T23:27:55.000117Z"
   },
   {
     "id": "005b299c-c462-4ad8-88e8-32cd6c7ac23c",
     "term": "Direct Cost",
     "definition": "Direct cost refers to expenses that can be directly traced and attributed to a specific product, unit, project, or service. In acquisition and cost estimating, direct costs typically include labor, materials, and components that are consumed in the production or delivery of a particular item. Direct costs are distinguished from indirect or overhead costs, which support operations but cannot be linked to a single unit.",
-    "abbreviation": ""
+    "abbreviation": "",
+    "created_at": "2025-12-15T00:27:55.000117Z",
+    "updated_at": "2025-12-15T00:27:55.000117Z"
   },
   {
     "id": "78928a70-0089-41d4-a028-5bf3b83d52d9",
     "term": "Learning Curve",
-    "definition": "A learning curve describes the empirical relationship between cumulative production quantity and the reduction in unit cost, labor hours, or time required to produce each additional unit. In parametric estimating, learning curves are used to model efficiency gains resulting from increased worker experience, process improvements, and organizational learning, typically expressed as a learning rate indicating the percentage reduction in effort each time cumulative production doubles.",
-    "abbreviation": ""
+    "definition": "A learning curve describes the empirical relationship between cumulative production quantity and the reduction in unit cost, labor hours, or time required to produce each additional unit. In parametric estimating, learning curves are used to model efficiency gains resulting from increased worker experience, process improvements, and organizational learning, typically expressed as a learning rate indicating the percentage reduction in effort each time cumulative production doubles.\nCould be also called \"cost improvement\".",
+    "abbreviation": "",
+    "created_at": "2025-12-15T01:27:55.000117Z",
+    "updated_at": "2026-01-13T20:42:39.364351Z"
+  },
+  {
+    "id": "81c560a6-945e-4124-8c49-eeef7c10999e",
+    "term": "Capability Maturity Model Integration",
+    "definition": "Capability Maturity Model Integration (CMMI) is a process improvement framework that provides organizations with best practices to develop and refine effective, efficient, and repeatable processes. In acquisition and cost estimating, CMMI maturity levels are used as indicators of organizational capability and process discipline, which can influence cost, schedule, risk, and performance outcomes.",
+    "abbreviation": "CMMI",
+    "created_at": "2025-12-15T02:27:55.000117Z",
+    "updated_at": "2025-12-15T02:27:55.000117Z"
+  },
+  {
+    "id": "1049ad14-149a-4ca2-81af-4976f4e5ddda",
+    "term": "Volatility",
+    "definition": "Volatility refers to the degree of variation or instability in data values over time. In cost estimating and acquisition, volatility describes the extent to which costs, prices, schedules, or economic factors fluctuate, increasing uncertainty and risk in estimates. High volatility reduces the reliability of historical data and may require additional adjustments, risk analysis, or the use of probabilistic estimating techniques.",
+    "abbreviation": "",
+    "created_at": "2025-12-15T03:27:55.000117Z",
+    "updated_at": "2025-12-15T03:27:55.000117Z"
+  },
+  {
+    "id": "f576d76d-70e0-4022-910a-fed77510c8ac",
+    "term": "Book of Account",
+    "definition": "A book of account is an official and systematic record of financial transactions maintained by an organization, documenting revenues, expenditures, assets, and liabilities. In acquisition and cost estimating, books of account provide authoritative historical cost data used for analysis, auditing, reporting, and the development or validation of cost estimates.",
+    "abbreviation": "",
+    "created_at": "2025-12-15T04:27:55.000117Z",
+    "updated_at": "2025-12-15T04:27:55.000117Z"
+  },
+  {
+    "id": "080849de-2279-48e3-93a9-4107bdd4ffd2",
+    "term": "General Ledger",
+    "definition": "The general ledger is the primary accounting record of an organization, containing a complete and systematic summary of all financial transactions. It organizes accounts such as assets, liabilities, revenues, expenses, and equity, and serves as the authoritative source for financial statements. In acquisition and cost estimating, the general ledger provides verified historical cost data that support cost analysis, audits, and the development of reliable estimates.",
+    "abbreviation": "",
+    "created_at": "2025-12-15T05:27:55.000117Z",
+    "updated_at": "2025-12-15T05:27:55.000117Z"
   }
 ]

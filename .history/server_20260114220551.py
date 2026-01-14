@@ -101,7 +101,7 @@ def load_items():
                         changed = True
                     migrated.append(new)
                     continue
-                # migrate (handle old schema with 'type' field)
+                # migrate
                 new = dict(it)
                 t = it.get('type')
                 if t == 'Abréviation':
