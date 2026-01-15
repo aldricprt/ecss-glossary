@@ -176,8 +176,10 @@
     "definition": "Correlation is a statistical measure that describes the strength and direction of the relationship between two variables. In parametric estimating, correlation is used to assess how well a cost driver (such as weight, size, complexity, or performance) is related to cost, and to evaluate the suitability of variables for inclusion in cost estimating relationships (CERs). A higher correlation indicates a stronger association, but does not necessarily imply causation.",
     "abbreviation": "",
     "created_at": "2025-12-14T16:27:55.000117Z",
-    "updated_at": "2025-12-14T16:27:55.000117Z",
-    "tags": []
+    "updated_at": "2026-01-14T21:22:30.985074Z",
+    "tags": [
+      "CER validation"
+    ]
   },
   {
     "id": "1467f9d3-9cbc-478e-a029-8773ca80f6e7",
@@ -346,37 +348,85 @@
     "term": "Cost Estimation",
     "definition": "The process of calculating the estimated cost of a project or component",
     "abbreviation": "CE",
-    "tags": [
-      "cost-estimation",
-      "engineering",
-      "planning"
-    ],
+    "tags": [],
     "created_at": "2026-01-14T21:19:41.077142Z",
-    "updated_at": "2026-01-14T21:19:41.078106Z"
+    "updated_at": "2026-01-14T21:24:22.236046Z"
   },
   {
     "id": "61ff3847-7e19-4b3a-8a7d-09fd1bb0a482",
     "term": "Work Breakdown Structure",
     "definition": "Hierarchical decomposition of the project into smaller deliverables and tasks",
     "abbreviation": "WBS",
-    "tags": [
-      "planning",
-      "project-management",
-      "engineering"
-    ],
+    "tags": [],
     "created_at": "2026-01-14T21:19:41.078182Z",
-    "updated_at": "2026-01-14T21:19:41.078205Z"
+    "updated_at": "2026-01-14T21:23:49.593685Z"
   },
   {
     "id": "ceb82ffe-2dc4-4c0e-8e4e-ba2491023cfa",
     "term": "Resource Allocation",
     "definition": "Distribution of project resources to tasks and activities",
     "abbreviation": "RA",
-    "tags": [
-      "project-management",
-      "planning"
-    ],
+    "tags": [],
     "created_at": "2026-01-14T21:19:41.078246Z",
-    "updated_at": "2026-01-14T21:19:41.078262Z"
+    "updated_at": "2026-01-14T21:23:32.591071Z"
+  },
+  {
+    "id": "42a08de4-3056-437e-818d-33ac6f3441a8",
+    "term": "Integrated Product Team",
+    "definition": "An Integrated Product Team (IPT) is a multidisciplinary group composed of members from relevant functional areas—such as engineering, cost estimating, contracting, logistics, test, and program management—who work collaboratively to plan, develop, and manage a product or system throughout its life cycle. In acquisition, IPTs are used to improve communication, reduce risk, and support informed decision-making by integrating technical, cost, and schedule perspectives.",
+    "abbreviation": "IPT",
+    "tags": [
+      "CER validation"
+    ],
+    "created_at": "2026-01-15T20:42:02.013453Z",
+    "updated_at": "2026-01-15T20:42:02.013453Z"
+  },
+  {
+    "id": "61f6c5f4-f5ba-43f3-a489-2a563933f3f0",
+    "term": "Target Cost",
+    "definition": "Target cost is the estimated cost established for a program, system, or contract that serves as a management objective and baseline for cost control. In acquisition and contracting, the target cost is used to measure cost performance, assess variances, and, in incentive-type contracts, determine the sharing of cost savings or overruns between the government and the contractor.",
+    "abbreviation": "",
+    "tags": [
+      "Cost Constraints",
+      "Project management"
+    ],
+    "created_at": "2026-01-15T21:07:39.056902Z",
+    "updated_at": "2026-01-15T21:10:04.759081Z"
+  },
+  {
+    "id": "7cd9b5d2-9d50-4092-8ca0-d3615ac63731",
+    "term": "Design to Cost",
+    "definition": "Design to Cost (DTC) is a management approach in which cost objectives are treated as a key design requirement, alongside performance and schedule. Under DTC, systems and components are designed, engineered, and traded off to meet predefined cost targets throughout the life cycle, ensuring affordability while satisfying mission and technical requirements.",
+    "abbreviation": "DTC",
+    "tags": [
+      "Cost Constraints",
+      "Project management"
+    ],
+    "created_at": "2026-01-15T21:08:42.639806Z",
+    "updated_at": "2026-01-15T21:10:16.642664Z"
+  },
+  {
+    "id": "6e6dfc23-46f2-42a6-b9c0-ec98f9f7c014",
+    "term": "Life cycle cost",
+    "definition": "Life cycle cost (LCC) is the total cost of a system, product, or program over its entire life span, from initial concept and development through production, operation, support, and disposal. In acquisition and cost estimating, LCC includes all recurring and non-recurring costs and is used to support affordability analysis, trade studies, and long-term decision-making.",
+    "abbreviation": "LCC",
+    "tags": [
+      "Project management",
+      "Cost Constraints"
+    ],
+    "created_at": "2026-01-15T21:09:54.195490Z",
+    "updated_at": "2026-01-15T21:09:54.195490Z"
+  },
+  {
+    "id": "9cab45e5-6df0-4fd9-9b3b-2d1996ad533f",
+    "term": "Total Ownership Cost",
+    "definition": "Total Ownership Cost (TOC) represents the full cost to the government or organization of acquiring, operating, supporting, and disposing of a system throughout its entire life cycle. TOC extends beyond initial acquisition costs to include operation and support (O&S), manpower, infrastructure, logistics, and disposal costs, providing a comprehensive measure of long-term affordability.",
+    "abbreviation": "TOC",
+    "tags": [
+      "Project management",
+      "Cost Constraints"
+    ],
+    "created_at": "2026-01-15T21:12:07.144535Z",
+    "updated_at": "2026-01-15T21:12:07.144535Z"
   }
 ]

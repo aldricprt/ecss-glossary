@@ -348,37 +348,48 @@
     "term": "Cost Estimation",
     "definition": "The process of calculating the estimated cost of a project or component",
     "abbreviation": "CE",
-    "tags": [
-      "cost-estimation",
-      "engineering",
-      "planning"
-    ],
+    "tags": [],
     "created_at": "2026-01-14T21:19:41.077142Z",
-    "updated_at": "2026-01-14T21:19:41.078106Z"
+    "updated_at": "2026-01-14T21:24:22.236046Z"
   },
   {
     "id": "61ff3847-7e19-4b3a-8a7d-09fd1bb0a482",
     "term": "Work Breakdown Structure",
     "definition": "Hierarchical decomposition of the project into smaller deliverables and tasks",
     "abbreviation": "WBS",
-    "tags": [
-      "planning",
-      "project-management",
-      "engineering"
-    ],
+    "tags": [],
     "created_at": "2026-01-14T21:19:41.078182Z",
-    "updated_at": "2026-01-14T21:19:41.078205Z"
+    "updated_at": "2026-01-14T21:23:49.593685Z"
   },
   {
     "id": "ceb82ffe-2dc4-4c0e-8e4e-ba2491023cfa",
     "term": "Resource Allocation",
     "definition": "Distribution of project resources to tasks and activities",
     "abbreviation": "RA",
-    "tags": [
-      "project-management",
-      "planning"
-    ],
+    "tags": [],
     "created_at": "2026-01-14T21:19:41.078246Z",
-    "updated_at": "2026-01-14T21:19:41.078262Z"
+    "updated_at": "2026-01-14T21:23:32.591071Z"
+  },
+  {
+    "id": "42a08de4-3056-437e-818d-33ac6f3441a8",
+    "term": "Integrated Product Team",
+    "definition": "An Integrated Product Team (IPT) is a multidisciplinary group composed of members from relevant functional areas—such as engineering, cost estimating, contracting, logistics, test, and program management—who work collaboratively to plan, develop, and manage a product or system throughout its life cycle. In acquisition, IPTs are used to improve communication, reduce risk, and support informed decision-making by integrating technical, cost, and schedule perspectives.",
+    "abbreviation": "IPT",
+    "tags": [
+      "CER validation"
+    ],
+    "created_at": "2026-01-15T20:42:02.013453Z",
+    "updated_at": "2026-01-15T20:42:02.013453Z"
+  },
+  {
+    "id": "61f6c5f4-f5ba-43f3-a489-2a563933f3f0",
+    "term": "Target Cost",
+    "definition": "Target cost is the estimated cost established for a program, system, or contract that serves as a management objective and baseline for cost control. In acquisition and contracting, the target cost is used to measure cost performance, assess variances, and, in incentive-type contracts, determine the sharing of cost savings or overruns between the government and the contractor.",
+    "abbreviation": "",
+    "tags": [
+      "Cost Constraints"
+    ],
+    "created_at": "2026-01-15T21:07:39.056902Z",
+    "updated_at": "2026-01-15T21:07:39.056902Z"
   }
 ]
