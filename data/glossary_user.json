@@ -205,9 +205,10 @@
     "definition": "Earned Value Management (EVM) is a structured project management methodology that integrates scope, schedule, and cost to assess project performance and progress. EVM uses objective measures of work performed to compare planned work, completed work, and actual costs, enabling early identification of cost and schedule variances and supporting informed management decisions.",
     "abbreviation": "EVM",
     "created_at": "2025-12-14T19:27:55.000117Z",
-    "updated_at": "2026-01-15T21:20:54.567138Z",
+    "updated_at": "2026-01-17T15:21:57.264137Z",
     "tags": [
-      "Project management"
+      "Project management",
+      "Algorithm"
     ]
   },
   {
@@ -454,5 +455,49 @@
     ],
     "created_at": "2026-01-15T21:18:55.244306Z",
     "updated_at": "2026-01-15T21:18:55.244306Z"
+  },
+  {
+    "id": "7fec28e7-f709-434b-9e51-dd3807b3b88e",
+    "term": "Phasing and Spread",
+    "definition": "Phasing and spread refers to the process of allocating estimated costs over time according to the planned schedule and distribution of work. In acquisition and cost estimating, phasing defines when costs are expected to occur across fiscal years, while spread describes how costs are distributed within and across program activities. Proper phasing and spread are essential for accurate budgeting, funding profiles, and schedule realism.",
+    "abbreviation": "",
+    "tags": [
+      "Algorithm"
+    ],
+    "created_at": "2026-01-17T15:12:05.021510Z",
+    "updated_at": "2026-01-17T15:12:05.021510Z"
+  },
+  {
+    "id": "552749b4-b5f0-4e0f-9614-3c361faeaea6",
+    "term": "Monte Carlo Simulations",
+    "definition": "Monte Carlo simulations are probabilistic analysis techniques that use repeated random sampling to model uncertainty and variability in input parameters. In cost estimating and acquisition, Monte Carlo simulations are used to assess cost, schedule, and risk outcomes by generating a range of possible results and associated confidence levels, supporting risk-informed decision-making and contingency analysis.",
+    "abbreviation": "",
+    "tags": [
+      "Algorithm"
+    ],
+    "created_at": "2026-01-17T15:15:55.697601Z",
+    "updated_at": "2026-01-17T15:15:55.697601Z"
+  },
+  {
+    "id": "79616d0b-5408-4cdd-91bc-1e38fcd27ccc",
+    "term": "Unit theory",
+    "definition": "The unit theory of learning is a learning-curve concept that assumes the cost or labor hours required to produce each unit decrease as cumulative production increases, with learning applied on a unit-by-unit basis. Under this theory, each additional unit benefits from accumulated experience, making it suitable for modeling production processes where individual unit improvements are incremental and continuous.",
+    "abbreviation": "",
+    "tags": [
+      "Algorithm"
+    ],
+    "created_at": "2026-01-17T15:19:41.789947Z",
+    "updated_at": "2026-01-17T15:19:41.789947Z"
+  },
+  {
+    "id": "72895ef4-d1d5-48c3-9d1a-5bc080323f18",
+    "term": "Cumulative average theory",
+    "definition": "The cumulative average theory of learning is a learning-curve concept that states that the average cost or labor hours per unit decreases by a constant percentage each time cumulative production doubles. In this theory, learning is applied to the average of all units produced to date rather than to individual units, and it is commonly used in parametric cost estimating to model overall production efficiency improvements.",
+    "abbreviation": "",
+    "tags": [
+      "Algorithm"
+    ],
+    "created_at": "2026-01-17T15:20:41.739761Z",
+    "updated_at": "2026-01-17T15:20:41.739761Z"
   }
 ]

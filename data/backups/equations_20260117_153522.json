@@ -16,9 +16,6 @@
     "content": "y = a \\times x + b",
     "description": "Polynomial of order 1 also known as the straight line",
     "created_at": "2026-01-13T21:13:32.402920Z",
-    "updated_at": "2026-01-17T15:35:22.497482Z",
-    "tags": [
-      "CER"
-    ]
+    "updated_at": "2026-01-13T21:18:41.928954Z"
   }
 ]

@@ -567,25 +567,8 @@ document.addEventListener('DOMContentLoaded', async ()=>{
   setupTagAutocompleteFor('imgTags','imgTagsSuggestions');
   setupTagAutocompleteFor('eqTags','eqTagsSuggestions');
   
-  // Clear tag filters for diagrams
-  const clearDiagBtn = document.getElementById('clearDiagTagFilters');
-  if(clearDiagBtn){
-    clearDiagBtn.addEventListener('click', ()=>{
-      selectedTags.clear();
-      renderTagFiltersInto('diagTagFilterContainer','clearDiagTagFilters');
-      const filteredImgs = filterImagesByTags(imagesData);
-      renderGalleryIn('diagramsGallery', filteredImgs);
-    });
-  }
-  // Clear tag filters for equations
-  const clearEqBtn = document.getElementById('clearEqTagFilters');
-  if(clearEqBtn){
-    clearEqBtn.addEventListener('click', ()=>{
-      selectedTags.clear();
-      renderTagFiltersInto('eqTagFilterContainer','clearEqTagFilters');
-      renderEquationsList(equationsData);
-    });
-  }
+  // Tag autocomplete for the editor
+  setupTagAutocomplete();
   
   // Menu switching
   const menuGloss = document.getElementById('menuGlossary');
@@ -770,26 +753,6 @@ function renderGalleryIn(containerId, imgs){
     }
     const t = document.createElement('div'); t.textContent = it.title || ''; t.className='diagramTitle';
     const meta = document.createElement('div'); meta.className='diagramMeta'; meta.textContent = it.uploaded_at ? new Date(it.uploaded_at).toLocaleString() : '';
-    // tags badges
-    if(it.tags && it.tags.length>0){
-      const tagsDiv = document.createElement('div');
-      tagsDiv.style.marginTop = '4px';
-      tagsDiv.style.display = 'flex';
-      tagsDiv.style.gap = '6px';
-      tagsDiv.style.flexWrap = 'wrap';
-      for(const tag of it.tags){
-        const tagEl = document.createElement('span');
-        tagEl.style.backgroundColor = 'rgba(77,161,255,0.15)';
-        tagEl.style.color = 'var(--accent)';
-        tagEl.style.padding = '2px 8px';
-        tagEl.style.borderRadius = '4px';
-        tagEl.style.fontSize = '12px';
-        tagEl.style.fontWeight = '500';
-        tagEl.textContent = tag;
-        tagsDiv.appendChild(tagEl);
-      }
-      card.appendChild(tagsDiv);
-    }
     const actions = document.createElement('div'); actions.className='diagramActions';
     const openBtn = document.createElement('a'); openBtn.textContent = 'Open'; openBtn.href = `/images/${it.filename}`; openBtn.target='_blank'; openBtn.className='diagramBtn';
     const delBtn = document.createElement('button'); delBtn.textContent='Delete'; delBtn.className='diagramBtn';
@@ -798,9 +761,8 @@ function renderGalleryIn(containerId, imgs){
       try{
         const resp = await fetch(`/api/images/${it.id}`, {method:'DELETE'});
         if(!resp.ok) throw new Error('Delete failed');
-        imagesData = await tryFetch('/api/images') || [];
-        const filtered = filterImagesByTags(imagesData);
-        renderGalleryIn(containerId, filtered);
+        const imgs = await tryFetch('/api/images') || [];
+        renderGalleryIn(containerId, imgs);
       }catch(e){ alert('Delete failed'); }
     });
     actions.appendChild(openBtn); actions.appendChild(delBtn);
@@ -986,35 +948,16 @@ function showDiagModal(imgs){
     }
     const t = document.createElement('div'); t.textContent = it.title || ''; t.style.fontWeight='600';
     const meta = document.createElement('div'); meta.style.fontSize='12px'; meta.style.color='var(--muted)'; meta.textContent = it.uploaded_at ? new Date(it.uploaded_at).toLocaleString() : '';
-    if(it.tags && it.tags.length>0){
-      const tagsDiv = document.createElement('div');
-      tagsDiv.style.marginTop = '4px';
-      tagsDiv.style.display = 'flex';
-      tagsDiv.style.gap = '6px';
-      tagsDiv.style.flexWrap = 'wrap';
-      for(const tag of it.tags){
-        const tagEl = document.createElement('span');
-        tagEl.style.backgroundColor = 'rgba(77,161,255,0.15)';
-        tagEl.style.color = 'var(--accent)';
-        tagEl.style.padding = '2px 8px';
-        tagEl.style.borderRadius = '4px';
-        tagEl.style.fontSize = '12px';
-        tagEl.style.fontWeight = '500';
-        tagEl.textContent = tag;
-        tagsDiv.appendChild(tagEl);
-      }
-      card.appendChild(tagsDiv);
-    }
     const actions = document.createElement('div'); actions.style.display='flex'; actions.style.gap='6px';
     const openBtn = document.createElement('a'); openBtn.textContent = 'Open'; openBtn.href = `/images/${it.filename}`; openBtn.target='_blank'; openBtn.style.padding='6px 8px'; openBtn.style.border='1px solid rgba(255,255,255,0.04)'; openBtn.style.borderRadius='6px'; openBtn.style.background='transparent';
     const delBtn = document.createElement('button'); delBtn.textContent='Delete'; delBtn.style.padding='6px 8px'; delBtn.addEventListener('click', async ()=>{
       if(!confirm('Delete this diagram?')) return;
       try{
+        // delete metadata entry via API deletion reusing terms endpoint? Not implemented server-side; we'll remove metadata client-side for now by calling a simple endpoint not yet present
         const resp = await fetch(`/api/images/${it.id}`, {method:'DELETE'});
         if(!resp.ok) throw new Error('Delete failed');
-        imagesData = await tryFetch('/api/images') || [];
-        const filtered = filterImagesByTags(imagesData);
-        renderGallery(filtered);
+        const imgs = await tryFetch('/api/images') || [];
+        renderGallery(imgs);
       }catch(e){ alert('Delete failed (server must support image deletion)'); }
     });
     actions.appendChild(openBtn); actions.appendChild(delBtn);
@@ -1026,8 +969,7 @@ function showDiagModal(imgs){
 }
 
 function renderGallery(imgs){
-  const filtered = filterImagesByTags(imgs || []);
-  showDiagModal(filtered);
+  showDiagModal(imgs);
 }
 // Equations management
 function openEquationEditor(equation){
@@ -1036,7 +978,6 @@ function openEquationEditor(equation){
   const nameField = document.getElementById('eqName');
   const contentField = document.getElementById('eqContent');
   const descField = document.getElementById('eqDescription');
-  const tagsField = document.getElementById('eqTags');
   const idField = document.getElementById('eqId');
   
   editor.classList.remove('hidden');
@@ -1047,14 +988,12 @@ function openEquationEditor(equation){
     nameField.value = equation.name || '';
     contentField.value = equation.content || '';
     descField.value = equation.description || '';
-    tagsField && (tagsField.value = (equation.tags && equation.tags.length>0) ? equation.tags.join(', ') : '');
     idField.value = equation.id || '';
   }else{
     title.textContent = 'Add a new equation';
     nameField.value = '';
     contentField.value = '';
     descField.value = '';
-    tagsField && (tagsField.value = '');
     idField.value = '';
   }
   nameField.focus();
@@ -1066,13 +1005,13 @@ function closeEquationEditor(){
   editor.setAttribute('aria-hidden','true');
 }
 
-async function saveEquation(name, content, description, id, tags){
+async function saveEquation(name, content, description, id){
   try{
     if(id){
       const resp = await fetch(`/api/equations/${id}`, {
         method: 'PUT',
         headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({name, content, description, tags})
+        body: JSON.stringify({name, content, description})
       });
       if(!resp.ok) throw new Error('Failed to update');
       return await resp.json();
@@ -1080,7 +1019,7 @@ async function saveEquation(name, content, description, id, tags){
       const resp = await fetch('/api/equations', {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({name, content, description, tags})
+        body: JSON.stringify({name, content, description})
       });
       if(!resp.ok) throw new Error('Failed to create');
       return await resp.json();
@@ -1096,18 +1035,11 @@ async function deleteEquation(id){
     const resp = await fetch(`/api/equations/${id}`, {method:'DELETE'});
     if(!resp.ok) throw new Error('Delete failed');
     // Reload equations
-    equationsData = await tryFetch('/api/equations') || [];
-    renderEquationsList(equationsData);
+    const eqs = await tryFetch('/api/equations') || [];
+    renderEquationsList(eqs);
   }catch(e){
     alert('Could not delete equation. Is the server running?');
   }
-}
-
-function equationMatchesTags(eq){
-  if(selectedTags.size === 0) return true;
-  const itemTags = new Set(eq.tags || []);
-  for(const tag of selectedTags){ if(!itemTags.has(tag)) return false; }
-  return true;
 }
 
 function renderEquationsList(equations){
@@ -1119,17 +1051,12 @@ function renderEquationsList(equations){
   
   function filterEquations(q){
     const s = (q||'').trim().toLowerCase();
-    let base = equations.slice();
-    if(s){
-      base = base.filter(eq => 
+    if(!s) return equations.slice();
+    return equations.filter(eq => 
       (eq.name || '').toLowerCase().includes(s) || 
       (eq.content || '').toLowerCase().includes(s) || 
       (eq.description || '').toLowerCase().includes(s)
-      );
-    }
-    // tag filter (AND)
-    base = base.filter(equationMatchesTags);
-    return base;
+    );
   }
   
   function renderList(){
@@ -1177,25 +1104,6 @@ function renderEquationsList(equations){
         card.appendChild(h);
         card.appendChild(p);
       }
-      if(eq.tags && eq.tags.length>0){
-        const tagsDiv = document.createElement('div');
-        tagsDiv.style.marginBottom = '8px';
-        tagsDiv.style.display = 'flex';
-        tagsDiv.style.gap = '6px';
-        tagsDiv.style.flexWrap = 'wrap';
-        for(const tag of eq.tags){
-          const tagEl = document.createElement('span');
-          tagEl.style.backgroundColor = 'rgba(77,161,255,0.15)';
-          tagEl.style.color = 'var(--accent)';
-          tagEl.style.padding = '2px 8px';
-          tagEl.style.borderRadius = '4px';
-          tagEl.style.fontSize = '12px';
-          tagEl.style.fontWeight = '500';
-          tagEl.textContent = tag;
-          tagsDiv.appendChild(tagEl);
-        }
-        card.appendChild(tagsDiv);
-      }
       const actions = document.createElement('div');
       actions.className = 'itemActions';
       const editBtn = document.createElement('button');
@@ -1224,7 +1132,6 @@ function renderEquationsList(equations){
     renderList();
   };
   
-  filtered = filterEquations(searchField.value);
   renderList();
 }
 
@@ -1242,26 +1149,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const name = document.getElementById('eqName').value.trim();
     const content = document.getElementById('eqContent').value.trim();
     const description = document.getElementById('eqDescription').value.trim();
-    const tags = document.getElementById('eqTags').value.trim();
     const id = document.getElementById('eqId').value;
     
     if(!name || !content){ alert('Name and equation/formula are required'); return; }
     
-    const result = await saveEquation(name, content, description, id, tags);
+    const result = await saveEquation(name, content, description, id);
     if(result){
       closeEquationEditor();
-      equationsData = await tryFetch('/api/equations') || [];
-      renderEquationsList(equationsData);
+      const eqs = await tryFetch('/api/equations') || [];
+      renderEquationsList(eqs);
     }
   });
 }, {once: true});
-
-// Helper: filter images by selected tags (AND semantics)
-function filterImagesByTags(imgs){
-  if(selectedTags.size === 0) return imgs.slice();
-  return (imgs||[]).filter(it=>{
-    const itemTags = new Set(it.tags || []);
-    for(const tag of selectedTags){ if(!itemTags.has(tag)) return false; }
-    return true;
-  });
-}

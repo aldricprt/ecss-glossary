@@ -1096,8 +1096,8 @@ async function deleteEquation(id){
     const resp = await fetch(`/api/equations/${id}`, {method:'DELETE'});
     if(!resp.ok) throw new Error('Delete failed');
     // Reload equations
-    equationsData = await tryFetch('/api/equations') || [];
-    renderEquationsList(equationsData);
+    const eqs = await tryFetch('/api/equations') || [];
+    renderEquationsList(eqs);
   }catch(e){
     alert('Could not delete equation. Is the server running?');
   }
