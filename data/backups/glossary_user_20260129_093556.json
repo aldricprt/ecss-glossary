@@ -205,9 +205,10 @@
     "definition": "Earned Value Management (EVM) is a structured project management methodology that integrates scope, schedule, and cost to assess project performance and progress. EVM uses objective measures of work performed to compare planned work, completed work, and actual costs, enabling early identification of cost and schedule variances and supporting informed management decisions.",
     "abbreviation": "EVM",
     "created_at": "2025-12-14T19:27:55.000117Z",
-    "updated_at": "2026-01-15T21:20:54.567138Z",
+    "updated_at": "2026-01-17T15:21:57.264137Z",
     "tags": [
-      "Project management"
+      "Project management",
+      "Algorithm"
     ]
   },
   {
@@ -476,5 +477,83 @@
     ],
     "created_at": "2026-01-17T15:15:55.697601Z",
     "updated_at": "2026-01-17T15:15:55.697601Z"
+  },
+  {
+    "id": "79616d0b-5408-4cdd-91bc-1e38fcd27ccc",
+    "term": "Unit theory",
+    "definition": "The unit theory of learning is a learning-curve concept that assumes the cost or labor hours required to produce each unit decrease as cumulative production increases, with learning applied on a unit-by-unit basis. Under this theory, each additional unit benefits from accumulated experience, making it suitable for modeling production processes where individual unit improvements are incremental and continuous.",
+    "abbreviation": "",
+    "tags": [
+      "Algorithm"
+    ],
+    "created_at": "2026-01-17T15:19:41.789947Z",
+    "updated_at": "2026-01-17T15:19:41.789947Z"
+  },
+  {
+    "id": "72895ef4-d1d5-48c3-9d1a-5bc080323f18",
+    "term": "Cumulative average theory",
+    "definition": "The cumulative average theory of learning is a learning-curve concept that states that the average cost or labor hours per unit decreases by a constant percentage each time cumulative production doubles. In this theory, learning is applied to the average of all units produced to date rather than to individual units, and it is commonly used in parametric cost estimating to model overall production efficiency improvements.",
+    "abbreviation": "",
+    "tags": [
+      "Algorithm"
+    ],
+    "created_at": "2026-01-17T15:20:41.739761Z",
+    "updated_at": "2026-01-17T15:20:41.739761Z"
+  },
+  {
+    "id": "07b2b30e-618a-4a66-932e-93a4f8fd07df",
+    "term": "Virtual Intelligence",
+    "definition": "Virtual Intelligence (VI) refers to the use of computer-based intelligent systems—such as advanced analytics, artificial intelligence, or automated decision-support tools—to assist human decision-making. In acquisition and cost estimating, VI can be used to analyze large datasets, identify patterns, support parametric modeling, and improve the accuracy, consistency, and speed of cost and risk assessments.",
+    "abbreviation": "VI",
+    "tags": [
+      "Virtual Intelligence",
+      "Quality"
+    ],
+    "created_at": "2026-01-27T11:42:58.399989Z",
+    "updated_at": "2026-01-27T11:42:58.399989Z"
+  },
+  {
+    "id": "5d622328-1cdc-4137-aa6b-4996dd5a9579",
+    "term": "Constructive Cost Model II",
+    "definition": "COCOMO II is a parametric software cost estimation model used to estimate the effort, cost, and schedule required to develop software systems. It relates software size (e.g., source lines of code or function points) and cost drivers—such as product complexity, personnel capability, and development environment—to predicted development effort using empirically derived equations. COCOMO II is widely used to support planning and trade-off analysis for modern software-intensive systems.",
+    "abbreviation": "COCOMO II",
+    "tags": [
+      "Software"
+    ],
+    "created_at": "2026-01-29T07:39:43.061432Z",
+    "updated_at": "2026-01-29T07:39:43.061432Z"
+  },
+  {
+    "id": "f8a0511a-52c1-4827-8e31-1b29b4654c43",
+    "term": "Black box models",
+    "definition": "Black box models are analytical or estimating models in which the internal logic, structure, or causal relationships are not explicitly visible or understood by the user. In cost estimating, black box models produce outputs based on inputs and embedded algorithms—often proprietary or highly complex—without transparent explanation of how results are derived. While they can be efficient, their lack of transparency can limit validation, insight, and credibility in acquisition decision-making.",
+    "abbreviation": "",
+    "tags": [
+      "Models"
+    ],
+    "created_at": "2026-01-29T07:40:51.209314Z",
+    "updated_at": "2026-01-29T07:40:51.209314Z"
+  },
+  {
+    "id": "31948152-83f6-4bd2-963e-b893e805fad9",
+    "term": "Model calibration",
+    "definition": "Model calibration is the process of adjusting a model’s parameters and coefficients so that its outputs align with observed historical data or known outcomes. In parametric cost estimating, calibration ensures that a model accurately reflects the specific environment, processes, and performance characteristics of the organization or program, thereby improving the reliability and credibility of cost estimates.",
+    "abbreviation": "",
+    "tags": [
+      "Calibration"
+    ],
+    "created_at": "2026-01-29T07:59:36.417019Z",
+    "updated_at": "2026-01-29T07:59:36.417019Z"
+  },
+  {
+    "id": "7d04fbf1-c6ba-40ca-a048-df456cf905f2",
+    "term": "Labor hours",
+    "definition": "Labor hours represent the total amount of time, measured in hours, that personnel spend performing work on a specific task, product, or program. In cost estimating and acquisition, labor hours are a key input for estimating direct labor costs and are often used as dependent or independent variables in parametric models, learning curves, and productivity analyses.",
+    "abbreviation": "",
+    "tags": [
+      "Input"
+    ],
+    "created_at": "2026-01-29T08:36:47.965584Z",
+    "updated_at": "2026-01-29T08:36:47.965584Z"
   }
 ]

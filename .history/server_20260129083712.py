@@ -14,7 +14,6 @@ IMAGES_DIR = DATA_DIR / 'images'
 IMAGES_FILE = DATA_DIR / 'images.json'
 EQUATIONS_FILE = DATA_DIR / 'equations.json'
 REFERENCES_FILE = DATA_DIR / 'references.json'
-METHODS_FILE = DATA_DIR / 'methods.json'
 BACKUPS_DIR = DATA_DIR / 'backups'
 MAX_BACKUPS = 10
 DATA_DIR.mkdir(exist_ok=True)
@@ -187,21 +186,6 @@ def save_references(references):
     backup_file(REFERENCES_FILE)  # Backup before writing
     content = json.dumps(references, ensure_ascii=False, indent=2)
     atomic_write(REFERENCES_FILE, content)
-
-
-def load_methods():
-    if METHODS_FILE.exists():
-        try:
-            return json.loads(METHODS_FILE.read_text(encoding='utf-8') or '[]')
-        except Exception:
-            return []
-    return []
-
-
-def save_methods(methods):
-    backup_file(METHODS_FILE)  # Backup before writing
-    content = json.dumps(methods, ensure_ascii=False, indent=2)
-    atomic_write(METHODS_FILE, content)
 
 
 @app.route('/')
@@ -459,9 +443,9 @@ def create_reference():
     data = request.get_json(silent=True) or {}
     required = ['title', 'type', 'author']
     if not all(k in data and isinstance(data[k], str) and data[k].strip() for k in required):
-        return jsonify({'error': 'missing or invalid fields, required: title, type (book/article/film/website/software), author'}), 400
+        return jsonify({'error': 'missing or invalid fields, required: title, type (book/article/film/website), author'}), 400
     
-    valid_types = ['book', 'article', 'film', 'website', 'software']
+    valid_types = ['book', 'article', 'film', 'website']
     ref_type = data['type'].strip().lower()
     if ref_type not in valid_types:
         return jsonify({'error': f'invalid type; must be one of: {", ".join(valid_types)}'}), 400
@@ -506,7 +490,7 @@ def update_reference(ref_id):
             ref['url'] = data.get('url', ref.get('url', ''))
             # Update type if valid
             if 'type' in data:
-                valid_types = ['book', 'article', 'film', 'website', 'software']
+                valid_types = ['book', 'article', 'film', 'website']
                 ref_type = data['type'].strip().lower()
                 if ref_type in valid_types:
                     ref['type'] = ref_type
@@ -535,85 +519,6 @@ def delete_reference(ref_id):
     if len(new) == len(references):
         return jsonify({'error': 'not found'}), 404
     save_references(new)
-    return jsonify({'deleted': True})
-
-
-# Methods endpoints
-@app.route('/api/methods', methods=['GET'])
-def list_methods():
-    methods = load_methods()
-    return jsonify(methods)
-
-
-@app.route('/api/methods', methods=['POST'])
-def create_method():
-    data = request.get_json(silent=True) or {}
-    required = ['title', 'definition']
-    if not all(k in data and isinstance(data[k], str) and data[k].strip() for k in required):
-        return jsonify({'error': 'missing or invalid fields, required: title, definition'}), 400
-    methods = load_methods()
-    now = datetime.utcnow().isoformat() + 'Z'
-
-    def parse_list(value):
-        if isinstance(value, list):
-            return [str(v).strip() for v in value if str(v).strip()]
-        if isinstance(value, str):
-            return [v.strip() for v in value.split('\n') if v.strip()]
-        return []
-
-    item = {
-        'id': str(uuid.uuid4()),
-        'title': data['title'].strip(),
-        'definition': data['definition'].strip(),
-        'key_components': parse_list(data.get('key_components', [])),
-        'procedure': parse_list(data.get('procedure', [])),
-        'success_factors': parse_list(data.get('success_factors', [])),
-        'created_at': now,
-        'updated_at': now
-    }
-    methods.append(item)
-    save_methods(methods)
-    return jsonify(item), 201
-
-
-@app.route('/api/methods/<method_id>', methods=['PUT'])
-def update_method(method_id):
-    data = request.get_json(silent=True) or {}
-    methods = load_methods()
-
-    def parse_list(value, fallback):
-        if isinstance(value, list):
-            return [str(v).strip() for v in value if str(v).strip()]
-        if isinstance(value, str):
-            return [v.strip() for v in value.split('\n') if v.strip()]
-        return fallback
-
-    for i, it in enumerate(methods):
-        if it.get('id') == method_id:
-            if 'title' in data:
-                it['title'] = data.get('title', it.get('title'))
-            if 'definition' in data:
-                it['definition'] = data.get('definition', it.get('definition'))
-            if 'key_components' in data:
-                it['key_components'] = parse_list(data.get('key_components'), it.get('key_components', []))
-            if 'procedure' in data:
-                it['procedure'] = parse_list(data.get('procedure'), it.get('procedure', []))
-            if 'success_factors' in data:
-                it['success_factors'] = parse_list(data.get('success_factors'), it.get('success_factors', []))
-            it['updated_at'] = datetime.utcnow().isoformat() + 'Z'
-            methods[i] = it
-            save_methods(methods)
-            return jsonify(it)
-    return jsonify({'error': 'not found'}), 404
-
-
-@app.route('/api/methods/<method_id>', methods=['DELETE'])
-def delete_method(method_id):
-    methods = load_methods()
-    new = [it for it in methods if it.get('id') != method_id]
-    if len(new) == len(methods):
-        return jsonify({'error': 'not found'}), 404
-    save_methods(new)
     return jsonify({'deleted': True})
 
 

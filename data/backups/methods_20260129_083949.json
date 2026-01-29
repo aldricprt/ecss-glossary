@@ -1,0 +1,28 @@
+[
+  {
+    "id": "c7344818-19c7-46cf-bddc-5d65c3c9c6d9",
+    "title": "Parametric Analysis & Model Development",
+    "definition": "Parametric analysis uses project parameters and historical data to estimate resources (labor, materials, time). It converts historical outcomes into mathematical relationships to predict future project costs.",
+    "key_components": [
+      "Database: The foundation of historical cost and non-cost data.",
+      "CER (Cost Estimating Relationship): The mathematical equation (e.g., y=f(x",
+      "i",
+      "​",
+      ")).",
+      "Point vs. Range Estimates: Moving from a single (often \"wrong\") number to a probability distribution."
+    ],
+    "procedure": [
+      "Requirement Resolution: Define users, scope (LCC, SE), and available data.",
+      "Data Collection: Gather costs with expenditure dates and WBS formats.",
+      "Model Building: Select driving parameters with high correlation to cost but low correlation to each other.",
+      "Calibration & Validation: Use \"back-testing\" on completed projects to prove reliability.",
+      "Documentation: Record configuration control, versions, and assumptions."
+    ],
+    "success_factors": [
+      "Logical Flow: Inputs should drive outputs; never \"force\" inputs to reach a desired price.",
+      "Updates: Models must be updated as economic or technical conditions change."
+    ],
+    "created_at": "2026-01-29T08:39:16.894580Z",
+    "updated_at": "2026-01-29T08:39:16.894580Z"
+  }
+]

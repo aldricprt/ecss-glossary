@@ -205,8 +205,11 @@
     "definition": "Earned Value Management (EVM) is a structured project management methodology that integrates scope, schedule, and cost to assess project performance and progress. EVM uses objective measures of work performed to compare planned work, completed work, and actual costs, enabling early identification of cost and schedule variances and supporting informed management decisions.",
     "abbreviation": "EVM",
     "created_at": "2025-12-14T19:27:55.000117Z",
-    "updated_at": "2025-12-14T19:27:55.000117Z",
-    "tags": []
+    "updated_at": "2026-01-17T15:21:57.264137Z",
+    "tags": [
+      "Project management",
+      "Algorithm"
+    ]
   },
   {
     "id": "5a6f0b35-f579-4787-92ec-036bc436bdd2",
@@ -428,5 +431,85 @@
     ],
     "created_at": "2026-01-15T21:12:07.144535Z",
     "updated_at": "2026-01-15T21:12:07.144535Z"
+  },
+  {
+    "id": "26ce0f5c-4a8b-4ec1-8b79-e121b8ef01d4",
+    "term": "Cost as an Independent Variable",
+    "definition": "Cost as an Independent Variable (CAIV) is an acquisition and systems engineering approach in which cost is treated as a primary design constraint rather than a dependent outcome. Under CAIV, system performance, schedule, and technical requirements are traded off to achieve predefined cost objectives, promoting affordability and informed decision-making throughout the system life cycle.",
+    "abbreviation": "CAIV",
+    "tags": [
+      "Cost Constraints",
+      "Project management"
+    ],
+    "created_at": "2026-01-15T21:13:57.773596Z",
+    "updated_at": "2026-01-15T21:13:57.773596Z"
+  },
+  {
+    "id": "2cb8b3a3-ee7a-424d-a500-0377960591d7",
+    "term": "Trade studies",
+    "definition": "Trade studies are structured analyses used to evaluate alternative solutions by comparing cost, performance, schedule, risk, and other relevant factors. In acquisition and parametric cost estimating, trade studies support informed decision-making by quantifying the impacts of design or requirement changes and identifying options that best balance affordability and mission effectiveness.",
+    "abbreviation": "",
+    "tags": [
+      "System engineering",
+      "Trade-offs"
+    ],
+    "created_at": "2026-01-15T21:18:55.244306Z",
+    "updated_at": "2026-01-15T21:18:55.244306Z"
+  },
+  {
+    "id": "7fec28e7-f709-434b-9e51-dd3807b3b88e",
+    "term": "Phasing and Spread",
+    "definition": "Phasing and spread refers to the process of allocating estimated costs over time according to the planned schedule and distribution of work. In acquisition and cost estimating, phasing defines when costs are expected to occur across fiscal years, while spread describes how costs are distributed within and across program activities. Proper phasing and spread are essential for accurate budgeting, funding profiles, and schedule realism.",
+    "abbreviation": "",
+    "tags": [
+      "Algorithm"
+    ],
+    "created_at": "2026-01-17T15:12:05.021510Z",
+    "updated_at": "2026-01-17T15:12:05.021510Z"
+  },
+  {
+    "id": "552749b4-b5f0-4e0f-9614-3c361faeaea6",
+    "term": "Monte Carlo Simulations",
+    "definition": "Monte Carlo simulations are probabilistic analysis techniques that use repeated random sampling to model uncertainty and variability in input parameters. In cost estimating and acquisition, Monte Carlo simulations are used to assess cost, schedule, and risk outcomes by generating a range of possible results and associated confidence levels, supporting risk-informed decision-making and contingency analysis.",
+    "abbreviation": "",
+    "tags": [
+      "Algorithm"
+    ],
+    "created_at": "2026-01-17T15:15:55.697601Z",
+    "updated_at": "2026-01-17T15:15:55.697601Z"
+  },
+  {
+    "id": "79616d0b-5408-4cdd-91bc-1e38fcd27ccc",
+    "term": "Unit theory",
+    "definition": "The unit theory of learning is a learning-curve concept that assumes the cost or labor hours required to produce each unit decrease as cumulative production increases, with learning applied on a unit-by-unit basis. Under this theory, each additional unit benefits from accumulated experience, making it suitable for modeling production processes where individual unit improvements are incremental and continuous.",
+    "abbreviation": "",
+    "tags": [
+      "Algorithm"
+    ],
+    "created_at": "2026-01-17T15:19:41.789947Z",
+    "updated_at": "2026-01-17T15:19:41.789947Z"
+  },
+  {
+    "id": "72895ef4-d1d5-48c3-9d1a-5bc080323f18",
+    "term": "Cumulative average theory",
+    "definition": "The cumulative average theory of learning is a learning-curve concept that states that the average cost or labor hours per unit decreases by a constant percentage each time cumulative production doubles. In this theory, learning is applied to the average of all units produced to date rather than to individual units, and it is commonly used in parametric cost estimating to model overall production efficiency improvements.",
+    "abbreviation": "",
+    "tags": [
+      "Algorithm"
+    ],
+    "created_at": "2026-01-17T15:20:41.739761Z",
+    "updated_at": "2026-01-17T15:20:41.739761Z"
+  },
+  {
+    "id": "07b2b30e-618a-4a66-932e-93a4f8fd07df",
+    "term": "Virtual Intelligence",
+    "definition": "Virtual Intelligence (VI) refers to the use of computer-based intelligent systems—such as advanced analytics, artificial intelligence, or automated decision-support tools—to assist human decision-making. In acquisition and cost estimating, VI can be used to analyze large datasets, identify patterns, support parametric modeling, and improve the accuracy, consistency, and speed of cost and risk assessments.",
+    "abbreviation": "VI",
+    "tags": [
+      "Virtual Intelligence",
+      "Quality"
+    ],
+    "created_at": "2026-01-27T11:42:58.399989Z",
+    "updated_at": "2026-01-27T11:42:58.399989Z"
   }
 ]

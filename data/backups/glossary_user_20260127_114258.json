@@ -205,9 +205,10 @@
     "definition": "Earned Value Management (EVM) is a structured project management methodology that integrates scope, schedule, and cost to assess project performance and progress. EVM uses objective measures of work performed to compare planned work, completed work, and actual costs, enabling early identification of cost and schedule variances and supporting informed management decisions.",
     "abbreviation": "EVM",
     "created_at": "2025-12-14T19:27:55.000117Z",
-    "updated_at": "2026-01-15T21:20:54.567138Z",
+    "updated_at": "2026-01-17T15:21:57.264137Z",
     "tags": [
-      "Project management"
+      "Project management",
+      "Algorithm"
     ]
   },
   {
@@ -487,5 +488,16 @@
     ],
     "created_at": "2026-01-17T15:19:41.789947Z",
     "updated_at": "2026-01-17T15:19:41.789947Z"
+  },
+  {
+    "id": "72895ef4-d1d5-48c3-9d1a-5bc080323f18",
+    "term": "Cumulative average theory",
+    "definition": "The cumulative average theory of learning is a learning-curve concept that states that the average cost or labor hours per unit decreases by a constant percentage each time cumulative production doubles. In this theory, learning is applied to the average of all units produced to date rather than to individual units, and it is commonly used in parametric cost estimating to model overall production efficiency improvements.",
+    "abbreviation": "",
+    "tags": [
+      "Algorithm"
+    ],
+    "created_at": "2026-01-17T15:20:41.739761Z",
+    "updated_at": "2026-01-17T15:20:41.739761Z"
   }
 ]

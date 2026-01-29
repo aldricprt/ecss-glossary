@@ -79,28 +79,5 @@
       "Input",
       "Sources"
     ]
-  },
-  {
-    "id": "c4b55a2f-0870-4ad3-8401-e9adda8ca2b1",
-    "title": "Key Points about Data Collection, Evaluation, and Normalization",
-    "filename": "2c59275331f749f4a80ed8c2341a1bf4.png",
-    "original": "Capture d’écran 2026-01-29 à 10.40.33.png",
-    "uploaded_at": "2026-01-29T09:41:31.634372Z",
-    "tags": [
-      "Normalization",
-      "Data"
-    ]
-  },
-  {
-    "id": "dcc0af89-7f39-4a62-99f0-8dbaffd941db",
-    "title": "Typical Data Normalization Process Flow",
-    "filename": "a25fb320e25e4cb7adee7124209e61ef.png",
-    "original": "Capture d’écran 2026-01-29 à 10.47.46.png",
-    "uploaded_at": "2026-01-29T09:48:22.104961Z",
-    "tags": [
-      "Normalization",
-      "Process",
-      "Data"
-    ]
   }
 ]

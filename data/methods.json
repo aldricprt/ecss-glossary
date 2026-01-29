@@ -1,0 +1,91 @@
+[
+  {
+    "id": "c7344818-19c7-46cf-bddc-5d65c3c9c6d9",
+    "title": "Parametric Analysis & Model Development",
+    "definition": "Parametric analysis uses project parameters and historical data to estimate resources (labor, materials, time). It converts historical outcomes into mathematical relationships to predict future project costs.",
+    "key_components": [
+      "Database: The foundation of historical cost and non-cost data.",
+      "CER (Cost Estimating Relationship): The mathematical equation (e.g., y=f(x)).",
+      "Point vs. Range Estimates: Moving from a single (often \"wrong\") number to a probability distribution."
+    ],
+    "procedure": [
+      "Requirement Resolution: Define users, scope (LCC, SE), and available data.",
+      "Data Collection: Gather costs with expenditure dates and WBS formats.",
+      "Model Building: Select driving parameters with high correlation to cost but low correlation to each other.",
+      "Calibration & Validation: Use \"back-testing\" on completed projects to prove reliability.",
+      "Documentation: Record configuration control, versions, and assumptions."
+    ],
+    "success_factors": [
+      "Logical Flow: Inputs should drive outputs; never \"force\" inputs to reach a desired price.",
+      "Updates: Models must be updated as economic or technical conditions change."
+    ],
+    "created_at": "2026-01-29T08:39:16.894580Z",
+    "updated_at": "2026-01-29T08:39:49.388101Z"
+  },
+  {
+    "id": "20469197-7110-4610-9e38-09d107108e3b",
+    "title": "Data Normalization Techniques",
+    "definition": "Data normalization is the process of correcting dissimilarities in historical data to ensure \"apples-to-apples\" comparison between past projects and future estimates.",
+    "key_components": [
+      "Economic Factors: Inflation and currency fluctuations.",
+      "Quantity Factors: Production rates and learning curves.",
+      "Operational Factors: Team skills, tools, and working environment."
+    ],
+    "procedure": [
+      "Inflation Adjustment: Use inflation tables to convert all data to a common Base Year (BY).",
+      "Quantity Normalization: Avoid simple linear division; apply learning curve theories (Unit or Cumulative Average).",
+      "Recurring vs. Non-Recurring: Separate one-time design costs from repetitive production costs.",
+      "Accounting Check: Verify if \"Direct\" vs. \"Overhead\" classifications remained consistent across data sources."
+    ],
+    "success_factors": [
+      "Context: Data without context (metadata) is dangerous; always capture the \"how\" and \"when\" of the cost.",
+      "Non-Linearity: Recognize that most cost relationships are power laws or exponentials, not straight lines."
+    ],
+    "created_at": "2026-01-29T08:43:35.919091Z",
+    "updated_at": "2026-01-29T08:43:35.919091Z"
+  },
+  {
+    "id": "452aa975-fab1-4cab-bd5a-b377f5311cc2",
+    "title": "CER Validation & Statistical Metrics",
+    "definition": "Validation is the process of proving a CER’s ability to reliably predict costs through mathematical rigor and practical \"sanity checks.\"",
+    "key_components": [
+      "SEE (Standard Error of Estimate): Measures data scatter/uncertainty.",
+      "Bias: Measures systematic over or underestimation.",
+      "R 2 (Coefficient of Variation): Measures the strength of the correlation."
+    ],
+    "procedure": [
+      "Mathematical Fit: Ensure the equation (Linear, Power, Log) best fits the normalized data.",
+      "Significance Test: Verify that the chosen non-cost variables are significant predictors.",
+      "Outlier Analysis: Identify data points that may skew the model due to errors or anomalies.",
+      "IPT Review: Conduct a \"sanity check\" with an Integrated Product Team."
+    ],
+    "success_factors": [
+      "Trade-off: Don't hide data to make a model look \"accurate\" if it reduces the model's overall predictive power.",
+      "Consistency: A high R 2 does not guarantee a good model if the logic (causality) is missing."
+    ],
+    "created_at": "2026-01-29T08:45:32.806061Z",
+    "updated_at": "2026-01-29T08:45:32.806061Z"
+  },
+  {
+    "id": "aff40e01-ed3c-40b4-a5c3-82f95e7efce4",
+    "title": "Complex Models vs. Simple CERs",
+    "definition": "Complex models are algorithmically robust tools that require significantly more input (20–40 pieces of info) to produce detailed risk and uncertainty outputs.",
+    "key_components": [
+      "Inputs: Product features, environment parameters, and team capabilities.",
+      "Logic: Phasing, Monte Carlo simulations, and EVM integration.",
+      "Outputs: Range of costs, trade studies, and confidence levels (e.g., P80)."
+    ],
+    "procedure": [
+      "Selection: Use CERs for specific sub-tasks; use Complex Models for global project scope.",
+      "Input Management: Import WBS/CBS structures directly to avoid manual entry errors.",
+      "Scenario Setting: Define \"global settings\" (e.g., Heritage, Inflation) before starting specific estimates.",
+      "Integration: Link cost models with design tools for rapid data transfer during trade studies."
+    ],
+    "success_factors": [
+      "The \"Black Box\" Challenge: If using proprietary software, validate it through training, vendor use cases, and historical tests.",
+      "Expert Judgment: Experts are essential for complex inputs, but their judgment must be validated by the model’s logic."
+    ],
+    "created_at": "2026-01-29T08:46:19.758374Z",
+    "updated_at": "2026-01-29T08:46:19.758374Z"
+  }
+]

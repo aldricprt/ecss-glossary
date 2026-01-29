@@ -1663,38 +1663,31 @@ function renderMethodsList(methods){
 
       const h = document.createElement('h3');
       h.textContent = m.title || '';
-      h.style.cursor = 'pointer';
-      h.style.userSelect = 'none';
-      h.title = 'Click to expand/collapse';
       card.appendChild(h);
-
-      // Content container (hidden by default)
-      const content = document.createElement('div');
-      content.style.display = 'none';
 
       const defTitle = document.createElement('strong');
       defTitle.textContent = '1. Definition';
       defTitle.style.display = 'block';
       defTitle.style.marginTop = '16px';
-      content.appendChild(defTitle);
+      card.appendChild(defTitle);
       const def = document.createElement('p');
       def.style.whiteSpace = 'pre-wrap';
       def.textContent = m.definition || '';
-      content.appendChild(def);
+      card.appendChild(def);
 
       if(m.key_components && m.key_components.length){
         const kTitle = document.createElement('strong');
         kTitle.textContent = '2. Key Components';
         kTitle.style.display = 'block';
         kTitle.style.marginTop = '18px';
-        content.appendChild(kTitle);
+        card.appendChild(kTitle);
         const ul = document.createElement('ul');
         for(const it of m.key_components){
           const li = document.createElement('li');
           li.textContent = it;
           ul.appendChild(li);
         }
-        content.appendChild(ul);
+        card.appendChild(ul);
       }
 
       if(m.procedure && m.procedure.length){
@@ -1702,7 +1695,7 @@ function renderMethodsList(methods){
         pTitle.textContent = '3. Procedure & Checklist';
         pTitle.style.display = 'block';
         pTitle.style.marginTop = '18px';
-        content.appendChild(pTitle);
+        card.appendChild(pTitle);
         const list = document.createElement('div');
         list.style.display = 'grid';
         list.style.gap = '6px';
@@ -1720,7 +1713,7 @@ function renderMethodsList(methods){
           row.appendChild(span);
           list.appendChild(row);
         }
-        content.appendChild(list);
+        card.appendChild(list);
       }
 
       if(m.success_factors && m.success_factors.length){
@@ -1728,14 +1721,14 @@ function renderMethodsList(methods){
         sTitle.textContent = '4. Critical Success Factors';
         sTitle.style.display = 'block';
         sTitle.style.marginTop = '18px';
-        content.appendChild(sTitle);
+        card.appendChild(sTitle);
         const ul = document.createElement('ul');
         for(const it of m.success_factors){
           const li = document.createElement('li');
           li.textContent = it;
           ul.appendChild(li);
         }
-        content.appendChild(ul);
+        card.appendChild(ul);
       }
 
       const actions = document.createElement('div');
@@ -1754,19 +1747,7 @@ function renderMethodsList(methods){
       });
       actions.appendChild(editBtn);
       actions.appendChild(delBtn);
-      content.appendChild(actions);
-
-      card.appendChild(content);
-
-      // Toggle expand/collapse on title click
-      h.addEventListener('click', ()=>{
-        if(content.style.display === 'none'){
-          content.style.display = 'block';
-        }else{
-          content.style.display = 'none';
-        }
-      });
-
+      card.appendChild(actions);
       container.appendChild(card);
     }
   }

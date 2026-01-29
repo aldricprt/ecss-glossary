@@ -1,13 +1,12 @@
 let glossary = [];
 let fuse = null;
 let usingApi = false;
-let currentView = 'glossary'; // 'glossary' or 'diagrams' or 'equations' or 'references' or 'methods'
+let currentView = 'glossary'; // 'glossary' or 'diagrams' or 'equations' or 'references'
 let doSearch = null; // Will be defined in DOMContentLoaded
 let selectedTags = new Set();
 let imagesData = [];
 let equationsData = [];
 let referencesData = [];
-let methodsData = [];
 
 async function tryFetch(path){
   try{
@@ -609,25 +608,21 @@ document.addEventListener('DOMContentLoaded', async ()=>{
   const menuDiag = document.getElementById('menuDiagrams');
   const menuEq = document.getElementById('menuEquations');
   const menuRef = document.getElementById('menuReferences');
-  const menuMethods = document.getElementById('menuMethods');
   async function switchView(v){
     currentView = v;
     const g = document.getElementById('glossaryApp');
     const d = document.getElementById('diagramsApp');
     const e = document.getElementById('equationsApp');
     const r = document.getElementById('referencesApp');
-    const m = document.getElementById('methodsApp');
     if(v === 'glossary'){
       g.classList.remove('hidden'); g.setAttribute('aria-hidden','false');
       d.classList.add('hidden'); d.setAttribute('aria-hidden','true');
       e.classList.add('hidden'); e.setAttribute('aria-hidden','true');
       r.classList.add('hidden'); r.setAttribute('aria-hidden','true');
-      m.classList.add('hidden'); m.setAttribute('aria-hidden','true');
       menuGloss && menuGloss.classList.add('active');
       menuDiag && menuDiag.classList.remove('active');
       menuEq && menuEq.classList.remove('active');
       menuRef && menuRef.classList.remove('active');
-      menuMethods && menuMethods.classList.remove('active');
       // focus search
       const qq = document.getElementById('q'); qq && qq.focus(); qq && qq.select();
     }else if(v === 'diagrams'){
@@ -635,12 +630,10 @@ document.addEventListener('DOMContentLoaded', async ()=>{
       d.classList.remove('hidden'); d.setAttribute('aria-hidden','false');
       e.classList.add('hidden'); e.setAttribute('aria-hidden','true');
       r.classList.add('hidden'); r.setAttribute('aria-hidden','true');
-      m.classList.add('hidden'); m.setAttribute('aria-hidden','true');
       menuDiag && menuDiag.classList.add('active');
       menuGloss && menuGloss.classList.remove('active');
       menuEq && menuEq.classList.remove('active');
       menuRef && menuRef.classList.remove('active');
-      menuMethods && menuMethods.classList.remove('active');
       // load gallery into inline container
       imagesData = await tryFetch('/api/images') || [];
       renderTagFiltersInto('diagTagFilterContainer','clearDiagTagFilters');
@@ -651,12 +644,10 @@ document.addEventListener('DOMContentLoaded', async ()=>{
       d.classList.add('hidden'); d.setAttribute('aria-hidden','true');
       e.classList.remove('hidden'); e.setAttribute('aria-hidden','false');
       r.classList.add('hidden'); r.setAttribute('aria-hidden','true');
-      m.classList.add('hidden'); m.setAttribute('aria-hidden','true');
       menuEq && menuEq.classList.add('active');
       menuGloss && menuGloss.classList.remove('active');
       menuDiag && menuDiag.classList.remove('active');
       menuRef && menuRef.classList.remove('active');
-      menuMethods && menuMethods.classList.remove('active');
       // load and render equations
       equationsData = await tryFetch('/api/equations') || [];
       renderTagFiltersInto('eqTagFilterContainer','clearEqTagFilters');
@@ -666,36 +657,20 @@ document.addEventListener('DOMContentLoaded', async ()=>{
       d.classList.add('hidden'); d.setAttribute('aria-hidden','true');
       e.classList.add('hidden'); e.setAttribute('aria-hidden','true');
       r.classList.remove('hidden'); r.setAttribute('aria-hidden','false');
-      m.classList.add('hidden'); m.setAttribute('aria-hidden','true');
       menuRef && menuRef.classList.add('active');
       menuGloss && menuGloss.classList.remove('active');
       menuDiag && menuDiag.classList.remove('active');
       menuEq && menuEq.classList.remove('active');
-      menuMethods && menuMethods.classList.remove('active');
       // load and render references
       referencesData = await tryFetch('/api/references') || [];
       renderTagFiltersInto('refTagFilterContainer','clearRefTagFilters');
       renderReferencesList(referencesData);
-    }else if(v === 'methods'){
-      g.classList.add('hidden'); g.setAttribute('aria-hidden','true');
-      d.classList.add('hidden'); d.setAttribute('aria-hidden','true');
-      e.classList.add('hidden'); e.setAttribute('aria-hidden','true');
-      r.classList.add('hidden'); r.setAttribute('aria-hidden','true');
-      m.classList.remove('hidden'); m.setAttribute('aria-hidden','false');
-      menuMethods && menuMethods.classList.add('active');
-      menuGloss && menuGloss.classList.remove('active');
-      menuDiag && menuDiag.classList.remove('active');
-      menuEq && menuEq.classList.remove('active');
-      menuRef && menuRef.classList.remove('active');
-      methodsData = await tryFetch('/api/methods') || [];
-      renderMethodsList(methodsData);
     }
   }
   menuGloss && menuGloss.addEventListener('click', ()=>switchView('glossary'));
   menuDiag && menuDiag.addEventListener('click', ()=>switchView('diagrams'));
   menuEq && menuEq.addEventListener('click', ()=>switchView('equations'));
   menuRef && menuRef.addEventListener('click', ()=>switchView('references'));
-  menuMethods && menuMethods.addEventListener('click', ()=>switchView('methods'));
   // default view
   switchView('glossary');
   // editor buttons
@@ -1315,497 +1290,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
       closeEquationEditor();
       equationsData = await tryFetch('/api/equations') || [];
       renderEquationsList(equationsData);
-    }
-  });
-}, {once: true});
-
-// References management
-function openReferenceEditor(reference){
-  const editor = document.getElementById('referenceEditor');
-  const title = document.getElementById('refEditorTitle');
-  const titleField = document.getElementById('refTitle');
-  const authorField = document.getElementById('refAuthor');
-  const typeField = document.getElementById('refType');
-  const descField = document.getElementById('refDescription');
-  const urlField = document.getElementById('refUrl');
-  const tagsField = document.getElementById('refTags');
-  const idField = document.getElementById('refId');
-  
-  editor.classList.remove('hidden');
-  editor.setAttribute('aria-hidden','false');
-  
-  if(reference){
-    title.textContent = 'Edit reference';
-    titleField.value = reference.title || '';
-    authorField.value = reference.author || '';
-    typeField.value = reference.type || 'book';
-    descField.value = reference.description || '';
-    urlField.value = reference.url || '';
-    tagsField.value = (reference.tags && reference.tags.length>0) ? reference.tags.join(', ') : '';
-    idField.value = reference.id || '';
-  }else{
-    title.textContent = 'Add a new reference';
-    titleField.value = '';
-    authorField.value = '';
-    typeField.value = 'book';
-    descField.value = '';
-    urlField.value = '';
-    tagsField.value = '';
-    idField.value = '';
-  }
-  titleField.focus();
-}
-
-function closeReferenceEditor(){
-  const editor = document.getElementById('referenceEditor');
-  editor.classList.add('hidden');
-  editor.setAttribute('aria-hidden','true');
-}
-
-async function saveReference(title, author, type, description, url, id, tags){
-  try{
-    if(id){
-      const resp = await fetch(`/api/references/${id}`, {
-        method: 'PUT',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({title, author, type, description, url, tags})
-      });
-      if(!resp.ok) throw new Error('Failed to update');
-      return await resp.json();
-    }else{
-      const resp = await fetch('/api/references', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({title, author, type, description, url, tags})
-      });
-      if(!resp.ok) throw new Error('Failed to create');
-      return await resp.json();
-    }
-  }catch(e){
-    alert('Could not save reference. Is the server running?');
-    return null;
-  }
-}
-
-async function deleteReference(id){
-  try{
-    const resp = await fetch(`/api/references/${id}`, {method:'DELETE'});
-    if(!resp.ok) throw new Error('Delete failed');
-    // Reload references
-    referencesData = await tryFetch('/api/references') || [];
-    renderReferencesList(referencesData);
-  }catch(e){
-    alert('Could not delete reference. Is the server running?');
-  }
-}
-
-function referenceMatchesTags(ref){
-  if(selectedTags.size === 0) return true;
-  const itemTags = new Set(ref.tags || []);
-  for(const tag of selectedTags){ if(!itemTags.has(tag)) return false; }
-  return true;
-}
-
-function renderReferencesList(references){
-  const container = document.getElementById('referencesList');
-  const searchField = document.getElementById('refSearch');
-  container.innerHTML = '';
-  
-  let filtered = references;
-  
-  function filterReferences(q){
-    let base = references.slice();
-    if(q){
-      const s = (q||'').trim().toLowerCase();
-      base = base.filter(ref => 
-        (ref.title || '').toLowerCase().includes(s) || 
-        (ref.author || '').toLowerCase().includes(s) || 
-        (ref.description || '').toLowerCase().includes(s)
-      );
-    }
-    // tag filter (AND)
-    base = base.filter(referenceMatchesTags);
-    return base;
-  }
-  
-  function renderList(){
-    container.innerHTML = '';
-    if(filtered.length === 0){
-      container.textContent = 'No references found.';
-      return;
-    }
-    for(const ref of filtered){
-      const card = document.createElement('div');
-      card.className = 'item';
-      const h = document.createElement('h3');
-      h.textContent = ref.title || '';
-      const author = document.createElement('p');
-      author.style.fontSize = '13px';
-      author.style.color = 'var(--muted)';
-      author.style.marginBottom = '6px';
-      author.textContent = (ref.author ? `by ${ref.author}` : '') + (ref.type ? ` [${ref.type}]` : '');
-      card.appendChild(h);
-      card.appendChild(author);
-      
-      if(ref.description){
-        const desc = document.createElement('p');
-        desc.style.fontSize = '14px';
-        desc.style.color = '#ccc';
-        desc.style.whiteSpace = 'pre-wrap';
-        desc.textContent = ref.description;
-        card.appendChild(desc);
-      }
-      
-      if(ref.url){
-        const link = document.createElement('p');
-        link.style.fontSize = '13px';
-        link.style.marginTop = '6px';
-        const a = document.createElement('a');
-        a.href = ref.url;
-        a.target = '_blank';
-        a.textContent = ref.url;
-        a.style.color = 'var(--accent)';
-        link.appendChild(a);
-        card.appendChild(link);
-      }
-      
-      if(ref.tags && ref.tags.length>0){
-        const tagsDiv = document.createElement('div');
-        tagsDiv.style.marginTop = '8px';
-        tagsDiv.style.marginBottom = '8px';
-        tagsDiv.style.display = 'flex';
-        tagsDiv.style.gap = '6px';
-        tagsDiv.style.flexWrap = 'wrap';
-        for(const tag of ref.tags){
-          const tagEl = document.createElement('span');
-          tagEl.style.backgroundColor = 'rgba(77,161,255,0.15)';
-          tagEl.style.color = 'var(--accent)';
-          tagEl.style.padding = '2px 8px';
-          tagEl.style.borderRadius = '4px';
-          tagEl.style.fontSize = '12px';
-          tagEl.style.fontWeight = '500';
-          tagEl.textContent = tag;
-          tagsDiv.appendChild(tagEl);
-        }
-        card.appendChild(tagsDiv);
-      }
-      
-      const actions = document.createElement('div');
-      actions.className = 'itemActions';
-      const editBtn = document.createElement('button');
-      editBtn.textContent = 'Edit';
-      editBtn.addEventListener('click', (ev)=>{
-        ev.stopPropagation();
-        openReferenceEditor(ref);
-      });
-      const delBtn = document.createElement('button');
-      delBtn.textContent = 'Delete';
-      delBtn.addEventListener('click', (ev)=>{
-        ev.stopPropagation();
-        if(confirm(`Delete reference "${ref.title}"?`)) deleteReference(ref.id);
-      });
-      actions.appendChild(editBtn);
-      actions.appendChild(delBtn);
-      card.appendChild(actions);
-      container.appendChild(card);
-    }
-  }
-  
-  // Wire search
-  searchField.value = '';
-  searchField.oninput = ()=>{
-    filtered = filterReferences(searchField.value);
-    renderList();
-  };
-  
-  filtered = filterReferences(searchField.value);
-  renderList();
-}
-
-// Wire reference editor buttons
-document.addEventListener('DOMContentLoaded', ()=>{
-  const refShowAdd = document.getElementById('refShowAdd');
-  refShowAdd && refShowAdd.addEventListener('click', ()=>openReferenceEditor());
-  
-  const refCancelBtn = document.getElementById('refCancelBtn');
-  refCancelBtn && refCancelBtn.addEventListener('click', ()=>closeReferenceEditor());
-  
-  const refForm = document.getElementById('refForm');
-  refForm && refForm.addEventListener('submit', async (ev)=>{
-    ev.preventDefault();
-    const title = document.getElementById('refTitle').value.trim();
-    const author = document.getElementById('refAuthor').value.trim();
-    const type = document.getElementById('refType').value;
-    const description = document.getElementById('refDescription').value.trim();
-    const url = document.getElementById('refUrl').value.trim();
-    const tags = document.getElementById('refTags').value.trim();
-    const id = document.getElementById('refId').value;
-    
-    if(!title || !author){ alert('Title and author are required'); return; }
-    
-    const result = await saveReference(title, author, type, description, url, id, tags);
-    if(result){
-      closeReferenceEditor();
-      referencesData = await tryFetch('/api/references') || [];
-      renderReferencesList(referencesData);
-    }
-  });
-}, {once: true});
-
-// Methods management
-function openMethodEditor(method){
-  const editor = document.getElementById('methodEditor');
-  const title = document.getElementById('methodEditorTitle');
-  const titleField = document.getElementById('methodTitle');
-  const defField = document.getElementById('methodDefinition');
-  const keyField = document.getElementById('methodKeyComponents');
-  const procField = document.getElementById('methodProcedure');
-  const successField = document.getElementById('methodSuccessFactors');
-  const idField = document.getElementById('methodId');
-
-  editor.classList.remove('hidden');
-  editor.setAttribute('aria-hidden','false');
-
-  if(method){
-    title.textContent = 'Edit method';
-    titleField.value = method.title || '';
-    defField.value = method.definition || '';
-    keyField.value = (method.key_components || []).join('\n');
-    procField.value = (method.procedure || []).join('\n');
-    successField.value = (method.success_factors || []).join('\n');
-    idField.value = method.id || '';
-  }else{
-    title.textContent = 'Add a new method';
-    titleField.value = '';
-    defField.value = '';
-    keyField.value = '';
-    procField.value = '';
-    successField.value = '';
-    idField.value = '';
-  }
-  titleField.focus();
-}
-
-function closeMethodEditor(){
-  const editor = document.getElementById('methodEditor');
-  editor.classList.add('hidden');
-  editor.setAttribute('aria-hidden','true');
-}
-
-function parseLines(value){
-  return (value || '')
-    .split('\n')
-    .map(v=>v.replace(/^[-•\[\]\s]+/, '').trim())
-    .filter(Boolean);
-}
-
-async function saveMethod(title, definition, key_components, procedure, success_factors, id){
-  try{
-    if(id){
-      const resp = await fetch(`/api/methods/${id}`, {
-        method: 'PUT',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({title, definition, key_components, procedure, success_factors})
-      });
-      if(!resp.ok) throw new Error('Failed to update');
-      return await resp.json();
-    }else{
-      const resp = await fetch('/api/methods', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({title, definition, key_components, procedure, success_factors})
-      });
-      if(!resp.ok) throw new Error('Failed to create');
-      return await resp.json();
-    }
-  }catch(e){
-    alert('Could not save method. Is the server running?');
-    return null;
-  }
-}
-
-async function deleteMethod(id){
-  try{
-    const resp = await fetch(`/api/methods/${id}`, {method:'DELETE'});
-    if(!resp.ok) throw new Error('Delete failed');
-    methodsData = await tryFetch('/api/methods') || [];
-    renderMethodsList(methodsData);
-  }catch(e){
-    alert('Could not delete method. Is the server running?');
-  }
-}
-
-function renderMethodsList(methods){
-  const container = document.getElementById('methodsList');
-  const searchField = document.getElementById('methodSearch');
-  container.innerHTML = '';
-
-  let filtered = methods;
-
-  function filterMethods(q){
-    const s = (q||'').trim().toLowerCase();
-    if(!s) return methods.slice();
-    return methods.filter(m =>
-      (m.title || '').toLowerCase().includes(s) ||
-      (m.definition || '').toLowerCase().includes(s)
-    );
-  }
-
-  function renderList(){
-    container.innerHTML = '';
-    if(filtered.length === 0){
-      container.textContent = 'No method sheets found.';
-      return;
-    }
-    for(const m of filtered){
-      const card = document.createElement('div');
-      card.className = 'item';
-
-      const h = document.createElement('h3');
-      h.textContent = m.title || '';
-      h.style.cursor = 'pointer';
-      h.style.userSelect = 'none';
-      h.title = 'Click to expand/collapse';
-      card.appendChild(h);
-
-      // Content container (hidden by default)
-      const content = document.createElement('div');
-      content.style.display = 'none';
-
-      const defTitle = document.createElement('strong');
-      defTitle.textContent = '1. Definition';
-      defTitle.style.display = 'block';
-      defTitle.style.marginTop = '16px';
-      content.appendChild(defTitle);
-      const def = document.createElement('p');
-      def.style.whiteSpace = 'pre-wrap';
-      def.textContent = m.definition || '';
-      content.appendChild(def);
-
-      if(m.key_components && m.key_components.length){
-        const kTitle = document.createElement('strong');
-        kTitle.textContent = '2. Key Components';
-        kTitle.style.display = 'block';
-        kTitle.style.marginTop = '18px';
-        content.appendChild(kTitle);
-        const ul = document.createElement('ul');
-        for(const it of m.key_components){
-          const li = document.createElement('li');
-          li.textContent = it;
-          ul.appendChild(li);
-        }
-        content.appendChild(ul);
-      }
-
-      if(m.procedure && m.procedure.length){
-        const pTitle = document.createElement('strong');
-        pTitle.textContent = '3. Procedure & Checklist';
-        pTitle.style.display = 'block';
-        pTitle.style.marginTop = '18px';
-        content.appendChild(pTitle);
-        const list = document.createElement('div');
-        list.style.display = 'grid';
-        list.style.gap = '6px';
-        for(const step of m.procedure){
-          const row = document.createElement('label');
-          row.style.display = 'flex';
-          row.style.alignItems = 'center';
-          row.style.gap = '8px';
-          row.style.cursor = 'pointer';
-          const cb = document.createElement('input');
-          cb.type = 'checkbox';
-          const span = document.createElement('span');
-          span.textContent = step;
-          row.appendChild(cb);
-          row.appendChild(span);
-          list.appendChild(row);
-        }
-        content.appendChild(list);
-      }
-
-      if(m.success_factors && m.success_factors.length){
-        const sTitle = document.createElement('strong');
-        sTitle.textContent = '4. Critical Success Factors';
-        sTitle.style.display = 'block';
-        sTitle.style.marginTop = '18px';
-        content.appendChild(sTitle);
-        const ul = document.createElement('ul');
-        for(const it of m.success_factors){
-          const li = document.createElement('li');
-          li.textContent = it;
-          ul.appendChild(li);
-        }
-        content.appendChild(ul);
-      }
-
-      const actions = document.createElement('div');
-      actions.className = 'itemActions';
-      const editBtn = document.createElement('button');
-      editBtn.textContent = 'Edit';
-      editBtn.addEventListener('click', (ev)=>{
-        ev.stopPropagation();
-        openMethodEditor(m);
-      });
-      const delBtn = document.createElement('button');
-      delBtn.textContent = 'Delete';
-      delBtn.addEventListener('click', (ev)=>{
-        ev.stopPropagation();
-        if(confirm(`Delete method "${m.title}"?`)) deleteMethod(m.id);
-      });
-      actions.appendChild(editBtn);
-      actions.appendChild(delBtn);
-      content.appendChild(actions);
-
-      card.appendChild(content);
-
-      // Toggle expand/collapse on title click
-      h.addEventListener('click', ()=>{
-        if(content.style.display === 'none'){
-          content.style.display = 'block';
-        }else{
-          content.style.display = 'none';
-        }
-      });
-
-      container.appendChild(card);
-    }
-  }
-
-  searchField.value = '';
-  searchField.oninput = ()=>{
-    filtered = filterMethods(searchField.value);
-    renderList();
-  };
-
-  filtered = filterMethods(searchField.value);
-  renderList();
-}
-
-// Wire method editor buttons
-document.addEventListener('DOMContentLoaded', ()=>{
-  const methodShowAdd = document.getElementById('methodShowAdd');
-  methodShowAdd && methodShowAdd.addEventListener('click', ()=>openMethodEditor());
-
-  const methodCancelBtn = document.getElementById('methodCancelBtn');
-  methodCancelBtn && methodCancelBtn.addEventListener('click', ()=>closeMethodEditor());
-
-  const methodForm = document.getElementById('methodForm');
-  methodForm && methodForm.addEventListener('submit', async (ev)=>{
-    ev.preventDefault();
-    const title = document.getElementById('methodTitle').value.trim();
-    const definition = document.getElementById('methodDefinition').value.trim();
-    const key_components = parseLines(document.getElementById('methodKeyComponents').value);
-    const procedure = parseLines(document.getElementById('methodProcedure').value);
-    const success_factors = parseLines(document.getElementById('methodSuccessFactors').value);
-    const id = document.getElementById('methodId').value;
-
-    if(!title || !definition){ alert('Title and definition are required'); return; }
-
-    const result = await saveMethod(title, definition, key_components, procedure, success_factors, id);
-    if(result){
-      closeMethodEditor();
-      methodsData = await tryFetch('/api/methods') || [];
-      renderMethodsList(methodsData);
     }
   });
 }, {once: true});

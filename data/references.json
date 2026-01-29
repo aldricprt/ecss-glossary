@@ -1,0 +1,29 @@
+[
+  {
+    "id": "9a968c82-08a2-464a-8b8e-dfee79496ddc",
+    "title": "Constructive Cost Model II",
+    "type": "software",
+    "author": "Dr. Barry Boehm",
+    "description": "COCOMO II is a parametric software cost estimation model used to estimate the effort, cost, and schedule required to develop software systems. It relates software size (e.g., source lines of code or function points) and cost drivers—such as product complexity, personnel capability, and development environment—to predicted development effort using empirically derived equations. COCOMO II is widely used to support planning and trade-off analysis for modern software-intensive systems.",
+    "url": "https://softwarecost.org/tools/COCOMO/",
+    "tags": [
+      "Software",
+      "Models"
+    ],
+    "created_at": "2026-01-29T07:46:35.543936Z",
+    "updated_at": "2026-01-29T07:46:35.543936Z"
+  },
+  {
+    "id": "5e739d1c-5e54-4f96-b5d2-391480ea717e",
+    "title": "Work Breakdown Structure for Defense Material Items",
+    "type": "book",
+    "author": "Department of Defense (DoD)",
+    "description": "Handbook that provides detailed guidance on the use of the WBS",
+    "url": "https://www.secnav.navy.mil/rda/OneSource/Documents/New%20MIL-STD-881C%20Work%20Breakdown%20Structures%20for%20Defense%20Materiel%20Items.pdf",
+    "tags": [
+      "WBS"
+    ],
+    "created_at": "2026-01-29T09:05:16.005910Z",
+    "updated_at": "2026-01-29T09:05:16.005910Z"
+  }
+]

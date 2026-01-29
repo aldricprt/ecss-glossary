@@ -16,7 +16,6 @@
       <button id="menuDiagrams">Diagrams</button>
       <button id="menuEquations">Equations</button>
       <button id="menuReferences">References</button>
-      <button id="menuMethods">Methods</button>
     </nav>
 
     <div id="glossaryApp">
@@ -186,44 +185,6 @@
       </section>
 
       <div id="referencesList"></div>
-    </section>
-
-    <!-- Methods app view -->
-    <section id="methodsApp" class="hidden" aria-hidden="true">
-      <h2>Method Sheets</h2>
-      <p>Store step-by-step method sheets with key components and critical success factors.</p>
-      <div class="search" style="margin-bottom:16px">
-        <input id="methodSearch" type="search" placeholder="Search method sheets by title or definition" style="flex:1;padding:10px 12px;border:1px solid rgba(255,255,255,0.08);border-radius:8px;font-size:15px;background:#061026;color:inherit" />
-        <button id="methodShowAdd" style="padding:9px 12px;border-radius:8px;border:none;background:var(--accent);color:#071224;font-weight:700;cursor:pointer">+ Add Method</button>
-      </div>
-
-      <section id="methodEditor" class="editor hidden" aria-hidden="true">
-        <h3 id="methodEditorTitle">Add a new method</h3>
-        <form id="methodForm">
-          <label>Title
-            <input id="methodTitle" required style="width:100%;padding:10px;border:1px solid rgba(255,255,255,0.06);border-radius:8px;background:#061026;color:inherit" />
-          </label>
-          <label>Definition
-            <textarea id="methodDefinition" rows="3" required style="width:100%;padding:10px;border:1px solid rgba(255,255,255,0.06);border-radius:8px;background:#061026;color:inherit"></textarea>
-          </label>
-          <label>Key Components (one per line)
-            <textarea id="methodKeyComponents" rows="4" placeholder="- Component A\n- Component B" style="width:100%;padding:10px;border:1px solid rgba(255,255,255,0.06);border-radius:8px;background:#061026;color:inherit"></textarea>
-          </label>
-          <label>Procedure & Checklist (one per line)
-            <textarea id="methodProcedure" rows="4" placeholder="- Step 1\n- Step 2" style="width:100%;padding:10px;border:1px solid rgba(255,255,255,0.06);border-radius:8px;background:#061026;color:inherit"></textarea>
-          </label>
-          <label>Critical Success Factors (one per line)
-            <textarea id="methodSuccessFactors" rows="4" placeholder="- Factor A\n- Factor B" style="width:100%;padding:10px;border:1px solid rgba(255,255,255,0.06);border-radius:8px;background:#061026;color:inherit"></textarea>
-          </label>
-          <input type="hidden" id="methodId" />
-          <div class="formActions" style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
-            <button id="methodSaveBtn" type="submit" style="padding:8px 12px;border-radius:8px;border:none;background:var(--accent);color:#071224;font-weight:700;cursor:pointer">Save</button>
-            <button id="methodCancelBtn" type="button" style="padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#061026;color:inherit;cursor:pointer">Cancel</button>
-          </div>
-        </form>
-      </section>
-
-      <div id="methodsList"></div>
     </section>
   </main>
 
