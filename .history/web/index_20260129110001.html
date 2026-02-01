@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Knowledge Hub — ECSS</title>
+  <title>Local Glossary — editable</title>
   <link rel="stylesheet" href="/web/styles.css">
 </head>
 <body>
   <main>
-    <h1>Knowledge Hub</h1>
-    <p>Centralize glossary, diagrams, equations, references, and method sheets.</p>
+    <h1>Local Glossary</h1>
+    <p>Search and manage your own glossary entries (terms or abbreviations).</p>
 
     <div class="search" style="margin:12px 0 18px 0">
       <input id="globalSearch" type="search" placeholder="Global search (glossary, diagrams, equations, references, methods)" style="flex:1;padding:10px 12px;border:1px solid rgba(255,255,255,0.08);border-radius:8px;font-size:15px;background:#061026;color:inherit" />
@@ -17,14 +17,14 @@
     <div id="globalResults" style="margin-bottom:16px"></div>
 
     <nav class="mainMenu" role="navigation" aria-label="Main menu">
-      <button id="menuGlossary">Glossary</button>
+      <button id="menuGlossary" class="active">Glossary</button>
       <button id="menuDiagrams">Diagrams</button>
       <button id="menuEquations">Equations</button>
       <button id="menuReferences">References</button>
       <button id="menuMethods">Methods</button>
     </nav>
 
-    <div id="glossaryApp" class="hidden" aria-hidden="true">
+    <div id="glossaryApp">
       <div class="search">
         <input id="q" type="search" placeholder="Search (term, definition, abbreviation)" autofocus />
         <div style="display:flex;gap:8px;align-items:center">

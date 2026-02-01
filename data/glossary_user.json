@@ -588,5 +588,39 @@
     ],
     "created_at": "2026-01-29T09:55:45.084685Z",
     "updated_at": "2026-01-29T09:55:45.084685Z"
+  },
+  {
+    "id": "67a7ab93-b6ea-4625-8785-a96ef8d0549c",
+    "term": "Critical Design Review",
+    "definition": "The Critical Design Review (CDR) is a formal technical review conducted to verify that a system’s detailed design is complete, mature, and capable of meeting all performance, cost, and schedule requirements. CDR confirms that the design is ready to proceed into fabrication, integration, and test, with acceptable risk.",
+    "abbreviation": "CDR",
+    "tags": [
+      "V-cycle",
+      "Project management"
+    ],
+    "created_at": "2026-02-01T18:30:39.388484Z",
+    "updated_at": "2026-02-01T18:31:10.524376Z"
+  },
+  {
+    "id": "2df68fd8-1282-432d-992c-7c1836b1155f",
+    "term": "Space Systems Cost Analysis Group",
+    "definition": "The Space Systems Cost Analysis Group (SSCAG) is a research organization associated with the University of Southern California that specializes in the development and application of parametric cost estimating methods for space systems. SSCAG is known for creating cost models, databases, and analytical techniques used to estimate the cost of satellites, launch vehicles, and other space-related programs throughout their life cycle.",
+    "abbreviation": "SSCAG",
+    "tags": [
+      "Organization"
+    ],
+    "created_at": "2026-02-01T18:33:24.572227Z",
+    "updated_at": "2026-02-01T18:33:24.572227Z"
+  },
+  {
+    "id": "f0f3583c-0b99-479f-8384-3d7d2d9c6f90",
+    "term": "Disclosure statement",
+    "definition": "A disclosure statement is a formal document in which a contractor describes its cost accounting practices and procedures. In acquisition and cost estimating, the disclosure statement is used to ensure transparency, consistency, and compliance with applicable cost accounting standards, and it supports audits, cost analysis, and contract administration.",
+    "abbreviation": "",
+    "tags": [
+      "Accounting"
+    ],
+    "created_at": "2026-02-01T19:50:51.822995Z",
+    "updated_at": "2026-02-01T19:50:51.822995Z"
   }
 ]

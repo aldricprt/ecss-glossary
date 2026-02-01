@@ -176,26 +176,5 @@
     ],
     "created_at": "2026-02-01T20:09:04.337828Z",
     "updated_at": "2026-02-01T20:09:15.027557Z"
-  },
-  {
-    "id": "affff999-2be1-4959-8665-e312e485484a",
-    "title": "Data Source Reliability (Primary vs. Secondary)",
-    "definition": "A methodology for ranking the quality of data based on its proximity to the original source.",
-    "key_components": [
-      "Primary Data: Original source documents (Accounting records, MIS, ERP).",
-      "Secondary Data: Data that has been summarized, adjusted, or derived from other sources."
-    ],
-    "procedure": [
-      "Prioritize Internal Records: Use the Management Information System (MIS) or General Ledger as the first point of collection.",
-      "Validate Secondary Data: If using external studies or \"market baskets,\" verify the manufacturing and software processes used.",
-      "Traceability Check: Can the data point be traced back to a specific invoice or work package?",
-      "Verify Context: Ensure the source data includes the \"Metadata\" (dates, quantities, technical specs) required for normalization."
-    ],
-    "success_factors": [
-      "\"As-Is\" Warning: Never assume external data is ready for use; external sources often lack knowledge of treatment for anomalies or accounting procedures.",
-      "Search for New Sources: A good estimator should constantly look for new internal and external indices to refine inflation and market studies."
-    ],
-    "created_at": "2026-02-01T20:10:14.413159Z",
-    "updated_at": "2026-02-01T20:10:14.413159Z"
   }
 ]

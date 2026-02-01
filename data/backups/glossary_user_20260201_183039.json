@@ -511,5 +511,82 @@
     ],
     "created_at": "2026-01-27T11:42:58.399989Z",
     "updated_at": "2026-01-27T11:42:58.399989Z"
+  },
+  {
+    "id": "5d622328-1cdc-4137-aa6b-4996dd5a9579",
+    "term": "Constructive Cost Model II",
+    "definition": "COCOMO II is a parametric software cost estimation model used to estimate the effort, cost, and schedule required to develop software systems. It relates software size (e.g., source lines of code or function points) and cost drivers—such as product complexity, personnel capability, and development environment—to predicted development effort using empirically derived equations. COCOMO II is widely used to support planning and trade-off analysis for modern software-intensive systems.",
+    "abbreviation": "COCOMO II",
+    "tags": [
+      "Software"
+    ],
+    "created_at": "2026-01-29T07:39:43.061432Z",
+    "updated_at": "2026-01-29T07:39:43.061432Z"
+  },
+  {
+    "id": "f8a0511a-52c1-4827-8e31-1b29b4654c43",
+    "term": "Black box models",
+    "definition": "Black box models are analytical or estimating models in which the internal logic, structure, or causal relationships are not explicitly visible or understood by the user. In cost estimating, black box models produce outputs based on inputs and embedded algorithms—often proprietary or highly complex—without transparent explanation of how results are derived. While they can be efficient, their lack of transparency can limit validation, insight, and credibility in acquisition decision-making.",
+    "abbreviation": "",
+    "tags": [
+      "Models"
+    ],
+    "created_at": "2026-01-29T07:40:51.209314Z",
+    "updated_at": "2026-01-29T07:40:51.209314Z"
+  },
+  {
+    "id": "31948152-83f6-4bd2-963e-b893e805fad9",
+    "term": "Model calibration",
+    "definition": "Model calibration is the process of adjusting a model’s parameters and coefficients so that its outputs align with observed historical data or known outcomes. In parametric cost estimating, calibration ensures that a model accurately reflects the specific environment, processes, and performance characteristics of the organization or program, thereby improving the reliability and credibility of cost estimates.",
+    "abbreviation": "",
+    "tags": [
+      "Calibration"
+    ],
+    "created_at": "2026-01-29T07:59:36.417019Z",
+    "updated_at": "2026-01-29T07:59:36.417019Z"
+  },
+  {
+    "id": "7d04fbf1-c6ba-40ca-a048-df456cf905f2",
+    "term": "Labor hours",
+    "definition": "Labor hours represent the total amount of time, measured in hours, that personnel spend performing work on a specific task, product, or program. In cost estimating and acquisition, labor hours are a key input for estimating direct labor costs and are often used as dependent or independent variables in parametric models, learning curves, and productivity analyses.",
+    "abbreviation": "",
+    "tags": [
+      "Input"
+    ],
+    "created_at": "2026-01-29T08:36:47.965584Z",
+    "updated_at": "2026-01-29T08:36:47.965584Z"
+  },
+  {
+    "id": "f1b8f517-4d19-4c20-9c2b-378f8a04bb53",
+    "term": "Market basket analysis",
+    "definition": "Market basket analysis is a pricing and inflation analysis technique that tracks the cost of a fixed set (“basket”) of goods or services over time to measure price changes. In cost estimating and acquisition, it is used to develop or validate price indices, assess inflation impacts, and support cost escalation or normalization of historical cost data.",
+    "abbreviation": "",
+    "tags": [
+      "Data"
+    ],
+    "created_at": "2026-01-29T09:35:56.616856Z",
+    "updated_at": "2026-01-29T09:35:56.616856Z"
+  },
+  {
+    "id": "4856b755-d6c8-469c-ba6f-b022e373db6d",
+    "term": "Consumer Price Index",
+    "definition": "The Consumer Price Index (CPI) is an economic indicator that measures changes over time in the average prices paid by consumers for a fixed basket of goods and services. In cost estimating and acquisition, CPI is commonly used to analyze inflation and to adjust historical costs to constant or then-year dollars.",
+    "abbreviation": "CPI",
+    "tags": [
+      "Inflation"
+    ],
+    "created_at": "2026-01-29T09:54:53.544294Z",
+    "updated_at": "2026-01-29T09:55:58.811242Z"
+  },
+  {
+    "id": "9ca0a29e-4b29-4530-a12b-3e0b104a344b",
+    "term": "Producer Price Index",
+    "definition": "The Producer Price Index (PPI) is an economic indicator that measures the average change over time in the selling prices received by domestic producers for their goods and services. In cost estimating and acquisition, PPI is used to analyze price trends at the production level and to adjust material, manufacturing, and industrial costs for inflation.",
+    "abbreviation": "PPI",
+    "tags": [
+      "Inflation"
+    ],
+    "created_at": "2026-01-29T09:55:45.084685Z",
+    "updated_at": "2026-01-29T09:55:45.084685Z"
   }
 ]

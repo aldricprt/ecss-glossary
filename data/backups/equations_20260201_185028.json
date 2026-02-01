@@ -24,12 +24,12 @@
   {
     "id": "b9ba77f2-81f5-45bb-b06b-c7c1959e01ac",
     "name": "Production rate general equation",
-    "content": "Y = A X^{b} Q^{r}",
+    "content": "\\[\nY = A X^{b} Q^{r}\n\\]",
     "description": "Y = Hours/unit (or constant dollars per unit)\nA = First unit hours (or constant dollars per unit)\nX = Unit number\nb = Slope of the curve related to learning\nQ = Production rate (quantity produced during the period)\nr = Slope of the curve related to the production rate.",
     "tags": [
       "Production rate"
     ],
     "created_at": "2026-02-01T18:50:08.557391Z",
-    "updated_at": "2026-02-01T18:50:28.139827Z"
+    "updated_at": "2026-02-01T18:50:08.557391Z"
   }
 ]

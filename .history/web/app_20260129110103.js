@@ -841,7 +841,8 @@ document.addEventListener('DOMContentLoaded', async ()=>{
   menuEq && menuEq.addEventListener('click', ()=>switchView('equations'));
   menuRef && menuRef.addEventListener('click', ()=>switchView('references'));
   menuMethods && menuMethods.addEventListener('click', ()=>switchView('methods'));
-  // default view: none selected
+  // default view
+  switchView('glossary');
   // editor buttons
   document.getElementById('showAdd').addEventListener('click', ()=>openEditor());
   document.getElementById('cancelBtn').addEventListener('click', ()=>closeEditor());

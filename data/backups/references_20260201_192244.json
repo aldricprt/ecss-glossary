@@ -25,18 +25,5 @@
     ],
     "created_at": "2026-01-29T09:05:16.005910Z",
     "updated_at": "2026-01-29T09:05:16.005910Z"
-  },
-  {
-    "id": "0c6273e7-0f88-4829-92d0-db20f8067f1f",
-    "title": "DFARS 215-407-5 — Estimating Systems",
-    "type": "article",
-    "author": "Department of Defense (DoD)",
-    "description": "DFARS 215-407-5, Estimating Systems is a regulation within the Defense Federal Acquisition Regulation Supplement (DFARS) that defines the Department of Defense’s policy for contractor cost estimating systems. It establishes requirements to ensure that contractors’ estimating systems are reliable, well-documented, and capable of producing accurate cost estimates to support fair and reasonable contract pricing and effective negotiations.",
-    "url": "https://www.acquisition.gov/dfars/215.407-5-70-disclosure-maintenance-and-review-requirements.",
-    "tags": [
-      "Regulation"
-    ],
-    "created_at": "2026-02-01T19:22:44.984573Z",
-    "updated_at": "2026-02-01T19:22:44.984573Z"
   }
 ]
